@@ -7,8 +7,8 @@ require "lato_core/version"
 Gem::Specification.new do |s|
   s.name        = "lato_core"
   s.version     = LatoCore::VERSION
-  s.authors     = ["Gregorio"]
-  s.email       = ["gregogalante@gmail.com"]
+  s.authors     = ["Ideonetwork"]
+  s.email       = ["info@ideonetwork.it"]
   s.homepage    = ""
   s.summary     = ""
   s.description = ""
