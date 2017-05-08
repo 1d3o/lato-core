@@ -1,0 +1,23 @@
+.button {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  width: auto;
+  background-color: $color_main;
+  color: $color_white;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 10px;
+  margin: 2.5px;
+  outline: 0;
+  border: none;
+  transition: all 0.25s;
+
+  &:focus {
+    background-color: darken($color_main, 5);
+  }
+
+  &:hover {
+    background-color: darken($color_main, 10);
+  }
+}

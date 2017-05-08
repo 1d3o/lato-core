@@ -1,0 +1,165 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+  form = cell(:inputs, :form).new(url: '#', method: 'get')
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Cells Inputs: Text') %>
+
+    <p>A Text is a normal input text.</p>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Normal Text input', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell(:inputs, :text).new(name: 'sample', label: 'Insert your text') %>
+
+      <%=raw row.close %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :text).new(name: 'sample', label: 'Insert your text') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Required Text input', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell(:inputs, :text).new(name: 'sample', label: 'Insert your required text', required: true) %>
+
+      <%=raw row.close %>
+
+      <%=raw cell(:elements, :button).new(type: 'submit', label: 'Submit') %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :text).new(name: 'sample', label: 'Insert your required text', required: true) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Text inputs with others options', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell(:inputs, :text).new(name: 'sample', label: 'Input with value', class: 'md-6', value: 'Im a value ;)') %>
+
+        <%=raw cell(:inputs, :text).new(name: 'sample', label: 'Input with placeholder', class: 'md-6', placeholder: 'Im a placeholder ;)') %>
+
+      <%=raw row.close %>
+
+      <%=raw row.open %>
+
+        <%=raw cell(:inputs, :text).new(name: 'sample', label: 'Input with help message', class: 'md-6', help: 'This is an help message for the input') %>
+
+        <%=raw cell(:inputs, :text).new(name: 'sample', label: 'Input with length limit', class: 'md-6', min_length: 3, max_length: 10, help: 'Remember to write the limit on the help message: this input must contain minimum 3 chars and maximum 10 chars.') %>
+
+      <%=raw row.close %>
+
+      <%=raw cell(:elements, :button).new(type: 'submit', label: 'Submit') %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw row.open <%= erb_close_tag %>
+
+  <%= erb_open_tag %>=raw cell(:inputs, :text).new(name: 'sample', label: 'Input with value', class: 'md-6', value: 'Im a value ;)') <%= erb_close_tag %>
+
+  <%= erb_open_tag %>=raw cell(:inputs, :text).new(name: 'sample', label: 'Input with placeholder', class: 'md-6', placeholder: 'Im a placeholder ;)') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw row.close <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw row.open <%= erb_close_tag %>
+
+  <%= erb_open_tag %>=raw cell(:inputs, :text).new(name: 'sample', label: 'Input with help message', class: 'md-6', help: 'This is an help message for the input') <%= erb_close_tag %>
+
+  <%= erb_open_tag %>=raw cell(:inputs, :text).new(name: 'sample', label: 'Input with length limit', class: 'md-6', min_length: 3, max_length: 10, help: 'Remember to write ...') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw row.close <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

@@ -1,0 +1,58 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Cells Elements: Icon') %>
+
+    <p>Use the Icon cell to render icons. Find a list of possible icons on <a target="_blank" href="http://fontawesome.io/">Fontawesome</a>. </p>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Normal Icons', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :icon).new(name: 'diamond') %>
+
+    <%=raw cell(:elements, :icon).new(name: 'commenting') %>
+
+    <%=raw cell(:elements, :icon).new(name: 'credit-card-alt') %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:elements, :icon).new(name: 'diamond') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :icon).new(name: 'commenting') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :icon).new(name: 'credit-card-alt') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

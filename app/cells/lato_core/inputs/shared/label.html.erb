@@ -1,0 +1,11 @@
+<% if @show_label %>
+  <label
+    class="inputs__label"
+    for="<%= @args[:name] %>"
+  >
+    <%= @args[:label] %>
+    <% if @args[:required] %>
+      <span class="inputs__label-required-sign">*</span>
+    <% end %>
+  </label>
+<% end %>

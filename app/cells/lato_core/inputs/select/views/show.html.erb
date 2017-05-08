@@ -1,0 +1,25 @@
+<div class="inputs-select inputs__container <%= @args[:class] %>">
+
+  <%= render '../../shared/label.html' %>
+
+  <select
+    class="inputs__select"
+    type="text"
+    value="<%= @args[:value] %>"
+    name="<%= @args[:name] %>"
+    placeholder="<%= @args[:placeholder] %>"
+    data-required="<%= @args[:required] %>"
+  />
+    <% if @args[:option_blank] %>
+      <option value=""></option>
+    <% end %>
+    <% @options.each do |option| %>
+      <option value="<%= option[:value] %>" <%= @args[:value] == option[:value] ? 'selected' : '' %>>
+        <%= option[:name] %>
+      </option>
+    <% end %>
+  </select>
+
+  <%= render '../../shared/help.html' %>
+  
+</div>

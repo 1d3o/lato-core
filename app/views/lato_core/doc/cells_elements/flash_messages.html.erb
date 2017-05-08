@@ -1,0 +1,100 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Cells Elements: Flash') %>
+
+    <p>A Flash is an element used to prompt informations to user.</p>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Normal Flash message', size: 3) %>
+
+<%=raw cell(:elements, :flash).new(message: 'Hello world') %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:elements, :flash).new(message: 'Hello world') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Flash message with close button', size: 3) %>
+
+<%=raw cell(:elements, :flash).new(message: 'Hello world, close me!', close: true) %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:elements, :flash).new(message: 'Hello world, close me!', close: true) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Flash messages with style', size: 3) %>
+
+<%=raw cell(:elements, :flash).new(message: 'Info Hello world', close: true, style: 'info') %>
+
+<%=raw cell(:elements, :flash).new(message: 'Success Hello world', close: true, style: 'success') %>
+
+<%=raw cell(:elements, :flash).new(message: 'Danger Hello world', close: true, style: 'danger') %>
+
+<%=raw cell(:elements, :flash).new(message: 'Warning Hello world', close: true, style: 'warning') %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:elements, :flash).new(message: 'Info Hello world', close: true, style: 'info') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :flash).new(message: 'Success Hello world', close: true, style: 'success') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :flash).new(message: 'Danger Hello world', close: true, style: 'danger') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :flash).new(message: 'Warning Hello world', close: true, style: 'warning') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

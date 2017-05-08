@@ -1,0 +1,11 @@
+<div class="elements-flash elements-flash--<%= @args[:style] %>">
+  <%= @args[:message] %>
+
+  <% if @args[:close] %>
+    <a
+      href="#"
+      class="elements-flash__close-button"
+      title="<%= LANGUAGES[:lato_core][:mixed][:close_message] %>"
+    ><%=raw LatoCore::Elements::Icon::Cell.new(name: 'times-circle') %></a>
+  <% end %>
+</div>

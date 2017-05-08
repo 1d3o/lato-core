@@ -1,0 +1,16 @@
+<div class="inputs-textarea inputs__container <%= @args[:class] %>">
+
+  <%= render '../../shared/label.html' %>
+
+  <textarea
+    class="inputs__textarea"
+    name="<%= @args[:name] %>"
+    placeholder="<%= @args[:placeholder] %>"
+    data-required="<%= @args[:required] %>"
+    data-max-length="<%= @args[:max_length] %>"
+    data-min-length="<%= @args[:min_length] %>"
+  /><%= @args[:value] %></textarea>
+
+  <%= render '../../shared/help.html' %>
+  
+</div>

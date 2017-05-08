@@ -1,0 +1,25 @@
+<div class="login__container">
+
+  <!-- Login form -->
+
+  <% form = cell(:inputs, :form).new(url: lato_core.authentication_exec_login_path) %>
+  
+  <%=raw form.open %>
+
+    <% row = cell(:elements, :row).new %>
+
+    <%=raw row.open %>
+
+      <%=raw cell(:inputs, :text).new(name: 'username', label: LANGUAGES[:lato_core][:forms][:username], required: true) %>
+
+      <%=raw cell(:inputs, :password).new(name: 'password', label: LANGUAGES[:lato_core][:forms][:password], required: true) %>
+
+    <%=raw row.close %>
+
+    <%=raw cell(:elements, :button).new(label: LANGUAGES[:lato_core][:mixed][:login], type: 'submit') %>
+
+  <%=raw form.close %>
+  
+  <!-- /Login form -->
+
+</div>

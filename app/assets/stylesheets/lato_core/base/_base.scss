@@ -1,0 +1,26 @@
+@import "mixin";
+@import "normalize";
+@import "helpers";
+@import "typography";
+@import "grid";
+@import "button";
+@import "table";
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: $body_background;
+  font-family: $body_font_family;
+  font-size: $body_font_size;
+  overflow-x: hidden;
+}
+
+a {
+  color: $color_main;
+}

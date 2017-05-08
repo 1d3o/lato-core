@@ -1,0 +1,47 @@
+.table {
+  border-collapse: collapse;
+  text-align: left;
+  background: $color_white;
+  width: 100%;
+
+  thead {
+    border-bottom: solid 1px darken($color_white, 3);
+  }
+
+  tbody:before {
+      content: "-";
+      display: block;
+      line-height: 0em;
+      color: transparent;
+  }
+
+  tr {
+    background: $color_white;
+
+    &:nth-child(2n) {
+      background: darken($color_white, 3);
+    }
+  }
+
+  th {
+
+  }
+
+  td {
+    
+  }
+
+  th, td {
+    padding: 7.5px 5px;
+  }
+
+  &.table-border {
+    
+    tbody {
+      th, td {
+        border: solid 1px lighten($color_black, 90);
+      }
+    }
+  }
+
+}

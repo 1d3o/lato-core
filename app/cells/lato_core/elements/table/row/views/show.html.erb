@@ -1,0 +1,35 @@
+<tr class="elements-table__row">
+
+  <% @labels.each do |label| %>
+
+    <% if label[:type] === 'string' %>
+
+      <td><%= label[:value] %></td>
+
+    <% elsif label[:type] === 'boolean' %>
+
+      <td>
+        <span class="boolean-value <%= label[:value] %>"></span>
+      </td>
+
+    <% elsif label[:type] === 'icon' %>
+
+      <td>
+        <i class="fa fa-<%= label[:value] %>" aria-hidden="true"></i>
+      </td>
+
+    <% elsif label[:type] === 'component' %>
+
+      <td>
+        <%=raw label[:value].show %>
+      </td>
+
+    <% else %>
+
+      <td></td>
+
+    <% end %>
+
+  <% end %>
+
+</tr>

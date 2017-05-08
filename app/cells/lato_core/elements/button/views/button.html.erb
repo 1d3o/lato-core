@@ -1,0 +1,23 @@
+<div class="elements-button">
+
+  <button
+    class="button elements-button__element elements-button__element--<%= @args[:style] %> elements-button__button"
+    title="<%= @args[:label] %>"
+    <% if @show_submit %>
+      type="submit"
+    <% end %>
+  >
+
+    <% if @show_icon && @icon_left %>
+      <i class="fa fa-<%= @args[:icon] %> icon-left" aria-hidden="true"></i>
+    <% end %>
+    
+    <%= @args[:label] %>
+
+    <% if @show_icon && @icon_right %>
+      <i class="fa fa-<%= @args[:icon] %> icon-right" aria-hidden="true"></i>
+    <% end %>
+  
+  </button>
+
+</div>

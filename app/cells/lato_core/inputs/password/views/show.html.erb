@@ -1,0 +1,18 @@
+<div class="inputs-password inputs__container <%= @args[:class] %>">
+
+  <%= render '../../shared/label.html' %>
+
+  <input
+    class="inputs__input"
+    type="password"
+    value="<%= @args[:value] %>"
+    name="<%= @args[:name] %>"
+    placeholder="<%= @args[:placeholder] %>"
+    data-required="<%= @args[:required] %>"
+    data-max-length="<%= @args[:max_length] %>"
+    data-min-length="<%= @args[:min_length] %>"
+  />
+
+  <%= render '../../shared/help.html' %>
+  
+</div>

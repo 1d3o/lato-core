@@ -1,0 +1,65 @@
+<%
+  row = cell(:elements, :row).new
+  form = cell(:inputs, :form).new(url: url, method: method)
+%>
+
+<%=raw form.open %>
+
+  <%=raw cell(:elements, :title).new(label: 'Main informations', size: 4) %>
+
+  <%=raw row.open %>
+
+    <%=raw cell(:inputs, :text).new(name: 'superuser[name]', label: LANGUAGES[:lato_core][:forms][:name],
+    required: true, class: 'md-12', value: @superuser.name) %>
+
+    <%=raw cell(:inputs, :text).new(name: 'superuser[surname]', label: LANGUAGES[:lato_core][:forms][:surname],
+    required: true, class: 'md-12', value: @superuser.surname) %>
+
+    <%=raw cell(:inputs, :email).new(name: 'superuser[email]', label: LANGUAGES[:lato_core][:forms][:email],
+    required: true, class: 'md-12', value: @superuser.email) %>
+
+  <%=raw row.close %>
+
+  <%=raw row.open %>
+
+    <%=raw cell(:inputs, :textarea).new(name: 'superuser[biography]',
+    label: LANGUAGES[:lato_core][:forms][:biography], value: @superuser.biography) %>
+
+  <%=raw row.close %>
+
+  <%=raw cell(:elements, :title).new(label: 'Security informations', size: 4) %>
+
+  <%=raw row.open %>
+
+    <%=raw cell(:inputs, :text).new(name: 'superuser[username]', label: LANGUAGES[:lato_core][:forms][:username],
+    required: true, min_length: 4, help: LANGUAGES[:lato_core][:forms][:username_help], class: 'md-6',
+    value: @superuser.username) %>
+
+    <%=raw cell(:inputs, :select).new(name: 'superuser[permission]', label: LANGUAGES[:lato_core][:forms][:permission],
+    required: true, class: 'md-6', options: @permissions_list, option_value: 'value', option_name: 'title',
+    value: @superuser.permission) %>
+
+  <%=raw row.close %>
+
+  <%=raw row.open %>
+
+    <%=raw cell(:inputs, :password).new(name: 'superuser[password]', label: LANGUAGES[:lato_core][:forms][:password],
+    required: (method === :post), min_length: 6, class: 'md-6', help: LANGUAGES[:lato_core][:forms][:password_help]) %>
+
+    <%=raw cell(:inputs, :password).new(name: 'superuser[password_confirmation]', min_length: 6,
+    label: LANGUAGES[:lato_core][:forms][:password_confirmation], required: (method === :post), class: 'md-6',
+    help: LANGUAGES[:lato_core][:forms][:password_confirmation_help]) %>
+
+  <%=raw row.close %>
+
+  <div class="text-right">
+
+    <%=raw cell(:elements, :button).new(type: 'link', label: LANGUAGES[:lato_core][:mixed][:cancel],
+    style: 'danger', icon: 'ban', url: lato_core.superusers_path) %>
+
+    <%=raw cell(:elements, :button).new(type: 'submit', label: LANGUAGES[:lato_core][:mixed][:save],
+    style: 'success', icon: 'check') %>
+
+  </div>
+
+<%=raw form.close %>

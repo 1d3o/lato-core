@@ -1,0 +1,264 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Cells Elements: Button') %>
+
+    <p>A Button is a simple link or clickable button.</p>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Static HTML Buttons', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <a href="#" class="button">Link button</a>
+
+    <button class="button">Normal button</button>
+
+    <input type="submit" value="Submit button" class="button">
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= "<a href='#' class='button'>Link button</a>" %>
+
+<%= "<button class='button'>Normal button</button>" %>
+
+<%= "<input type='submit' value='Submit button' class='button'>" %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Normal Buttons', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :button).new(label: 'Link button') %>
+
+    <%=raw cell(:elements, :button).new(label: 'Normal button', type: 'button') %>
+
+    <%=raw cell(:elements, :button).new(label: 'Submit button', type: 'submit') %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Link button', url: 'http://...') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Normal button', type: 'button', url: 'http://...') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Submit button', type: 'submit', url: 'http://...') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Buttons with style', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :button).new(label: 'Default style') %>
+
+    <%=raw cell(:elements, :button).new(label: 'Info style', style: 'info') %>
+
+    <%=raw cell(:elements, :button).new(label: 'Success style', style: 'success') %>
+
+    <%=raw cell(:elements, :button).new(label: 'Danger style', style: 'danger') %>
+
+    <%=raw cell(:elements, :button).new(label: 'Warning style', style: 'warning') %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Default style') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Info style', style: 'info') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Success style', style: 'success') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Danger style', style: 'danger') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Warning style', style: 'warning') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Buttons with icon', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :button).new(label: 'Default icon left', icon: 'diamond') %>
+
+    <%=raw cell(:elements, :button).new(label: 'Default icon right', icon: 'diamond', icon_align: 'right') %>
+
+    <%=raw cell(:elements, :button).new(label: 'Button icon left', type: 'button', icon: 'diamond') %>
+
+    <%=raw cell(:elements, :button).new(label: 'Button icon right', type: 'button', icon: 'diamond', icon_align: 'right') %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Default icon left', icon: 'diamond') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Default icon right', icon: 'diamond', icon_align: 'right') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Button icon left', type: 'button', icon: 'diamond') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Button icon right', type: 'button', icon: 'diamond', icon_align: 'right') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Link Button with custom method', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :button).new(label: 'POST link button', method: 'post') %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Info', size: 6) %>
+
+<p>The Button with a custom method work only with type <i>link</i>.</p>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Link button', method: 'post') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Link Button with confirmation request', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :button).new(label: 'Link button', style: 'danger', confirmation: {
+      message: 'Are you sure to continue with the action?', positive_response: 'Yes, im sure', negative_response: 'No'
+    }) %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Info', size: 6) %>
+
+<p>The Button with a confirmation message work only with type <i>link</i>.</p>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Link button', style: 'danger', confirmation: {
+  message: 'Are you sure to continue with the action?', positive_response: 'Yes, im sure', negative_response: 'No'
+}) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+
+

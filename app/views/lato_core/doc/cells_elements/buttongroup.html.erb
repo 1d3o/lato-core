@@ -1,0 +1,101 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Cells Elements: Buttongroup') %>
+
+    <p>A Buttongroup is used to contain a list of buttons.</p>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Normal Buttongroup', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <% button = cell(:elements, :button).new(label: 'Link button') %>
+
+    <%=raw cell(:elements, :buttongroup).new(buttons: [button, button, button]) %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %> button = cell(:elements, :button).new(label: 'Link button') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :buttongroup).new(buttons: [button, button, button]) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Buttongroup with style buttons', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%
+    button1 = cell(:elements, :button).new(label: 'Default!')
+    button2 = cell(:elements, :button).new(label: 'Info!', style: 'info')
+    button3 = cell(:elements, :button).new(label: 'Success!', style: 'success')
+    button4 = cell(:elements, :button).new(label: 'Danger!', style: 'danger')
+    button5 = cell(:elements, :button).new(label: 'Warning!', style: 'warning')
+    %>
+
+    <%=raw cell(:elements, :buttongroup).new(buttons: [button1, button2, button3, button4, button5]) %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>
+button1 = cell(:elements, :button).new(label: 'Default!')
+button2 = cell(:elements, :button).new(label: 'Info!', style: 'info')
+button3 = cell(:elements, :button).new(label: 'Success!', style: 'success')
+button4 = cell(:elements, :button).new(label: 'Danger!', style: 'danger')
+button5 = cell(:elements, :button).new(label: 'Warning!', style: 'warning')
+<%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :buttongroup).new(buttons: [button1, button2, button3, button4, button5]) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

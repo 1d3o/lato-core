@@ -1,0 +1,16 @@
+<div class="layout-admin__profile-container">
+
+  <div class="layout-admin__profile-image" style="background-image: url(<%= image_path 'lato_core/user.png' %>)"></div>
+
+  <div class="layout-admin__profile-info">
+    <span><%= @core__current_superuser.surname %></span> <br>
+    <span><%= @core__current_superuser.name %></span>
+  </div>
+
+  <ul class="layout-admin__profile-menu-list">
+    <li class="layout-admin__profile-menu-item">
+      <a href="<%= lato_core.authentication_exec_logout_path %>" data-method="post" class="layout-admin__profile-menu-link"><%= LANGUAGES[:lato_core][:mixed][:logout] %></a>
+    </li>
+  </ul>
+
+</div>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= CONFIGS[:lato_core][:application_name] %></title>
+  <%= render 'layouts/lato_core/partials/load_stylesheet' %>
+  <%= render 'layouts/lato_core/partials/load_javascript' %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="layout-admin">
+
+  <div class="layout-admin__sidebar-container">
+
+    <%= render 'layouts/lato_core/partials/logo' %>
+
+    <%= render 'layouts/lato_core/partials/menu' %>
+
+  </div>
+
+  <div class="layout-admin__header-container">
+
+    <%= render 'layouts/lato_core/partials/back' %>
+
+    <%= render 'layouts/lato_core/partials/title' %>
+
+    <%= render 'layouts/lato_core/partials/profile' %>
+
+  </div>
+
+  <div class="layout-admin__container">
+
+    <% flash.each do |style, message| %>
+      <%=raw cell(:elements, :flash).new(message: message, style: style, close: true) %>
+    <% end %>
+
+    <%= yield %>
+
+  </div>
+
+</body>
+</html>

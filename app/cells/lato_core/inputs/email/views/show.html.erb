@@ -1,0 +1,16 @@
+<div class="inputs-email inputs__container <%= @args[:class] %>">
+
+  <%= render '../../shared/label.html' %>
+
+  <input
+    class="inputs__input"
+    type="email"
+    value="<%= @args[:value] %>"
+    name="<%= @args[:name] %>"
+    placeholder="<%= @args[:placeholder] %>"
+    data-required="<%= @args[:required] %>"
+  />
+
+  <%= render '../../shared/help.html' %>
+  
+</div>

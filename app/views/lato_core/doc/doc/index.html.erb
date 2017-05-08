@@ -1,0 +1,64 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Welcome to Lato official documentation') %>
+
+    <p>Lato is a modular software project.</p>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
+
+<!-- CELLS SECTION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Cells', size: 2) %>
+
+    <p>Cells are object used to create the user interface.</p>
+
+    <%=raw cell(:elements, :title).new(label: 'Elements', size: 4) %>
+
+    <%=raw cell(:elements, :button).new(label: 'Row', url: lato_core.doc_cells_elements_row_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Block', url: lato_core.doc_cells_elements_block_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Button', url: lato_core.doc_cells_elements_button_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Buttongroup', url: lato_core.doc_cells_elements_buttongroup_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Flash', url: lato_core.doc_cells_elements_flash_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Icon', url: lato_core.doc_cells_elements_icon_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Title', url: lato_core.doc_cells_elements_title_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Table', url: lato_core.doc_cells_elements_table_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Table head', url: lato_core.doc_cells_elements_table_head_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Table body', url: lato_core.doc_cells_elements_table_body_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Table row', url: lato_core.doc_cells_elements_table_row_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Pagination', url: lato_core.doc_cells_elements_pagination_path) %>
+
+    <br><br>
+
+    <%=raw cell(:elements, :title).new(label: 'Inputs', size: 4) %>
+
+    <%=raw cell(:elements, :button).new(label: 'Form', url: lato_core.doc_cells_inputs_form_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Text', url: lato_core.doc_cells_inputs_text_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Password', url: lato_core.doc_cells_inputs_password_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Email', url: lato_core.doc_cells_inputs_email_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Select', url: lato_core.doc_cells_inputs_select_path) %>
+    <%=raw cell(:elements, :button).new(label: 'Textarea', url: lato_core.doc_cells_inputs_textarea_path) %>
+
+    <br><br>
+
+    <%=raw cell(:elements, :title).new(label: 'Widgets', size: 4) %>
+
+    <%=raw cell(:elements, :button).new(label: 'Index', url: lato_core.doc_cells_widgets_index_path) %>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CELLS SECTION -->

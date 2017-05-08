@@ -1,0 +1,118 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+  table = cell(:elements, :table, :container).new
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Cells Elements: Table body') %>
+
+    <p>This cell is a partial element of a table and render the <i>tbody</i> tag.</p>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Normal Table body', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw table.open %>
+
+    <%=raw cell(:elements, :table, :head).new(labels: ['Name', 'Last login']) %>
+
+    <% table_body = cell(:elements, :table, :body).new %>
+
+    <%=raw table_body.open %>
+
+      <%=raw cell(:elements, :table, :row).new(labels: ['Pippo baudo', 'Two days ago']) %>
+
+      <%=raw cell(:elements, :table, :row).new(labels: ['Mario Rossi', 'Last week']) %>
+
+    <%=raw table_body.close %>
+
+  <%=raw table.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %> table_body = cell(:elements, :table, :body).new <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw table_body.open <%= erb_close_tag %>
+...
+<%= erb_open_tag %>=raw table_body.close <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Table body with hover', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw table.open %>
+
+    <%=raw cell(:elements, :table, :head).new(labels: ['Name', 'Last login']) %>
+
+    <% table_body = cell(:elements, :table, :body).new(hover: true) %>
+
+    <%=raw table_body.open %>
+
+      <%=raw cell(:elements, :table, :row).new(labels: ['Pippo baudo', 'Two days ago']) %>
+
+      <%=raw cell(:elements, :table, :row).new(labels: ['Mario Rossi', 'Last week']) %>
+
+    <%=raw table_body.close %>
+
+  <%=raw table.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %> table_body = cell(:elements, :table, :body).new(hover: true) <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw table_body.open <%= erb_close_tag %>
+...
+<%= erb_open_tag %>=raw table_body.close <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

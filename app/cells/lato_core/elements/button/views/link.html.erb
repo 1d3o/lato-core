@@ -1,0 +1,50 @@
+<div class="elements-button">
+
+  <a
+    class="button elements-button__element elements-button__element--<%= @args[:style] %> elements-button__link"
+    href="<%= @args[:url] %>"
+    title="<%= @args[:label] %>"
+    <% if @show_method && !@show_confirmation %>
+      data-method="<%= @args[:method] %>"
+    <% end %>
+    <% if @show_confirmation %>
+      data-confirmation="true"
+    <% end %>
+  >
+    <% if @show_icon && @icon_left %>
+      <i class="fa fa-<%= @args[:icon] %> icon-left" aria-hidden="true"></i>
+    <% end %>
+    
+    <%= @args[:label] %>
+
+    <% if @show_icon && @icon_right %>
+      <i class="fa fa-<%= @args[:icon] %> icon-right" aria-hidden="true"></i>
+    <% end %>
+  </a>
+
+  <% if @show_confirmation %>
+
+  <div class="elements-button__confirmation">
+    <span class="message"><%= @args[:confirmation][:message] %></span>
+
+    <a
+      class="button popup true"
+      href="<%= @args[:url] %>"
+      title="<%= @args[:confirmation][:positive_response] %>"
+      <% if @show_method %>
+        data-method="<%= @args[:method] %>"
+      <% end %>
+    >
+      <i class="fa fa-check" aria-hidden="true"></i> <%= @args[:confirmation][:positive_response] %>
+    </a>
+    <button
+      class="button popup false"
+      title="<%= @args[:confirmation][:negative_response] %>"
+    >
+      <i class="fa fa-ban" aria-hidden="true"></i> <%= @args[:confirmation][:negative_response] %>
+    </button>
+  </div>
+
+  <% end %>
+
+</div>

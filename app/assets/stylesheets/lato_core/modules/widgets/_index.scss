@@ -1,0 +1,59 @@
+.widgets-index {
+  
+  .elements-table  {
+    padding-bottom: 30px;
+    clear: both;
+  }
+}
+
+.widgets-index--actions {
+  .elements-table__table thead th:last-child {
+    text-align: center;
+  }
+
+  .elements-table__row td:last-child {
+    text-align: center;
+
+    .elements-button__element {
+      font-size: 0.8em;
+    }
+  }
+}
+
+.widgets-index__head  {
+  margin-bottom: 15px;
+}
+
+.widgets-index__new-action {
+  display: inline-block;
+  width: auto;
+  float: right;
+}
+
+.widgets-index__search {
+  display: inline-block;
+  width: auto;
+  height: 34px;
+  overflow: hidden;
+  
+  .inputs-text {
+    display: inline-block;
+    margin: 0;
+    width: 200px;
+
+    input {
+      margin: 0;
+    }
+  }
+
+  .elements-button {
+    position: relative;
+    left: -5px;
+    button {
+      margin: 0;
+      padding: 7px 12px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}

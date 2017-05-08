@@ -1,0 +1,65 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  table = cell(:elements, :table, :container).new(border: false)
+  table_body = cell(:elements, :table, :body).new 
+%>
+
+<%=raw cell(:elements, :title).new(label: @superuser.get_complete_name, size: 1) %>
+
+<!-- MAIN CONTAINER -->
+<%=raw row.open %>
+
+  <%=raw block.open(custom_class: 'md-7') %>
+
+    <%=raw cell(:elements, :title).new(label: LANGUAGES[:lato_core][:mixed][:main_informations], size: 4) %>
+
+    <%=raw table.open %>
+
+      <%=raw table_body.open %>
+
+        <%=raw cell(:elements, :table, :row).new(labels: [LANGUAGES[:lato_core][:forms][:name], @superuser.name]) %>
+
+        <%=raw cell(:elements, :table, :row).new(labels: [LANGUAGES[:lato_core][:forms][:surname], @superuser.surname]) %>
+
+        <%=raw cell(:elements, :table, :row).new(labels: [LANGUAGES[:lato_core][:forms][:username], @superuser.username]) %>
+
+        <%=raw cell(:elements, :table, :row).new(labels: [LANGUAGES[:lato_core][:forms][:email], @superuser.email]) %>
+
+        <%=raw cell(:elements, :table, :row).new(labels: [LANGUAGES[:lato_core][:forms][:permission], @superuser.get_permission_name]) %>
+
+      <%=raw table_body.close %>
+
+    <%=raw table.close %>
+
+  <%=raw block.close %>
+
+  <%=raw block.open(custom_class: 'md-5') %>
+
+    <%=raw cell(:elements, :title).new(label: LANGUAGES[:lato_core][:mixed][:login_informations], size: 4) %>
+
+    <%=raw table.open %>
+
+      <%=raw table_body.open %>
+
+        <%=raw cell(:elements, :table, :row).new(labels: [LANGUAGES[:lato_core][:forms][:last_login_datetime], @superuser.last_login_datetime]) %>
+
+        <%=raw cell(:elements, :table, :row).new(labels: [LANGUAGES[:lato_core][:forms][:last_login_ip_address], @superuser.last_login_ip_address]) %>
+
+      <%=raw table_body.close %>
+
+    <%=raw table.close %>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / MAIN CONTAINER -->
+
+<%=raw cell(:elements, :button).new(label: LANGUAGES[:lato_core][:mixed][:edit], url: lato_core.edit_superuser_path(@superuser.id),
+icon: 'pencil', style: 'warning') %>
+<%=raw cell(:elements, :button).new(label: LANGUAGES[:lato_core][:mixed][:delete], url: lato_core.superuser_path(@superuser.id),
+icon: 'trash', style: 'danger', method: 'delete', confirmation: {
+  message: LANGUAGES[:lato_core][:mixed][:default_delete_message],
+  positive_response: LANGUAGES[:lato_core][:mixed][:default_delete_positive_response],
+  negative_response: LANGUAGES[:lato_core][:mixed][:default_delete_negative_response]
+}) %>

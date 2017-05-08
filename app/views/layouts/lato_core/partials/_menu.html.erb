@@ -1,0 +1,67 @@
+<div class="layout-admin__menu-container">
+
+  <ul class="layout-admin__menu-list">
+    <% LAYOUT[:menu_items].each do |menu_item| %>
+      <%
+        next if (@core__current_superuser.permission < menu_item[:permission_min])
+        next if (@core__current_superuser.permission > menu_item[:permission_max])
+
+        active = ''
+        active = 'layout-admin__menu-item-link--active' if  @core__menu_active_item && @core__menu_active_item === menu_item[:key]
+      %>
+      <li class="layout-admin__menu-item">
+        <a
+          class="layout-admin__menu-item-link <%= active %>"
+          href="<%= menu_item[:url] %>"
+          title="<%= menu_item[:title] %>"
+        >
+          <i class="fa fa-<%= menu_item[:icon] %>" aria-hidden="true"></i> <span><%= menu_item[:title] %></span>
+        </a>
+        <% if menu_item[:sub_items].length > 0 %>
+          <ul class="layout-admin__menu-sublist">
+            <% menu_item[:sub_items].each do |sub_item| %>
+              <%
+                next if (@core__current_superuser.permission < sub_item[:permission_min])
+                next if (@core__current_superuser.permission > sub_item[:permission_max])
+              %>
+              <li class="layout-admin__menu-subitem">
+                <a
+                  class="layout-admin__menu-subitem-link"
+                  href="<%= sub_item[:url] %>"
+                  title="<%= sub_item[:title] %>"
+                ><%= sub_item[:title] %></a>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+
+</div>
+
+<!--<div class="layout-admin__menu-container">
+
+  <ul class="layout-admin__menu-list">
+    <li class="layout-admin__menu-item">
+      <a class="layout-admin__menu-item-link layout-admin__menu-item-link--active" href=""><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a>
+    </li>
+    <li class="layout-admin__menu-item">
+      <a class="layout-admin__menu-item-link" href=""><i class="fa fa-users" aria-hidden="true"></i> Iscritti</a>
+    </li>
+    <li class="layout-admin__menu-item">
+      <a class="layout-admin__menu-item-link" href="">
+        <i class="fa fa-cogs" aria-hidden="true"></i> Amministratori
+      </a>
+      <ul class="layout-admin__menu-sublist">
+        <li class="layout-admin__menu-subitem">
+          <a class="layout-admin__menu-subitem-link" href="">Crea nuovo</a>
+        </li>
+        <li class="layout-admin__menu-subitem">
+          <a class="layout-admin__menu-subitem-link" href="">Visualizza lista</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+</div>-->

@@ -1,0 +1,172 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Cells Elements: Block') %>
+
+    <p>A Block is a container where you can put code. Every block should be define inside a row.</p>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Blocks with custom width', size: 3) %>
+
+<%=raw row.open %>
+
+  <% example_block = cell(:elements, :block).new(class: 'md-6') %>
+
+  <%=raw example_block.open %>
+
+    Content...
+    
+  <%=raw example_block.close %>
+
+  <%=raw example_block.open %>
+
+    Content...
+    
+  <%=raw example_block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %> example_block = cell(:elements, :block).new(class: 'md-6') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw example_block.open <%= erb_close_tag %>
+
+  Content...
+
+<%= erb_open_tag %>=raw example_block.close <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw example_block.open <%= erb_close_tag %>
+
+  Content...
+  
+<%= erb_open_tag %>=raw example_block.close <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Responsive blocks', size: 3) %>
+
+<%=raw row.open %>
+
+  <% example_block = cell(:elements, :block).new(class: 'xs-12 sm-6 md-6 lg-4') %>
+
+  <%=raw example_block.open %>
+
+    Content...
+    
+  <%=raw example_block.close %>
+
+  <%=raw example_block.open %>
+
+    Content...
+    
+  <%=raw example_block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %> example_block = cell(:elements, :block).new(class: 'xs-12 sm-6 md-6 lg-4') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw example_block.open <%= erb_close_tag %>
+
+  Content...
+
+<%= erb_open_tag %>=raw example_block.close <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw example_block.open <%= erb_close_tag %>
+
+  Content...
+  
+<%= erb_open_tag %>=raw example_block.close <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Blocks without rounded borders', size: 3) %>
+
+<%=raw row.open %>
+
+  <% example_block = cell(:elements, :block).new(class: 'md-6', round: false) %>
+
+  <%=raw example_block.open %>
+
+    Content...
+    
+  <%=raw example_block.close %>
+
+  <%=raw example_block.open %>
+
+    Content...
+    
+  <%=raw example_block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %> example_block = cell(:elements, :block).new(class: 'md-6', round: false) <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw example_block.open <%= erb_close_tag %>
+
+  Content...
+
+<%= erb_open_tag %>=raw example_block.close <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw example_block.open <%= erb_close_tag %>
+
+  Content...
+  
+<%= erb_open_tag %>=raw example_block.close <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

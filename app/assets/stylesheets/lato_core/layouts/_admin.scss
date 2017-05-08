@@ -1,0 +1,251 @@
+.layout-admin {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 160px;
+  background: $layout_admin_background;
+}
+
+.layout-admin__sidebar-container {
+  z-index: 99;
+  width: 160px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $layout_admin_sidebar_background;
+}
+
+.layout-admin__logo-container {
+  text-align: center;
+  padding: 15px 0;
+  background: darken($layout_admin_sidebar_background, 10);
+
+  img {
+    max-width: 50%;
+  }
+}
+
+.layout-admin__menu-container {
+  
+}
+
+.layout-admin__menu-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 7.5px;
+}
+
+.layout-admin__menu-item {
+  border-bottom: solid 1px lighten($layout_admin_sidebar_background, 2);
+  position: relative;
+
+  &:hover {
+    background: darken($layout_admin_sidebar_background, 5);
+
+    .layout-admin__menu-sublist {
+      display: block;
+    }
+  }
+}
+
+.layout-admin__menu-item-link {
+  display: block;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: $layout_admin_sidebar_color_text;
+  outline: 0;
+  cursor: pointer;
+
+  i {
+    display: inline-block;
+    margin-right: 3px;
+  }
+
+  &:focus {
+    background: darken($layout_admin_sidebar_background, 5);
+  }
+
+  &:hover {
+    background: darken($layout_admin_sidebar_background, 5);
+  }
+}
+
+.layout-admin__menu-item-link--active {
+  position: relative;
+  background: darken($layout_admin_sidebar_background, 3);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background-color: $layout_admin_sidebar_color_text;
+  }
+}
+
+.layout-admin__menu-sublist {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background: darken($layout_admin_sidebar_background, 5);
+  width: 140px;
+  overflow: hidden;
+}
+
+.layout-admin__menu-subitem {
+  border-bottom: solid 1px darken($layout_admin_sidebar_background, 3);
+}
+
+.layout-admin__menu-subitem-link {
+  display: block;
+  padding: 8px 10px;
+  text-decoration: none;
+  color: $layout_admin_sidebar_color_text;
+  outline: 0;
+  cursor: pointer;
+
+  &:hover {
+    background: darken($layout_admin_sidebar_background, 2);
+  }
+}
+
+.layout-admin__header-container {
+  background: $layout_admin_header_background;
+  height: 55px;
+  box-shadow: 0px 11px 20px rgba(41,59,90,0.08);
+}
+
+.layout-admin__title-container {
+  display: inline-block;
+  padding: 15px 5px;
+
+  h1 {
+    color: $layout_admin_header_color_title;
+    font-size: 20px;
+    margin: 0;
+    padding-right: 30px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.layout-admin__back-container {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.layout-admin__profile-container {
+  max-width: 200px;
+  height: 55px;
+  float: right;
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+  background-color: $layout_admin_header_background;
+}
+
+.layout-admin__profile-image {
+  width: 35px;
+  height: 35px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+}
+
+.layout-admin__profile-info {
+  padding: 4px 10px;
+  padding-left: 45px;
+  color: $layout_admin_header_color_text;
+
+  span:last-child {
+    font-size: 0.8em;
+    position: relative;
+    top: -3px;
+  }
+}
+
+.layout-admin__profile-menu-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: $layout_admin_header_background;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  min-width: 160px;
+  overflow: hidden;
+  box-shadow: 0px 11px 20px rgba(41,59,90,0.08);
+}
+
+.layout-admin__profile-menu-list--active {
+  display: block;
+}
+
+.layout-admin__profile-menu-item {
+
+}
+
+.layout-admin__profile-menu-link {
+  text-decoration: none;
+  display: block;
+  padding: 8px 10px;
+  font-size: 0.8em;
+  color: $layout_admin_header_color_text;
+  border-top: solid 1px $layout_admin_background;
+
+  &:hover {
+    background-color: darken($layout_admin_header_background, 3);
+  }
+}
+
+.layout-admin__container {
+  min-height: 100vh;
+  padding: 15px;
+}
+
+@media(max-width:767px) {
+  .layout-admin {
+    padding-left: 60px;
+  }
+
+  .layout-admin__logo-container {
+    padding: 0;
+    height: 55px; 
+    img {
+      display: none;
+    }
+  }
+
+  .layout-admin__sidebar-container {
+    width: 60px;
+  }
+
+  .layout-admin__menu-item-link {
+    text-align: center;
+
+    span {
+      display: none;
+    }
+
+    i {
+      margin-right: 0;
+    }
+  }
+
+  .layout-admin__profile-info {
+    display: none;
+  }
+}

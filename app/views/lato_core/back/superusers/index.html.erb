@@ -1,0 +1,24 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+%>
+
+<!-- MAIN CONTAINER -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:widgets, :index).new(records: @widget_index_superusers, index_url: lato_core.superusers_path,
+    head: [
+      LANGUAGES[:lato_core][:forms][:id],
+      LANGUAGES[:lato_core][:forms][:surname],
+      LANGUAGES[:lato_core][:forms][:name],
+      LANGUAGES[:lato_core][:forms][:email],
+      LANGUAGES[:lato_core][:forms][:permission]
+    ], columns: ['id', 'surname', 'name', 'email', 'get_permission_name'],
+    actions: {show: true, edit: true, delete: true, new: true}, search: true, pagination: true) %>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / MAIN CONTAINER -->

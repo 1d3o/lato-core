@@ -1,0 +1,257 @@
+@mixin gridSharedStyle() {
+  box-sizing: border-box;
+  display: inline-block;
+  float: left;
+}
+
+.row {
+  @include clearfix;
+}
+
+@media(max-width:767px) {
+  .xs-12 {
+    @include gridSharedStyle;
+    width: calc(100% - 15px);
+  }
+
+  .xs-11 {
+    @include gridSharedStyle;
+    width: calc(91.6666% - 15px);
+  }
+
+  .xs-10 {
+    @include gridSharedStyle;
+    width: calc(83.3333% - 15px);
+  }
+
+  .xs-9 {
+    @include gridSharedStyle;
+    width: calc(75% - 15px);
+  }
+
+  .xs-8 {
+    @include gridSharedStyle;
+    width: calc(66.6666% - 15px);
+  }
+
+  .xs-7 {
+    @include gridSharedStyle;
+    width: calc(58.3333% - 15px);
+  }
+
+  .xs-6 {
+    @include gridSharedStyle;
+    width: calc(50% - 15px);
+  }
+
+  .xs-5 {
+    @include gridSharedStyle;
+    width: calc(41.6666% - 15px);
+  }
+
+  .xs-4 {
+    @include gridSharedStyle;
+    width: calc(33.3333% - 15px);
+  }
+
+  .xs-3 {
+    @include gridSharedStyle;
+    width: calc(25% - 15px);
+  }
+
+  .xs-2 {
+    @include gridSharedStyle;
+    width: calc(16.6666% - 15px);
+  }
+
+  .xs-1 {
+    @include gridSharedStyle;
+    width: calc(8.3333% - 15px);
+  }
+}
+
+@media(min-width: 768px) {
+  .sm-12 {
+    @include gridSharedStyle;
+    width: calc(100% - 15px);
+  }
+
+  .sm-11 {
+    @include gridSharedStyle;
+    width: calc(91.6666% - 15px);
+  }
+
+  .sm-10 {
+    @include gridSharedStyle;
+    width: calc(83.3333% - 15px);
+  }
+
+  .sm-9 {
+    @include gridSharedStyle;
+    width: calc(75% - 15px);
+  }
+
+  .sm-8 {
+    @include gridSharedStyle;
+    width: calc(66.6666% - 15px);
+  }
+
+  .sm-7 {
+    @include gridSharedStyle;
+    width: calc(58.3333% - 15px);
+  }
+
+  .sm-6 {
+    @include gridSharedStyle;
+    width: calc(50% - 15px);
+  }
+
+  .sm-5 {
+    @include gridSharedStyle;
+    width: calc(41.6666% - 15px);
+  }
+
+  .sm-4 {
+    @include gridSharedStyle;
+    width: calc(33.3333% - 15px);
+  }
+
+  .sm-3 {
+    @include gridSharedStyle;
+    width: calc(25% - 15px);
+  }
+
+  .sm-2 {
+    @include gridSharedStyle;
+    width: calc(16.6666% - 15px);
+  }
+
+  .sm-1 {
+    @include gridSharedStyle;
+    width: calc(8.3333% - 15px);
+  }
+}
+
+@media(min-width: 992px) {
+  .md-12 {
+    @include gridSharedStyle;
+    width: calc(100% - 15px);
+  }
+
+  .md-11 {
+    @include gridSharedStyle;
+    width: calc(91.6666% - 15px);
+  }
+
+  .md-10 {
+    @include gridSharedStyle;
+    width: calc(83.3333% - 15px);
+  }
+
+  .md-9 {
+    @include gridSharedStyle;
+    width: calc(75% - 15px);
+  }
+
+  .md-8 {
+    @include gridSharedStyle;
+    width: calc(66.6666% - 15px);
+  }
+
+  .md-7 {
+    @include gridSharedStyle;
+    width: calc(58.3333% - 15px);
+  }
+
+  .md-6 {
+    @include gridSharedStyle;
+    width: calc(50% - 15px);
+  }
+
+  .md-5 {
+    @include gridSharedStyle;
+    width: calc(41.6666% - 15px);
+  }
+
+  .md-4 {
+    @include gridSharedStyle;
+    width: calc(33.3333% - 15px);
+  }
+
+  .md-3 {
+    @include gridSharedStyle;
+    width: calc(25% - 15px);
+  }
+
+  .md-2 {
+    @include gridSharedStyle;
+    width: calc(16.6666% - 15px);
+  }
+
+  .md-1 {
+    @include gridSharedStyle;
+    width: calc(8.3333% - 15px);
+  }
+}
+
+@media(min-width: 1200px) {
+  .lg-12 {
+    @include gridSharedStyle;
+    width: calc(100% - 15px);
+  }
+
+  .lg-11 {
+    @include gridSharedStyle;
+    width: calc(91.6666% - 15px);
+  }
+
+  .lg-10 {
+    @include gridSharedStyle;
+    width: calc(83.3333% - 15px);
+  }
+
+  .lg-9 {
+    @include gridSharedStyle;
+    width: calc(75% - 15px);
+  }
+
+  .lg-8 {
+    @include gridSharedStyle;
+    width: calc(66.6666% - 15px);
+  }
+
+  .lg-7 {
+    @include gridSharedStyle;
+    width: calc(58.3333% - 15px);
+  }
+
+  .lg-6 {
+    @include gridSharedStyle;
+    width: calc(50% - 15px);
+  }
+
+  .lg-5 {
+    @include gridSharedStyle;
+    width: calc(41.6666% - 15px);
+  }
+
+  .lg-4 {
+    @include gridSharedStyle;
+    width: calc(33.3333% - 15px);
+  }
+
+  .lg-3 {
+    @include gridSharedStyle;
+    width: calc(25% - 15px);
+  }
+
+  .lg-2 {
+    @include gridSharedStyle;
+    width: calc(16.6666% - 15px);
+  }
+
+  .lg-1 {
+    @include gridSharedStyle;
+    width: calc(8.3333% - 15px);
+  }
+}

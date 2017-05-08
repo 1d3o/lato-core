@@ -1,0 +1,272 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Cells Elements: Table') %>
+
+    <p>Tables can be used to show datas to user.</p>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Static HTML Table', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Last login</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pippo baudo</td>
+          <td>Two days ago</td>
+        </tr>
+        <tr>
+          <td>Mario Rossi</td>
+          <td>Last week</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= "<table class='table'>" %>
+  ...
+<%= "</table>" %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Static HTML Table with borders', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <table class="table table-border">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Last login</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pippo baudo</td>
+          <td>Two days ago</td>
+        </tr>
+        <tr>
+          <td>Mario Rossi</td>
+          <td>Last week</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= "<table class='table table-border'>" %>
+  ...
+<%= "</table>" %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Normal Table', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <% example_table = cell(:elements, :table, :container).new %>
+
+    <%=raw example_table.open %>
+
+    <%=raw cell(:elements, :table, :head).new(labels: ['Name', 'Last login']) %>
+
+    <% example_table_body = cell(:elements, :table, :body).new %>
+
+    <%=raw example_table_body.open %>
+
+      <%=raw cell(:elements, :table, :row).new(labels: ['Pippo baudo', 'Two days ago']) %>
+
+      <%=raw cell(:elements, :table, :row).new(labels: ['Mario Rossi', 'Last week']) %>
+
+    <%=raw example_table_body.close %>
+
+  <%=raw example_table.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %> example_table = cell(:elements, :table, :container).new <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw example_table.open <%= erb_close_tag %>
+  ...
+<%= erb_open_tag %>=raw example_table.close <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Table with borders', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <% example_table = cell(:elements, :table, :container).new(border: true) %>
+
+    <%=raw example_table.open %>
+
+    <%=raw cell(:elements, :table, :head).new(labels: ['Name', 'Last login']) %>
+
+    <% example_table_body = cell(:elements, :table, :body).new %>
+
+    <%=raw example_table_body.open %>
+
+      <%=raw cell(:elements, :table, :row).new(labels: ['Pippo baudo', 'Two days ago']) %>
+
+      <%=raw cell(:elements, :table, :row).new(labels: ['Mario Rossi', 'Last week']) %>
+
+    <%=raw example_table_body.close %>
+
+  <%=raw example_table.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %> example_table = cell(:elements, :table, :container).new(border: true) <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw example_table.open <%= erb_close_tag %>
+  ...
+<%= erb_open_tag %>=raw example_table.close <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Table scrollable with fixed header', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <% example_table = cell(:elements, :table, :container).new(fixed: true, height: 150) %>
+
+    <%=raw example_table.open %>
+
+    <%=raw cell(:elements, :table, :head).new(labels: ['Name', 'Last login']) %>
+
+    <% example_table_body = cell(:elements, :table, :body).new %>
+
+    <%=raw example_table_body.open %>
+
+      <% 100.times do %>
+        <%=raw cell(:elements, :table, :row).new(labels: ['Pippo baudo', 'Two days ago']) %>
+      <% end %>
+
+    <%=raw example_table_body.close %>
+
+  <%=raw example_table.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %> example_table = cell(:elements, :table, :container).new(fixed: true, height: 150) <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw example_table.open <%= erb_close_tag %>
+  ...
+<%= erb_open_tag %>=raw example_table.close <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

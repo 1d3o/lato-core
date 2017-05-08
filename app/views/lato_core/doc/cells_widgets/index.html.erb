@@ -1,0 +1,163 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Cells Widgets: Index') %>
+
+    <p>A Index widget can be used to show the list of records on database.</p>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Index with records', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:widgets, :index).new(records: @superusers) %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:widgets, :index).new(records: @superusers) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Index with records and custom data', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:widgets, :index).new(records: @superusers,
+    head: ['Name', 'Surname', 'Email', 'Username', 'Permission level', 'Last login IP'],
+    columns: ['name', 'surname', 'email', 'username', 'permission', 'last_login_ip_address']) %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:widgets, :index).new(records: @superusers,
+head: ['Name', 'Surname', 'Email', 'Username', 'Permission level', 'Last login IP'],
+columns: ['name', 'surname', 'email', 'username', 'permission', 'last_login_ip_address']) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Index with actions', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:widgets, :index).new(records: @superusers, head: ['Name', 'Surname', 'Email', 'Username'],
+    columns: ['name', 'surname', 'email', 'username'], index_url: lato_core.superusers_path,
+    actions: {show: true, edit: true, delete: true, new: true}) %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Info', size: 6) %>
+
+<p>You need to set the <i>index_url</i> value to use actions.</p>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:widgets, :index).new(records: @superusers, index_url: lato_core.superusers_path,
+head: ['Name', 'Surname', 'Email', 'Username'], columns: ['name', 'surname', 'email', 'username'],
+actions: {show: true, edit: true, delete: true, new: true}) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Index with search', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:widgets, :index).new(records: @superusers, head: ['Name', 'Surname', 'Email', 'Username'],
+    columns: ['name', 'surname', 'email', 'username'], index_url: lato_core.superusers_path,
+    actions: {show: true, edit: true, delete: true, new: true}, search: true) %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Info', size: 6) %>
+
+<p>You need to set the <i>index_url</i> value to use search.</p>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:widgets, :index).new(records: @superusers, index_url: lato_core.superusers_path,
+head: ['Name', 'Surname', 'Email', 'Username'], columns: ['name', 'surname', 'email', 'username'],
+actions: {show: true, edit: true, delete: true, new: true}, search: true) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

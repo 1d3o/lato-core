@@ -1,0 +1,98 @@
+// Colors:
+
+$color_clouds: #ecf0f1;
+$color_belize_hole: #2980b9;
+$color_wet_asphalt: #34495e;
+$color_alizarin: #e74c3c;
+$color_orange: #f39c12;
+$color_nephritis: #27ae60;
+
+// BASE STYLE
+// ///////////////////////////////////////////////////////////
+
+// Main colors:
+
+$color_white: #ffffff;
+$color_black: #000000;
+$color_main: $color_wet_asphalt;
+
+// Body main configurations:
+
+$body_background: $color_white;
+
+$body_font_family: 'latoregular';
+$body_font_size: 14px;
+
+// Layouts configurations:
+
+$layout_authentication_background: $color_clouds;
+$layout_admin_background: $color_clouds;
+
+$layout_admin_sidebar_background: $color_main;
+$layout_admin_sidebar_color_text: $color_white;
+
+$layout_admin_header_background: $color_white;
+$layout_admin_header_color_title: $color_main;
+$layout_admin_header_color_text: $color_black;
+
+// CELLS STYLE
+// ///////////////////////////////////////////////////////////
+
+// Inputs configurations:
+
+$input_color_background: $color_white;
+$input_color_border: $color_clouds;
+$input_color_border_error: $color_alizarin;
+$input_color_text: $color_black;
+$input_color_label: $color_main;
+$input_font_weight_label: 700;
+
+// Button configurations:
+
+$button_color_background: $color_main;
+$button_color_text: $color_white;
+$button_font_weight: 500;
+
+$button_info_background: $color_belize_hole;
+$button_info_color_text: $color_white;
+$button_success_background: $color_nephritis;
+$button_success_color_text: $color_white;
+$button_danger_background: $color_alizarin;
+$button_danger_color_text: $color_white;
+$button_warning_background: $color_orange;
+$button_warning_color_text: $color_white;
+
+// Flash configurations:
+
+$flash_color_background: $color_main;
+$flash_color_text: $color_white;
+
+$flash_info_background: $color_belize_hole;
+$flash_info_color_text: $color_white;
+$flash_success_background: $color_nephritis;
+$flash_success_color_text: $color_white;
+$flash_danger_background: $color_alizarin;
+$flash_danger_color_text: $color_white;
+$flash_warning_background: $color_orange;
+$flash_warning_color_text: $color_white;
+
+// Block configurations:
+
+$block_color_background: $color_white;
+
+// Title configurations:
+
+$title_color_text: $color_main;
+$title_color_border: $color_clouds;
+
+// Table configurations:
+
+$table_head_color_background: $color_main;
+$table_head_color_text: $color_white;
+$table_row_color_boolean_true: $color_nephritis;
+$table_row_color_boolean_false: $color_alizarin;
+
+// Code configurations:
+
+$code_color_background: $color_clouds;
+

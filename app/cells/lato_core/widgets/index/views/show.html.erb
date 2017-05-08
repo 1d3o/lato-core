@@ -1,0 +1,45 @@
+<div class="widgets-index <%= @show_row_actions_class %>">
+
+  <% if @show_search || @show_new_action %>
+
+    <div class="widgets-index__head">
+
+      <% if @show_search %>
+
+        <%= render './partials/search.html' %>
+
+      <% end %>
+
+      <% if @show_new_action %>
+
+        <%= render './partials/new.html' %>
+
+      <% end %>
+
+    </div>
+
+  <% end %>
+
+  <%=raw @table.open %>
+
+    <%=raw @table_head.show %>
+
+    <%=raw @table_body.open %>
+
+    <% @table_rows.each do |table_row| %>
+
+      <%=raw table_row.show %>
+
+    <% end %>
+
+    <%=raw @table_body.close %>
+
+  <%=raw @table.close %>
+  
+  <% if @show_pagiantion %>
+
+    <%= render './partials/pagination.html' %>
+
+  <% end %>
+
+</div>

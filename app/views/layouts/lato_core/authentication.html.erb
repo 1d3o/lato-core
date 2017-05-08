@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= CONFIGS[:lato_core][:application_name] %></title>
+  <%= render 'layouts/lato_core/partials/load_stylesheet' %>
+  <%= render 'layouts/lato_core/partials/load_javascript' %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="layout-authentication">
+
+<div class="layout-authentication__container">
+
+  <% flash.each do |style, message| %>
+    <%=raw cell(:elements, :flash).new(message: message, style: style, close: true) %>
+  <% end %>
+
+  <%= yield %>
+  
+</div>
+
+</body>
+</html>

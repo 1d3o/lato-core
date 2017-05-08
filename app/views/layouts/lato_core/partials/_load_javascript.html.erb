@@ -1,0 +1,4 @@
+<% LAYOUT[:assets].each do |asset| %>
+  <% next if asset[:type] != 'javascript' %>
+  <%= javascript_include_tag asset[:path] %>
+<% end %>

@@ -1,0 +1,57 @@
+.elements-table {
+  overflow-y: scroll;
+  overflow-x: scroll;
+  box-sizing: border-box;
+  padding: 1px; // FIX
+}
+
+.elements-table--fixed {
+  position: relative;
+  overflow: auto;
+}
+
+.elements-table__table {
+  tr, td {
+    min-width: 50px;
+  }
+}
+
+.elements-table__head {
+
+}
+
+.elements-table__head--color {
+  background: $table_head_color_background;
+  color: $table_head_color_text;
+
+  tr {
+    background: $table_head_color_background;
+  }
+}
+
+.elements-table__body {
+  
+}
+
+.elements-table__body--hover {
+  tr:hover {
+    background-color: darken($color_white, 10);
+  }
+}
+
+.elements-table__row {
+
+  .boolean-value {
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 50%;
+
+    &.true {
+      background-color: $table_row_color_boolean_true;
+    }
+    &.false {
+      background-color: $table_row_color_boolean_false;
+    }
+  }
+}

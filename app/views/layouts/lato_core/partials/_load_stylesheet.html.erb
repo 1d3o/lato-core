@@ -1,0 +1,4 @@
+<% LAYOUT[:assets].each do |asset| %>
+  <% next if asset[:type] != 'stylesheet' %>
+  <%= stylesheet_link_tag    asset[:path], media: "all" %>
+<% end %>
