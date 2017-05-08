@@ -1,4 +1,4 @@
-# Lato Core 2.0
+# Lato Core
 
 ## Installation
 
