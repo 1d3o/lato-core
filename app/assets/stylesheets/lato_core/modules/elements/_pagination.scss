@@ -1,0 +1,30 @@
+.elements-pagination {
+
+}
+
+.elements-pagination__arrows {
+  display: inline-block;
+
+  a {
+    display: inline-block;
+    font-size: 1.4em;
+    width: 22px;
+    text-align: center;
+    color: $pagination_color_text;
+    border-radius: 50%;
+    transition: all 0.25s;
+
+    &:hover {
+      font-weight: bolder;
+      background-color: darken($color_white, 10);
+    }
+  }
+}
+
+.elements-pagination__arrows--prev {
+  float: left;
+}
+
+.elements-pagination__arrows--next {
+  float: right;
+}

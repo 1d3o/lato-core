@@ -5,7 +5,8 @@ module LatoCore
     @@requested_args = [:total]
 
     @@default_args = {
-      current: 1
+      current: 1,
+      max_visible: 5
     }
 
     def initialize(args = {})
