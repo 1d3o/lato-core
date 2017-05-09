@@ -28,3 +28,10 @@
     transform: translateY(-50%);
   }
 }
+
+// Set text to one line.
+@mixin oneLineText {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

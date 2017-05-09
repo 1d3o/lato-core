@@ -6,6 +6,8 @@
   background: $layout_admin_background;
 }
 
+// Sidebar section:
+
 .layout-admin__sidebar-container {
   z-index: 99;
   width: 160px;
@@ -117,6 +119,8 @@
   }
 }
 
+// Header section:
+
 .layout-admin__header-container {
   background: $layout_admin_header_background;
   height: 55px;
@@ -125,21 +129,34 @@
 
 .layout-admin__title-container {
   display: inline-block;
-  padding: 15px 5px;
+  margin-left: 5px;
+  margin-top: 16px;
+  max-width: 30%;
 
   h1 {
     color: $layout_admin_header_color_title;
     font-size: 20px;
     margin: 0;
     padding-right: 30px;
-    position: relative;
-    top: 2px;
+    width: 100%;
+    @include oneLineText;
   }
 }
 
 .layout-admin__back-container {
   display: inline-block;
   margin-left: 15px;
+  margin-top: 8px;
+  float: left;
+
+  .button {
+    color: $layout_admin_header_color_back_text;
+    background-color: $layout_admin_header_color_back_background;
+
+    &:hover {
+      background-color: $layout_admin_header_color_back_background_hover;
+    }
+  }
 }
 
 .layout-admin__profile-container {
@@ -211,10 +228,34 @@
   }
 }
 
+.layout-admin__widgets-container {
+  display: inline-block;
+  float: right;
+  margin-top: 16px;
+  margin-right: 15px;
+}
+
+.layout-admin__widget-container {
+  
+}
+
+.layout-admin__widget-button {
+  font-size: 1.5em;
+  color: $layout_admin_header_color_widget_icon;
+
+  &:hover {
+    color: $layout_admin_header_color_widget_icon_hover;
+  }
+}
+
+// Main section:
+
 .layout-admin__container {
   min-height: 100vh;
   padding: 15px;
 }
+
+// Responsive layout:
 
 @media(max-width:767px) {
   .layout-admin {
