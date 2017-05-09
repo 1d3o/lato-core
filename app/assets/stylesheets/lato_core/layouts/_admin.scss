@@ -241,6 +241,8 @@
 
 .layout-admin__widget-container {
   position: relative;
+  display: inline-block;
+  margin: 0 10px;
 }
 
 .layout-admin__widget-container--active {

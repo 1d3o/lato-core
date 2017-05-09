@@ -28,7 +28,7 @@ module LatoCore
       end
       # sort items and return them
       header_widgets = header_widgets.sort_by {|header_widget| header_widget[:position]}
-      return header_widgets
+      return header_widgets.reverse
     end
 
     # This function return the list of header widgets for a specific module.
