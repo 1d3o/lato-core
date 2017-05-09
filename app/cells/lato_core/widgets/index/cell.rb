@@ -54,7 +54,7 @@ module LatoCore
         # generate action components
         @action_new_button = generate_new_button
         # generate pagination components
-        # TODO
+        @pagination = generate_pagination
       end
 
       # Table generation:
@@ -185,6 +185,16 @@ module LatoCore
       # This function generate the search submit button.
       def generate_search_submit
         return LatoCore::Elements::Button::Cell.new(label: ' ', icon: 'search', type: 'submit', icon_align: 'right')
+      end
+
+      # Pagination generation:
+
+      def generate_pagination
+        total_records = @args[:records].is_a?(Hash) ? @args[:records][:total] : @args[:records].length
+        total_records_per_page = @args[:records].is_a?(Hash) ? @args[:records][:per_page] : @args[:records].length
+        total_pages = total_records / total_records_per_page
+        current_page = @args[:records].is_a?(Hash) ? @args[:records][:pagination] : 1
+        return LatoCore::Elements::Pagination::Cell.new(total: total_pages, current: current_page)
       end
 
   end
