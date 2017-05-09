@@ -1,9 +1,11 @@
 .elements-pagination {
-
+  position: relative;
 }
 
 .elements-pagination__arrows {
   display: inline-block;
+  position: absolute;
+  top: 0;
 
   a {
     display: inline-block;
@@ -22,11 +24,11 @@
 }
 
 .elements-pagination__arrows--prev {
-  float: left;
+  left: 0;
 }
 
 .elements-pagination__arrows--next {
-  float: right;
+  right: 0;
 }
 
 .elements-pagination__arrows--disabled {
@@ -42,6 +44,20 @@
 }
 
 .elements-pagination__pages {
-  display: inline-block;
-  margin: auto;
+  text-align: center;
+  padding-top: 2px;
+
+  a {
+    display: inline-block;
+    padding: 2px 6px;
+    color: $pagination_color_text;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: all 0.25s;
+    cursor: pointer;
+
+    &.current {
+      background-color: $pagination_color_background_hover;
+    }
+  }
 }

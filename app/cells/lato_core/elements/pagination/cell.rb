@@ -34,12 +34,16 @@ module LatoCore
 
       # This function generates the first page number to show on the range.
       def generate_pages_range_init
-        
+        init_candidate = @args[:current] - (@args[:max_visible] / 2)
+        return 1 if init_candidate < 1
+        return init_candidate
       end
       
       # This function generates the last page number to show on the range.
       def generate_pages_range_end
-
+        end_candidate = @pages_range_init + @args[:max_visible] -1
+        return @args[:total] if end_candidate > @args[:total]
+        return end_candidate
       end
 
   end

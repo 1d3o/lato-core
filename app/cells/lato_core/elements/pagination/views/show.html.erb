@@ -9,12 +9,16 @@
 
   <div class="elements-pagination__pages">
     
+    <% (@pages_range_init..@pages_range_end).each do |page_number| %>
+      <a href="" class="<%= (@args[:current] === page_number) ? 'current' : '' %>"><%= page_number %></a>
+    <% end %>
+
   </div>
 
   <div class="elements-pagination__arrows elements-pagination__arrows--next <%= @next_disabled_class %>">
 
-    <a href=""><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
     <a href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+    <a href=""><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
   
   </div>
 
