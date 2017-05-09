@@ -6,7 +6,9 @@ module LatoCore
 
     @@default_args = {
       current: 1,
-      max_visible: 5
+      max_visible: 5,
+      url: '#',
+      param: 'page'
     }
 
     def initialize(args = {})
@@ -30,6 +32,8 @@ module LatoCore
         @next_disabled_class = @args[:current] < @args[:total] ? '' : 'elements-pagination__arrows--disabled'
         @pages_range_init = generate_pages_range_init
         @pages_range_end = generate_pages_range_end
+        @prev_page_number = @args[:current] > 1 ? (@args[:current] - 1) : 1
+        @next_page_number = @args[:current] < @args[:total] ? (@args[:current] + 1) : @args[:total] 
       end
 
       # This function generates the first page number to show on the range.
@@ -44,6 +48,11 @@ module LatoCore
         end_candidate = @pages_range_init + @args[:max_visible] -1
         return @args[:total] if end_candidate > @args[:total]
         return end_candidate
+      end
+
+      # This function generate the link to go to a specific page number
+      def generate_page_link page_number
+        return "#{@args[:url]}?#{@args[:param]}=#{page_number}"
       end
 
   end

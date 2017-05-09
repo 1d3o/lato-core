@@ -56,7 +56,7 @@
 
   <%=raw block.open %>
 
-    <%=raw cell(:elements, :pagination).new(total: 25, current: 14, max_visible: 11) %>
+    <%=raw cell(:elements, :pagination).new(total: 25, current: 14, max_visible: 11, url: lato_core.superusers_path, param: 'page') %>
     
   <%=raw block.close %>
 
@@ -71,7 +71,7 @@
 
 <%=raw code.open %>
 
-<%= erb_open_tag %>=raw cell(:elements, :pagination).new(total: 25, current: 14, max_visible: 11) <%= erb_close_tag %>
+<%= erb_open_tag %>=raw cell(:elements, :pagination).new(total: 25, current: 14, max_visible: 11, url: lato_core.superusers_path, param: 'page') <%= erb_close_tag %>
 
 <%=raw code.close %>
 

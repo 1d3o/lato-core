@@ -2,23 +2,23 @@
 
   <div class="elements-pagination__arrows elements-pagination__arrows--prev <%= @prev_disabled_class %>">
 
-    <a href=""><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
-    <a href=""><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+    <a href="<%= generate_page_link(1) %>"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+    <a href="<%= generate_page_link(@prev_page_number) %>"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
 
   </div>
 
   <div class="elements-pagination__pages">
     
     <% (@pages_range_init..@pages_range_end).each do |page_number| %>
-      <a href="" class="<%= (@args[:current] === page_number) ? 'current' : '' %>"><%= page_number %></a>
+      <a href="<%= generate_page_link(page_number) %>" class="<%= (@args[:current] === page_number) ? 'current' : '' %>"><%= page_number %></a>
     <% end %>
 
   </div>
 
   <div class="elements-pagination__arrows elements-pagination__arrows--next <%= @next_disabled_class %>">
 
-    <a href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-    <a href=""><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+    <a href="<%= generate_page_link(@next_page_number) %>"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+    <a href="<%= generate_page_link(@args[:total]) %>"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
   
   </div>
 
