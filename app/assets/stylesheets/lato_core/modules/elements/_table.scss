@@ -35,7 +35,7 @@
 
 .elements-table__body--hover {
   tr:hover {
-    background-color: darken($color_white, 10);
+    background-color: $table_row_color_background_hover;
   }
 }
 
