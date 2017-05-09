@@ -8,8 +8,8 @@ module LatoCore
       head: [],
       columns: [],
       index_url: nil,
-      pagination: nil,
-      search: nil,
+      pagination: false,
+      search: false,
       actions: {
         show: false,
         edit: false,
