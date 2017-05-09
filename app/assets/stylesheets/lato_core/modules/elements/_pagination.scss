@@ -33,9 +33,15 @@
   a {
     color: $pagination_color_text_disabled;
     cursor: not-allowed;
+    pointer-events: none;
 
     &:hover {
       background-color: transparent;
     }
   }
+}
+
+.elements-pagination__pages {
+  display: inline-block;
+  margin: auto;
 }
