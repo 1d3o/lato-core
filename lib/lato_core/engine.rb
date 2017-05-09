@@ -18,5 +18,12 @@ module LatoCore
       end
     end
 
+     # add helpers support
+    initializer 'Add helpers to application' do
+      ActiveSupport.on_load :action_controller do
+        helper LatoCore::CellsHelper
+      end
+    end
+
   end
 end
