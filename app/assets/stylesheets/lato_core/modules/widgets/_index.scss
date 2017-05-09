@@ -28,6 +28,10 @@
   display: inline-block;
   width: auto;
   float: right;
+
+  .elements-button__element {
+    margin: 0;
+  }
 }
 
 .widgets-index__search {
@@ -54,6 +58,25 @@
       padding: 7px 12px;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+    }
+  }
+}
+
+// Responsive layout:
+
+@media(max-width:767px) {
+  .widgets-index--actions {
+    .elements-table__row td:last-child {
+      .elements-button__element {
+        border-radius: 10px;
+        margin: 2px;
+      }
+    }
+  }
+
+  .widgets-index__search { 
+    .inputs-text {
+      width: 120px;
     }
   }
 }
