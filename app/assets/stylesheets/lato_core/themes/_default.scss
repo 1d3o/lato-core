@@ -32,7 +32,7 @@ $layout_admin_sidebar_background: $color_main;
 $layout_admin_sidebar_color_text: $color_white;
 
 $layout_admin_header_background: $color_white;
-$layout_admin_header_color_title: $color_main;
+$layout_admin_header_color_title: darken($color_clouds, 20);
 $layout_admin_header_color_text: $color_black;
 
 // CELLS STYLE
