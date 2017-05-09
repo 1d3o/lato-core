@@ -16,7 +16,7 @@
     cursor: pointer;
 
     &:hover {
-      background-color: darken($color_white, 10);
+      background-color: $pagination_color_background_hover;
     }
   }
 }
