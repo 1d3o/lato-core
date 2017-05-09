@@ -16,10 +16,13 @@
 //= require_tree ./modules
 
 $(document).ready(function () {
-  Inputs.formInputsValidator()
-  Inputs.selectsStyle()
+  Layout.toggleProfileMenu()
+  Layout.toggleHeaderWidget()
+
   Elements.flashCloseButton()
   Elements.tableHeadFixed()
   Elements.buttonConfirmation()
-  Layout.toggleProfileMenu()
+  
+  Inputs.formInputsValidator()
+  Inputs.selectsStyle()
 })

@@ -3,6 +3,10 @@
   <% LAYOUT[:header_widgets].each do |widget| %>
     <div class="layout-admin__widget-container">
       <a href="#" class="layout-admin__widget-button"><i class="fa fa-<%= widget[:icon] %>" aria-hidden="true"></i></a>
+
+      <div class="layout-admin__widget-content">
+        <%= render widget[:path] %>
+      </div>
     </div>
   <% end %>
 

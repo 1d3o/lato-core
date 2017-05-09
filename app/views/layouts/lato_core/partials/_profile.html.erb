@@ -9,6 +9,9 @@
 
   <ul class="layout-admin__profile-menu-list">
     <li class="layout-admin__profile-menu-item">
+      <a href="<%= lato_core.superuser_path(@core__current_superuser.id) %>" class="layout-admin__profile-menu-link"><%= LANGUAGES[:lato_core][:mixed][:my_profile] %></a>
+    </li>
+    <li class="layout-admin__profile-menu-item">
       <a href="<%= lato_core.authentication_exec_logout_path %>" data-method="post" class="layout-admin__profile-menu-link"><%= LANGUAGES[:lato_core][:mixed][:logout] %></a>
     </li>
   </ul>

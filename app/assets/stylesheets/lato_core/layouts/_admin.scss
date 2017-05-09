@@ -205,6 +205,7 @@
   min-width: 160px;
   overflow: hidden;
   box-shadow: 0px 11px 20px rgba(41,59,90,0.08);
+  z-index: 99;
 }
 
 .layout-admin__profile-menu-list--active {
@@ -237,7 +238,18 @@
 }
 
 .layout-admin__widget-container {
-  
+  position: relative;
+}
+
+.layout-admin__widget-container--active {
+
+  .layout-admin__widget-button {
+    color: $layout_admin_header_color_widget_icon_hover;
+  }
+
+  .layout-admin__widget-content {
+    display: block;
+  }
 }
 
 .layout-admin__widget-button {
@@ -247,6 +259,21 @@
   &:hover {
     color: $layout_admin_header_color_widget_icon_hover;
   }
+}
+
+.layout-admin__widget-content {
+  display: none;
+  background-color: $layout_admin_header_background;
+  position: absolute;
+  top: calc(100% + 15px);
+  right: -50px;
+  padding: 15px;
+  width: 400px;
+  min-height: 50px;
+  box-shadow: 0px 11px 20px rgba(41,59,90,0.08);
+  border: solid 1px darken($color_white, 3);
+  border-radius: 15px;
+  z-index: 99;
 }
 
 // Main section:
