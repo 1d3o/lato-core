@@ -13,9 +13,9 @@
     color: $pagination_color_text;
     border-radius: 50%;
     transition: all 0.25s;
+    cursor: pointer;
 
     &:hover {
-      font-weight: bolder;
       background-color: darken($color_white, 10);
     }
   }
@@ -27,4 +27,15 @@
 
 .elements-pagination__arrows--next {
   float: right;
+}
+
+.elements-pagination__arrows--disabled {
+  a {
+    color: $pagination_color_text_disabled;
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
 }

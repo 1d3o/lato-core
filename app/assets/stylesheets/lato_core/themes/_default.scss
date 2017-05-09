@@ -99,5 +99,5 @@ $code_color_background: $color_clouds;
 // Pagination configurations:
 
 $pagination_color_text: $color_main;
-$pagination_color_text_disabled: $color_clouds;
+$pagination_color_text_disabled: darken($color_white, 20);
 

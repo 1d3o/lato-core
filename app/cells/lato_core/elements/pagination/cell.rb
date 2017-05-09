@@ -26,7 +26,8 @@ module LatoCore
     private
 
       def set_conditions
-        # set conditional variables
+        @prev_disabled_class = @args[:current] > 1 ? '' : 'elements-pagination__arrows--disabled'
+        @next_disabled_class = @args[:current] < @args[:total] ? '' : 'elements-pagination__arrows--disabled'
       end
 
   end
