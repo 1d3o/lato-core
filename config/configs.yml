@@ -72,7 +72,7 @@ assets:
 
 # set header widgets for the module. -> This is a test widget. Remove it.
 header_widgets:
-  core_test:
-    icon: book
-    path: lato_core/header_widgets/test
+  core_system_info:
+    icon: info
+    path: lato_core/hwidgets/systeminfo
     position: 1

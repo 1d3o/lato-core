@@ -1,3 +1,5 @@
+@import "hwidgets/systeminfo";
+
 .layout-admin {
   position: relative;
   width: 100%;
@@ -265,8 +267,8 @@
   display: none;
   background-color: $layout_admin_header_background;
   position: absolute;
-  top: calc(100% + 15px);
-  right: -50px;
+  top: calc(100% + 5px);
+  right: -30px;
   padding: 15px;
   width: 400px;
   min-height: 50px;
