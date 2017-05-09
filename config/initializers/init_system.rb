@@ -13,6 +13,7 @@ LAYOUT = {
   logo: core__get_application_logo_path,
   logo_sidebar: core__get_application_logo_sidebar_path,
   menu_items: core__get_menu_items,
+  header_widgets: core__get_header_widgets,
   assets: core_get_assets
 }
 

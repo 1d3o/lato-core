@@ -15,6 +15,47 @@ module LatoCore
       @core__menu_active_item = item_key
     end
 
+    # Header widgets:
+
+    # This function return a list of header widgets for the header of the layout.
+    def core__get_header_widgets
+      lato_modules = core__get_modules_list
+      # create list of header widgets
+      header_widgets = []
+      lato_modules.each do |lato_module_name|
+        module_header_widgets = core_get_header_widgets_for_module(lato_module_name)
+        header_widgets = header_widgets + module_header_widgets if module_header_widgets
+      end
+      # sort items and return them
+      header_widgets = header_widgets.sort_by {|header_widget| header_widget[:position]}
+      return header_widgets
+    end
+
+    # This function return the list of header widgets for a specific module.
+    def core_get_header_widgets_for_module module_name
+      module_configs = core__get_module_configs(module_name)
+      return [] unless module_configs
+      # load module items
+      module_header_widgets = []
+      if module_configs[:header_widgets]
+        module_configs[:header_widgets].each do |key, value|
+          module_header_widgets.push(core__generate_header_widget(key, value, module_name))
+        end
+      end
+      # return module items
+      return module_header_widgets
+    end
+
+    # This function create a correct header widget object for the header.
+    def core__generate_header_widget key, values, module_name
+      header_widget = {}
+      header_widget[:key] = key
+      header_widget[:icon] = values[:icon] ? values[:icon] : 'check-circle'
+      header_widget[:path] = values[:path] ? values[:path] : ''
+      header_widget[:position] = values[:position] ? values[:position] : 999
+      return header_widget
+    end
+
     # Menu:
 
     # This function returns the list of the items for the menu.

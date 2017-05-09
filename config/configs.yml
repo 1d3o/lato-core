@@ -69,3 +69,10 @@ assets:
   core_script:
     path: lato_core/application
     type: javascript
+
+# set header widgets for the module. -> This is a test widget. Remove it.
+header_widgets:
+  core_test:
+    icon: book
+    path: lato_core/header_widgets/test
+    position: 1
