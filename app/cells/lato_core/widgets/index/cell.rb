@@ -194,7 +194,9 @@ module LatoCore
         total_records_per_page = @args[:records].is_a?(Hash) ? @args[:records][:per_page] : @args[:records].length
         total_pages = total_records / total_records_per_page
         current_page = @args[:records].is_a?(Hash) ? @args[:records][:pagination] : 1
-        return LatoCore::Elements::Pagination::Cell.new(total: total_pages, current: current_page, url: @args[:index_url],
+        search_value = @args[:records].is_a?(Hash) ? @args[:records][:search] : ''
+        url = "#{@args[:index_url]}?widget_index[search]=#{search_value}&"
+        return LatoCore::Elements::Pagination::Cell.new(total: total_pages, current: current_page, url: url,
         param: 'widget_index[pagination]')
       end
 

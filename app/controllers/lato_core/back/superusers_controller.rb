@@ -8,7 +8,7 @@ module LatoCore
     def index
       core__set_header_active_page_title(LANGUAGES[:lato_core][:pages][:superusers])
       @superusers = LatoCore::Superuser.all
-      @widget_index_superusers = core__widgets_index(@superusers, search: 'surname')
+      @widget_index_superusers = core__widgets_index(@superusers, search: 'surname', pagination: 10)
     end
 
     def show
