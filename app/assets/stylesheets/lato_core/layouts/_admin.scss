@@ -220,11 +220,12 @@
   display: block;
   padding: 8px 10px;
   font-size: 0.8em;
-  color: $layout_admin_header_color_text;
-  border-top: solid 1px $layout_admin_background;
+  color: $layout_admin_header_color_profile_menu_text;
+  background-color: $layout_admin_header_color_profile_menu_background;
+  border-top: solid 1px darken($layout_admin_header_color_profile_menu_background, 10);
 
   &:hover {
-    background-color: darken($layout_admin_header_background, 3);
+    background-color: $layout_admin_header_color_profile_menu_background_hover;
   }
 }
 
