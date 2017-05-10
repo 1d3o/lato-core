@@ -1,11 +1,29 @@
+// Align text:
+
 .text-left {
-  text-align: left;
+  text-align: left !important;
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .text-right {
-  text-align: right;
+  text-align: right !important;
+}
+
+// Varius style change:
+
+.no-background {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
