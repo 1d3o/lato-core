@@ -11,6 +11,7 @@ module LatoCore
       icon: nil,
       icon_align: 'left',
       method: 'get',
+      remote: false,
       confirmation: {
         message: nil,
         positive_response: nil,
