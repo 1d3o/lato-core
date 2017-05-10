@@ -26,8 +26,8 @@ default_superuser:
   username: lato
   password: WelcomeToLato!
 
-# set menu items for the module.
-menu_items:
+# set menu for the module.
+menu:
   core_dashboard:
     icon: tachometer
     title: translate[dashboard]

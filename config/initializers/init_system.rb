@@ -12,7 +12,7 @@ LANGUAGES = core_get_modules_languages
 LAYOUT = {
   logo: core__get_application_logo_path,
   logo_sidebar: core__get_application_logo_sidebar_path,
-  menu_items: core__get_menu_items,
+  menu_items: core__get_menu,
   widgets: core__get_widgets,
   assets: core_get_assets
 }

@@ -59,32 +59,32 @@ module LatoCore
     # Menu:
 
     # This function returns the list of the items for the menu.
-    def core__get_menu_items
+    def core__get_menu
       lato_modules = core__get_modules_list
       # create list of menu items
-      menu_items = []
+      menu = []
       lato_modules.each do |lato_module_name|
-        module_menu_items = core_get_menu_items_for_module(lato_module_name)
-        menu_items = menu_items + module_menu_items if module_menu_items
+        module_menu = core_get_menu_for_module(lato_module_name)
+        menu = menu + module_menu if module_menu
       end
       # sort items and return them
-      menu_items = menu_items.sort_by {|menu_item| menu_item[:position]}
-      return menu_items
+      menu = menu.sort_by {|menu_item| menu_item[:position]}
+      return menu
     end
 
     # This function returns the list of the items for the menu for a specific module.
-    def core_get_menu_items_for_module module_name
+    def core_get_menu_for_module module_name
       module_configs = core__get_module_configs(module_name)
       return [] unless module_configs
       # load module items
-      module_menu_items = []
-      if module_configs[:menu_items]
-        module_configs[:menu_items].each do |key, value|
-          module_menu_items.push(core__generate_menu_item(key, value, module_name))
+      module_menu = []
+      if module_configs[:menu]
+        module_configs[:menu].each do |key, value|
+          module_menu.push(core__generate_menu_item(key, value, module_name))
         end
       end
       # return module items
-      return module_menu_items
+      return module_menu
     end
 
     # This function create a correct menu item object for the menu.
