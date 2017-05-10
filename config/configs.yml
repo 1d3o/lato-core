@@ -70,9 +70,9 @@ assets:
     path: lato_core/application
     type: javascript
 
-# set header widgets for the module. -> This is a test widget. Remove it.
-header_widgets:
+# set widgets for the module. -> This is a test widget. Remove it.
+widgets:
   core_system_info:
     icon: info
-    path: lato_core/hwidgets/systeminfo
+    path: lato_core/widgets/systeminfo
     position: 1

@@ -17,7 +17,7 @@
 
 $(document).ready(function () {
   Layout.toggleProfileMenu()
-  Layout.toggleHeaderWidget()
+  Layout.toggleWidget()
 
   Elements.flashCloseButton()
   Elements.tableHeadFixed()

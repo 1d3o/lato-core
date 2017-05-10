@@ -1,8 +1,8 @@
-.headerwidgets-systeminfo {
+.widgets-systeminfo {
   
 }
 
-.hwidgets-systeminfo__module-name {
+.widgets-systeminfo__module-name {
   background-color: $color_main;
   display: inline-block;
   padding: 5px;
@@ -12,7 +12,7 @@
   font-size: 1em;
 }
 
-.hwidgets-systeminfo__footer {
+.widgets-systeminfo__footer {
   margin: 0;
   text-align: right;
   color: darken($color_white, 20);
