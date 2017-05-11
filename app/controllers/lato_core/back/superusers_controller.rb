@@ -69,9 +69,15 @@ module LatoCore
         return
       end
 
+      if @superuser.permission >= @core__current_superuser.permission && @superuser.id != @core__current_superuser.id
+        flash[:warning] = LANGUAGES[:lato_core][:flashes][:superuser_not_permission]
+        redirect_to lato_core.superusers_path
+        return
+      end
+
       if !@superuser.update(superuser_params)
         flash[:danger] = @superuser.errors.full_messages.to_sentence
-        redirect_to lato_core.superusers_path
+        redirect_to lato_core.edit_superuser_path(@superuser.id)
         return
       end
       
