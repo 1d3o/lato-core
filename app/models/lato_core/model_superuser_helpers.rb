@@ -1,7 +1,7 @@
 module LatoCore
 
   # This module contains helpers for the superuser activerecord.
-  module SuperuserHelpers
+  module ModelSuperuserHelpers
     
     # This function save login informations for user.
     def save_login ip_address
