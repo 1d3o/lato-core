@@ -39,8 +39,12 @@ module LatoCore
       # This function generate the value for the input if it is possible.
       def generate_value
         return if !@args[:value]
-        return @args[:value] if !@args[:value].is_a?(DateTime)
-        return @args[:value].strftime('%d/%m/%Y %H:%M')
+
+        if @args[:value].is_a?(DateTime) || @args[:value].is_a?(Time)
+          return @args[:value].strftime('%d/%m/%Y %H:%M')
+        end
+
+        return @args[:value] 
       end
 
   end
