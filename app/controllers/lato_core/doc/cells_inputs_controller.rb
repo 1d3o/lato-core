@@ -29,5 +29,9 @@ module LatoCore
 
     end
 
+    def editor
+
+    end
+
   end
 end

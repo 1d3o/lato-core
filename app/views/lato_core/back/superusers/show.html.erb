@@ -42,7 +42,7 @@
 
       <%=raw table_body.open %>
 
-        <%=raw cell(:elements, :table, :row).new(labels: [LANGUAGES[:lato_core][:forms][:last_login_datetime], @superuser.last_login_datetime]) %>
+        <%=raw cell(:elements, :table, :row).new(labels: [LANGUAGES[:lato_core][:forms][:last_login_datetime], @superuser.get_pretty_last_login_datetime]) %>
 
         <%=raw cell(:elements, :table, :row).new(labels: [LANGUAGES[:lato_core][:forms][:last_login_ip_address], @superuser.last_login_ip_address]) %>
 

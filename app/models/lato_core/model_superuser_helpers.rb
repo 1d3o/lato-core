@@ -21,7 +21,7 @@ module LatoCore
 
     # This function return a pretty string about the last login of the user.
     def get_pretty_last_login_datetime
-      # TODO
+      return self.last_login_datetime.strftime('%d/%m/%Y %H:%M') if self.last_login_datetime
     end
 
   end
