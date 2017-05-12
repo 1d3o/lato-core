@@ -12,6 +12,10 @@ var Inputs = (function () {
     })
   }
 
+  function editorStyle () {
+    $('.inputs__input--editor').trumbowyg();
+  }
+
   // Validations:
 
   function formInputsValidator () {
@@ -94,10 +98,18 @@ var Inputs = (function () {
     }
   }
 
+  // Init:
+
+  function init () {
+    selectsStyle()
+    datetimeStyle()
+    formInputsValidator()
+    editorStyle()
+  }
+
+
   return {
-    selectsStyle,
-    datetimeStyle,
-    formInputsValidator
+    init
   }
 
 })()

@@ -1,0 +1,14 @@
+<div class="inputs-editor inputs__container <%= @args[:class] %>">
+
+  <%= render '../../shared/label.html' %>
+
+  <input
+    class="inputs__input inputs__input--editor"
+    type="text"
+    value="<%= @args[:value] %>"
+    name="<%= @args[:name] %>"
+  />
+
+  <%= render '../../shared/help.html' %>
+  
+</div>

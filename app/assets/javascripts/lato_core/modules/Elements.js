@@ -1,6 +1,6 @@
 var Elements = (function () {
 
-  function flashCloseButton() {
+  function flashCloseButton () {
     $('.elements-flash__close-button').click(function (e) {
       var flash = $(this).parent()
       flash.addClass('elements-flash--hidden')
@@ -8,7 +8,7 @@ var Elements = (function () {
     })
   }
 
-  function tableHeadFixed() {
+  function tableHeadFixed () {
     var table = $('.elements-table--fixed .elements-table__table')
     table.floatThead({
       scrollContainer: function(table) {
@@ -17,7 +17,7 @@ var Elements = (function () {
     })
   }
 
-  function buttonConfirmation() {
+  function buttonConfirmation () {
     var button = $('.elements-button__element')
     button.click(function(e) {
       if ($(this).attr('data-confirmation') && $(this).attr('data-confirmation') === 'true') {
@@ -38,10 +38,16 @@ var Elements = (function () {
     })
   }
 
+  // Init:
+
+  function init () {
+    flashCloseButton()
+    tableHeadFixed()
+    buttonConfirmation()
+  }
+
   return {
-    flashCloseButton,
-    tableHeadFixed,
-    buttonConfirmation
+    init
   }
 
 })()

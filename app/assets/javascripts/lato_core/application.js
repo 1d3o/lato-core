@@ -16,14 +16,7 @@
 //= require_tree ./modules
 
 $(document).ready(function () {
-  Layout.toggleProfileMenu()
-  Layout.toggleWidget()
-
-  Elements.flashCloseButton()
-  Elements.tableHeadFixed()
-  Elements.buttonConfirmation()
-  
-  Inputs.formInputsValidator()
-  Inputs.selectsStyle()
-  Inputs.datetimeStyle()
+  Layout.init()
+  Elements.init()
+  Inputs.init()
 })

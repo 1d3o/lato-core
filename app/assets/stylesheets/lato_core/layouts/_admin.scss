@@ -286,6 +286,12 @@
   padding: 15px;
 }
 
+// Others:
+
+.layout-admin__dynamic-data-to-js-container {
+  display: none;
+}
+
 // Responsive layout:
 
 @media(max-width:767px) {

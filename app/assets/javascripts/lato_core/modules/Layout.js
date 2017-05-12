@@ -1,6 +1,6 @@
 var Layout = (function () {
 
-  function toggleProfileMenu() {
+  function toggleProfileMenu () {
     $('.layout-admin__profile-container').click(function () {
       // close header widgets
       $('.layout-admin__widget-container').removeClass('layout-admin__widget-container--active')
@@ -9,7 +9,7 @@ var Layout = (function () {
     })
   }
 
-  function toggleWidget() {
+  function toggleWidget () {
     $('.layout-admin__widget-button').click(function (e) {
       var widgetContainer = $(this).parent()
       // close profile menu
@@ -25,9 +25,15 @@ var Layout = (function () {
     })
   }
 
+  // Init:
+
+  function init () {
+    toggleProfileMenu()
+    toggleWidget()
+  }
+
   return {
-    toggleProfileMenu,
-    toggleWidget
+    init
   }
 
 })()
