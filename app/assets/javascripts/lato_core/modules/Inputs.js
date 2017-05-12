@@ -2,8 +2,14 @@ var Inputs = (function () {
 
   // Init plugins:
 
-  function selectsStyle() {
+  function selectsStyle () {
     $('.inputs__select').selectize()
+  }
+
+  function datetimeStyle () {
+    $('.inputs__input--datetime').datetimepicker({
+      format:'d/m/Y H:i'
+    })
   }
 
   // Validations:
@@ -90,6 +96,7 @@ var Inputs = (function () {
 
   return {
     selectsStyle,
+    datetimeStyle,
     formInputsValidator
   }
 

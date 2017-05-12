@@ -25,5 +25,9 @@ module LatoCore
 
     end
 
+    def datetime
+
+    end
+
   end
 end

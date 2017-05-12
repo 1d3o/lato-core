@@ -23,6 +23,7 @@ namespace :doc do
   get 'cells_inputs_email', to: 'cells_inputs#email', as: 'cells_inputs_email'
   get 'cells_inputs_select', to: 'cells_inputs#select', as: 'cells_inputs_select'
   get 'cells_inputs_textarea', to: 'cells_inputs#textarea', as: 'cells_inputs_textarea'
+  get 'cells_inputs_datetime', to: 'cells_inputs#datetime', as: 'cells_inputs_datetime'
 
   # cells widgets
   get 'cells_widgets_index', to: 'cells_widgets#index', as: 'cells_widgets_index'

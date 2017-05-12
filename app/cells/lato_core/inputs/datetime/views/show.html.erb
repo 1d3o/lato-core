@@ -1,0 +1,16 @@
+<div class="inputs-datetime inputs__container <%= @args[:class] %>">
+
+  <%= render '../../shared/label.html' %>
+
+  <input
+    class="inputs__input inputs__input--datetime"
+    type="text"
+    value="<%= @value %>"
+    name="<%= @args[:name] %>"
+    placeholder="<%= @args[:placeholder] %>"
+    data-required="<%= @args[:required] %>"
+  />
+
+  <%= render '../../shared/help.html' %>
+  
+</div>

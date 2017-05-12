@@ -1,0 +1,23 @@
+.inputs-datetime {
+
+}
+
+// plugin style
+.xdsoft_datetimepicker {
+  border: 1px solid $input_color_border;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  .xdsoft_current {
+    background-color: $color_main !important;
+    box-shadow: none !important;
+  }
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td:hover, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
+  background: lighten($color_main, 20) !important;
+}
+
+.xdsoft_datetimepicker .xdsoft_calendar td:hover, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
+  background: lighten($color_main, 20) !important;
+}

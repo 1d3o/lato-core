@@ -1,3 +1,47 @@
 .inputs-select {
   
+  .inputs__select {
+    .selectize-input {
+      border-radius: 0;
+      box-shadow: none;
+      border: 1px solid $input_color_border;
+      padding: 5px 12px;
+      outline: 0;
+      transition: all 0.25s;
+
+      &:focus {
+        border-color: $color_main;
+      }
+
+      &.focus {
+        box-shadow: none !important;
+        border-color: $color_main;
+      }
+    }
+
+    .dropdown-active {
+      border-radius: 0 !important;
+    }
+
+    .selectize-dropdown  {
+      box-shadow: none;
+      border: 1px solid $input_color_border;
+      border-top: none;
+
+      .option:hover, .option.selected:hover {
+        background: darken($input_color_background, 5);
+      }
+
+      .option.selected {
+        background: $input_color_background;
+      }
+    }
+  }
+
+  .inputs__select--error {
+    .selectize-input {
+      border-color: $input_color_border_error;
+    }
+  }
+
 }

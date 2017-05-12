@@ -25,4 +25,5 @@ $(document).ready(function () {
   
   Inputs.formInputsValidator()
   Inputs.selectsStyle()
+  Inputs.datetimeStyle()
 })

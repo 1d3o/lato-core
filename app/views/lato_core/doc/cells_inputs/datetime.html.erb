@@ -1,0 +1,178 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+  form = cell(:inputs, :form).new(url: '#', method: 'get')
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Cells Inputs: Datetime') %>
+
+    <p>A Datetime is a input used to set a datetime value.</p>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Normal Datetime input', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell(:inputs, :datetime).new(name: 'sample', label: 'Insert the date time') %>
+
+      <%=raw row.close %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :datetime).new(name: 'sample', label: 'Insert the date time') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Datetime with default value', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell(:inputs, :datetime).new(name: 'sample', label: 'Insert the date time', value: DateTime.new(2001,2,3,4,5,6)) %>
+
+      <%=raw row.close %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :datetime).new(name: 'sample', label: 'Insert the date time', value: DateTime.new(2001,2,3,4,5,6)) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Datetime with placeholder', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell(:inputs, :datetime).new(name: 'sample', label: 'Insert the date time', placeholder: 'Inser a date please!') %>
+
+      <%=raw row.close %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :datetime).new(name: 'sample', label: 'Insert the date time', placeholder: 'Inser a date please!') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Datetime required', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell(:inputs, :datetime).new(name: 'sample', label: 'Insert the date time', required: true) %>
+
+      <%=raw row.close %>
+
+      <%=raw cell(:elements, :button).new(type: 'submit', label: 'Submit') %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :datetime).new(name: 'sample', label: 'Insert the date time', required: true) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
