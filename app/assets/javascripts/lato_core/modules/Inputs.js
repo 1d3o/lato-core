@@ -13,7 +13,9 @@ var Inputs = (function () {
   }
 
   function editorStyle () {
-    $('.inputs__input--editor').trumbowyg();
+    $('.inputs__editor').trumbowyg({
+      svgPath: $('#ddtj__editor-icons-path').html()
+    });
   }
 
   // Validations:

@@ -2,12 +2,10 @@
 
   <%= render '../../shared/label.html' %>
 
-  <input
-    class="inputs__input inputs__input--editor"
-    type="text"
-    value="<%= @args[:value] %>"
+  <textarea
+    class="inputs__editor"
     name="<%= @args[:name] %>"
-  />
+  /><%= @args[:value] %></textarea>
 
   <%= render '../../shared/help.html' %>
   
