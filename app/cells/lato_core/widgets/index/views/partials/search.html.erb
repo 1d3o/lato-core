@@ -1,6 +1,10 @@
 <div class="widgets-index__search">
 
   <%= @search_form.open %>
+
+    <% @search_params.each do |key, value| %>
+      <input type="hidden" name="<%= key %>" value="<%= value %>">
+    <% end %>
   
     <%= @search_input.show %>
 

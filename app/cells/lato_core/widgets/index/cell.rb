@@ -51,6 +51,7 @@ module LatoCore
         @search_form = generate_search_form if @show_search
         @search_input = generate_search_input if @show_search
         @search_submit = generate_search_submit if @show_search
+        @search_params = generate_search_params if @show_search
         # generate action components
         @action_new_button = generate_new_button if @show_new_action
         # generate pagination components
@@ -185,6 +186,11 @@ module LatoCore
       # This function generate the search submit button.
       def generate_search_submit
         return LatoCore::Elements::Button::Cell.new(label: ' ', icon: 'search', type: 'submit', icon_align: 'right')
+      end
+
+      # This function generate a list of params the need to be set on the search form.
+      def generate_search_params
+        return Rack::Utils.parse_query URI(@args[:index_url]).query
       end
 
       # Pagination generation:
