@@ -192,7 +192,7 @@ module LatoCore
       def generate_pagination
         total_records = @args[:records].is_a?(Hash) ? @args[:records][:total] : @args[:records].length
         total_records_per_page = @args[:records].is_a?(Hash) ? @args[:records][:per_page] : @args[:records].length
-        total_pages = total_records / total_records_per_page
+        total_pages = (total_records.to_f / total_records_per_page.to_f).ceil
         current_page = @args[:records].is_a?(Hash) ? @args[:records][:pagination] : 1
         search_value = @args[:records].is_a?(Hash) ? @args[:records][:search] : ''
         url = "#{@args[:index_url]}?widget_index[search]=#{search_value}&"
