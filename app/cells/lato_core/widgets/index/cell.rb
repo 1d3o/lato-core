@@ -41,20 +41,20 @@ module LatoCore
         @show_row_actions_class = @show_row_actions ? 'widgets-index--actions' : ''
         @show_search = @args[:index_url] && @args[:search]
         @show_pagiantion = @args[:index_url] && @args[:pagination]
-        @show_new_action = @args[:actions] && @args[:actions][:new]
+        @show_new_action = @args[:index_url] && @args[:actions] && @args[:actions][:new]
         # generate table components
         @table = generate_table
         @table_head = generate_table_head
         @table_body = generate_table_body
         @table_rows = generate_table_rows
         # generate search components
-        @search_form = generate_search_form
-        @search_input = generate_search_input
-        @search_submit = generate_search_submit
+        @search_form = generate_search_form if @show_search
+        @search_input = generate_search_input if @show_search
+        @search_submit = generate_search_submit if @show_search
         # generate action components
-        @action_new_button = generate_new_button
+        @action_new_button = generate_new_button if @show_new_action
         # generate pagination components
-        @pagination = generate_pagination
+        @pagination = generate_pagination if @show_pagiantion
       end
 
       # Table generation:
@@ -137,21 +137,21 @@ module LatoCore
       # This function generate the show button for a record.
       def generate_show_button record_id
         return unless @args[:index_url]
-        url = @args[:index_url].end_with?('/') ? "#{@args[:index_url]}#{record_id}" : "#{@args[:index_url]}/#{record_id}"
+        url = @args[:index_url].end_with?('/') ? "#{@args[:index_url].gsub(/\?.*/, '')}#{record_id}" : "#{@args[:index_url].gsub(/\?.*/, '')}/#{record_id}"
         return LatoCore::Elements::Button::Cell.new(label: LANGUAGES[:lato_core][:mixed][:show], url: url, style: 'info', icon: 'eye')
       end
       
       # This function generate the edit button for a record.
       def generate_edit_button record_id
         return unless @args[:index_url]
-        url = @args[:index_url].end_with?('/') ? "#{@args[:index_url]}#{record_id}/edit" : "#{@args[:index_url]}/#{record_id}/edit"
+        url = @args[:index_url].end_with?('/') ? "#{@args[:index_url].gsub(/\?.*/, '')}#{record_id}/edit" : "#{@args[:index_url].gsub(/\?.*/, '')}/#{record_id}/edit"
         return LatoCore::Elements::Button::Cell.new(label: LANGUAGES[:lato_core][:mixed][:edit], url: url, style: 'warning', icon: 'pencil')
       end
       
       # This function generate the delete button for a record.
       def generate_delete_button record_id
         return unless @args[:index_url]
-        url = @args[:index_url].end_with?('/') ? "#{@args[:index_url]}#{record_id}" : "#{@args[:index_url]}/#{record_id}"
+        url = @args[:index_url].end_with?('/') ? "#{@args[:index_url].gsub(/\?.*/, '')}#{record_id}" : "#{@args[:index_url].gsub(/\?.*/, '')}/#{record_id}"
         return LatoCore::Elements::Button::Cell.new(label: LANGUAGES[:lato_core][:mixed][:delete], url: url, method: 'delete',
         icon: 'trash', style: 'danger', confirmation: {
           message: LANGUAGES[:lato_core][:mixed][:default_delete_message],
@@ -163,7 +163,7 @@ module LatoCore
       # This function generate new button.
       def generate_new_button
         return unless @args[:index_url]
-        url = "#{@args[:index_url]}/new"
+        url = "#{@args[:index_url].gsub(/\?.*/, '')}/new"
         return LatoCore::Elements::Button::Cell.new(label: LANGUAGES[:lato_core][:mixed][:new],
         url: url, icon: 'plus')
       end
@@ -195,7 +195,8 @@ module LatoCore
         total_pages = (total_records.to_f / total_records_per_page.to_f).ceil
         current_page = @args[:records].is_a?(Hash) ? @args[:records][:pagination] : 1
         search_value = @args[:records].is_a?(Hash) ? @args[:records][:search] : ''
-        url = "#{@args[:index_url]}?widget_index[search]=#{search_value}&"
+
+        url = core__add_param_to_url(@args[:index_url], 'widget_index[search]', search_value)
         return LatoCore::Elements::Pagination::Cell.new(total: total_pages, current: current_page, url: url,
         param: 'widget_index[pagination]')
       end

@@ -52,11 +52,7 @@ module LatoCore
 
       # This function generate the link to go to a specific page number
       def generate_page_link page_number
-        if @args[:url][-1] === '&'
-          return "#{@args[:url]}#{@args[:param]}=#{page_number}"
-        else
-          "#{@args[:url]}?#{@args[:param]}=#{page_number}"
-        end
+        return core__add_param_to_url(@args[:url], @args[:param], page_number)
       end
 
   end

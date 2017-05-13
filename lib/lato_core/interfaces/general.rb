@@ -28,6 +28,14 @@ module LatoCore
       return array[start, per_page]
     end
 
+    # This function add a new GET param to an url string.
+    def core__add_param_to_url url, param_name, param_value
+      uri = URI(url)
+      params = URI.decode_www_form(uri.query || "") << [param_name, param_value]
+      uri.query = URI.encode_www_form(params)
+      return uri.to_s
+    end
+
   end
 
 end
