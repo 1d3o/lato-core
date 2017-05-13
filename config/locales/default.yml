@@ -3,7 +3,7 @@ menu:
   superusers: Superusers
   superusers_new: Add new
   superusers_index: Show all
-  documentation: Documentation
+  documentation: Doc. Core
 
 forms:
   username: Username
