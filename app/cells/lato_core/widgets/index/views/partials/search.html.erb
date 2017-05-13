@@ -2,9 +2,11 @@
 
   <%= @search_form.open %>
 
+    <!-- MANTAIN OLD PARAMS -->
     <% @search_params.each do |key, value| %>
       <input type="hidden" name="<%= key %>" value="<%= value %>">
     <% end %>
+    <!-- / MANTAIN OLD PARAMS -->
   
     <%= @search_input.show %>
 
