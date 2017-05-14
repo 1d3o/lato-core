@@ -1,0 +1,49 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'General: Installation') %>
+
+    <p>Install Lato Core is simple. First of all you need to add the gem on your gemfile:</p>
+
+<%=raw code.open %>
+
+gem 'lato_core', git: 'https://github.com/ideonetwork/lato-core'
+
+<%=raw code.close %>
+
+    <p>Install the gem with bundle:</p>
+
+<%=raw code.open %>
+
+$> bundle install
+
+<%=raw code.close %>
+
+    <p>Copy the Lato Core migrations on your application:</p>
+
+<%=raw code.open %>
+
+$> rails lato_core:install:migrations
+
+<%=raw code.close %>
+
+    <p>Run the migrations:</p>
+
+<%=raw code.open %>
+
+$> bundle exec rake db:migrate
+
+<%=raw code.close %>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->

@@ -2,6 +2,9 @@ namespace :doc do
 
   root 'doc#index'
 
+  # general
+  get 'general_installation', to: 'general#installation', as: 'general_installation'
+
   # cells elements
   get 'cells_elements_row', to: 'cells_elements#row', as: 'cells_elements_row'
   get 'cells_elements_block', to: 'cells_elements#block', as: 'cells_elements_block'

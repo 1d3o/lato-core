@@ -1,3 +1,5 @@
+# TODO: Write the component in a better way.
+
 module LatoCore
 
   class Widgets::Index::Cell < Cell
