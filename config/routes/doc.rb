@@ -4,6 +4,7 @@ namespace :doc do
 
   # general
   get 'general_installation', to: 'general#installation', as: 'general_installation'
+  get 'general_personalization', to: 'general#personalization', as: 'general_personalization'
 
   # cells elements
   get 'cells_elements_row', to: 'cells_elements#row', as: 'cells_elements_row'

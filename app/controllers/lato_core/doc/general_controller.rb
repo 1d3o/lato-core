@@ -5,5 +5,9 @@ module LatoCore
 
     end
 
+    def personalization
+
+    end
+
   end
 end
