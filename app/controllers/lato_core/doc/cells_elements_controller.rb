@@ -1,53 +1,29 @@
 module LatoCore
   class Doc::CellsElementsController < Doc::DocController
 
-    def block
+    def block; end
 
-    end
+    def row; end
 
-    def row
+    def button; end
 
-    end
+    def buttongroup; end
 
-    def button
+    def flash_messages; end
 
-    end
+    def icon; end
 
-    def buttongroup
+    def title; end
 
-    end
+    def table; end
 
-    def flash_messages
+    def table_head; end
 
-    end
+    def table_body; end
 
-    def icon
+    def table_row; end
 
-    end
-
-    def title
-
-    end
-
-    def table
-
-    end
-
-    def table_head
-
-    end
-
-    def table_body
-
-    end
-
-    def table_row
-
-    end
-
-    def pagination
-
-    end
+    def pagination; end
     
   end
 end

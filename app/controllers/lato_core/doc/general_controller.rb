@@ -1,13 +1,9 @@
 module LatoCore
   class Doc::GeneralController < Doc::DocController
 
-    def installation
+    def installation; end
 
-    end
-
-    def personalization
-
-    end
+    def personalization; end
 
   end
 end

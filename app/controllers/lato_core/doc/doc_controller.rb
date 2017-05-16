@@ -10,9 +10,7 @@ module LatoCore
       core__set_header_active_page_title(LANGUAGES[:lato_core][:pages][:documentation])
     end
 
-    def index
-
-    end
+    def index; end
 
   end
 end

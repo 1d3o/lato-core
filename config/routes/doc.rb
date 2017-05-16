@@ -28,6 +28,7 @@ namespace :doc do
   get 'cells_inputs_select', to: 'cells_inputs#select', as: 'cells_inputs_select'
   get 'cells_inputs_textarea', to: 'cells_inputs#textarea', as: 'cells_inputs_textarea'
   get 'cells_inputs_datetime', to: 'cells_inputs#datetime', as: 'cells_inputs_datetime'
+  get 'cells_inputs_checkbox', to: 'cells_inputs#checkbox', as: 'cells_inputs_checkbox'
   get 'cells_inputs_editor', to: 'cells_inputs#editor', as: 'cells_inputs_editor'
 
   # cells widgets

@@ -1,37 +1,23 @@
 module LatoCore
   class Doc::CellsInputsController < Doc::DocController
 
-    def form
+    def form; end
 
-    end
+    def text; end
 
-    def text
+    def password; end
 
-    end
+    def email; end
 
-    def password
+    def select; end
 
-    end
+    def textarea; end
 
-    def email
+    def datetime; end
 
-    end
+    def checkbox; end
 
-    def select
-
-    end
-
-    def textarea
-
-    end
-
-    def datetime
-
-    end
-
-    def editor
-
-    end
+    def editor; end
 
   end
 end
