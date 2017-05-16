@@ -1,7 +1,7 @@
 module LatoCore
   class Superuser < ActiveRecord::Base
 
-    include ModelSuperuserHelpers
+    include Superuser::EntityHelpers
 
     has_secure_password
 
