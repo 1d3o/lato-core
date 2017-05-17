@@ -143,14 +143,14 @@ module LatoCore
         url = @args[:index_url].end_with?('/') ? "#{@args[:index_url].gsub(/\?.*/, '')}#{record_id}" : "#{@args[:index_url].gsub(/\?.*/, '')}/#{record_id}"
         return LatoCore::Elements::Button::Cell.new(label: LANGUAGES[:lato_core][:mixed][:show], url: url, style: 'info', icon: 'eye')
       end
-      
+
       # This function generate the edit button for a record.
       def generate_edit_button record_id
         return unless @args[:index_url]
         url = @args[:index_url].end_with?('/') ? "#{@args[:index_url].gsub(/\?.*/, '')}#{record_id}/edit" : "#{@args[:index_url].gsub(/\?.*/, '')}/#{record_id}/edit"
         return LatoCore::Elements::Button::Cell.new(label: LANGUAGES[:lato_core][:mixed][:edit], url: url, style: 'warning', icon: 'pencil')
       end
-      
+
       # This function generate the delete button for a record.
       def generate_delete_button record_id
         return unless @args[:index_url]
