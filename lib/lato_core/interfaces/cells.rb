@@ -2,7 +2,7 @@ module LatoCore
 
   # This module contains a list of functions used by controllers to interact with widgets
   # cells.
-  module Interface::Widgets
+  module Interface::Cells
 
     # This function manage the widget index from front end.
     def core__widgets_index records, search: nil, pagination: 50

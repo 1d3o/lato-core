@@ -19,8 +19,8 @@ module LatoCore
     require 'lato_core/interfaces/authentication'
     include LatoCore::Interface::Authentication
 
-    require 'lato_core/interfaces/widgets'
-    include LatoCore::Interface::Widgets
+    require 'lato_core/interfaces/cells'
+    include LatoCore::Interface::Cells
 
   end
 end
