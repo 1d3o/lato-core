@@ -29,23 +29,23 @@ module LatoCore
 
     private
 
-      def set_conditions
-        @show_label = !@args[:label].nil? && !@args[:label].blank?
-        @show_help = !@args[:help].nil? && !@args[:help].blank?
+    def set_conditions
+      @show_label = !@args[:label].nil? && !@args[:label].blank?
+      @show_help = !@args[:help].nil? && !@args[:help].blank?
 
-        @value = generate_value
+      @value = generate_value
+    end
+
+    # This function generate the value for the input if it is possible.
+    def generate_value
+      return unless @args[:value]
+
+      if @args[:value].is_a?(DateTime) || @args[:value].is_a?(Time)
+        return @args[:value].strftime('%d/%m/%Y %H:%M')
       end
 
-      # This function generate the value for the input if it is possible.
-      def generate_value
-        return if !@args[:value]
-
-        if @args[:value].is_a?(DateTime) || @args[:value].is_a?(Time)
-          return @args[:value].strftime('%d/%m/%Y %H:%M')
-        end
-
-        return @args[:value] 
-      end
+      @args[:value]
+    end
 
   end
 

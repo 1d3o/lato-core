@@ -1,6 +1,6 @@
 module LatoCore
 
-  class Inputs::Text::Cell < Cell
+  class Inputs::Checkbox::Cell < Cell
 
     @@requested_args = [:name]
 
@@ -28,10 +28,10 @@ module LatoCore
 
     private
 
-      def set_conditions
-        @show_label = !@args[:label].nil? && !@args[:label].blank?
-        @show_help = !@args[:help].nil? && !@args[:help].blank?
-      end
+    def set_conditions
+      @show_label = !@args[:label].nil? && !@args[:label].blank?
+      @show_help = !@args[:help].nil? && !@args[:help].blank?
+    end
 
   end
 
