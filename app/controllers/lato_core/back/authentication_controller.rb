@@ -35,13 +35,13 @@ module LatoCore
 
       private
 
-        def check_superuser_exist
-          unless @superuser
-            flash[:danger] = LANGUAGES[:lato_core][:flashes][:user_not_found]
-            redirect_to lato_core.login_path
-            return false
-          end
-        end
+      def check_superuser_exist
+        return true if @superuser
+
+        flash[:danger] = LANGUAGES[:lato_core][:flashes][:user_not_found]
+        redirect_to lato_core.login_path
+        false
+      end
 
     end
   end
