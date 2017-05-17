@@ -1,5 +1,5 @@
 # Style
-Rails.application.config.assets.precompile += %w( lato_core/application.css )
+Rails.application.config.assets.precompile += %w( lato_core/application.scss )
 # Javascript
 Rails.application.config.assets.precompile += %w( lato_core/application.js )
 # Images

@@ -20,14 +20,14 @@ LAYOUT = {
 # Set global core variables:
 
 # set variables to get the list of possible permissions values
-superusers_permissions_list = CONFIGS[:lato_core][:superusers_permissions].values.map{|x| x[:value]}
+superusers_permissions_list = CONFIGS[:lato_core][:superusers_permissions].values.map{ |x| x[:value] }
 CORE_SUPERUSERS_PERMISSIONS = superusers_permissions_list.sort.reverse
 
 # Create first default system user:
 
 # create first superuser if not other superusers are on system.
 if ActiveRecord::Base.connection.table_exists? 'lato_core_superusers'
-  if LatoCore::Superuser.all.length < 1
+  if LatoCore::Superuser.all.empty?
     user_params = CONFIGS[:lato_core][:default_superuser]
     user_params[:password_confirmation] = user_params[:password]
     user_params[:permission] = CORE_SUPERUSERS_PERMISSIONS.first
