@@ -23,6 +23,7 @@ namespace :doc do
   # cells inputs
   get 'cells_inputs_form', to: 'cells_inputs#form', as: 'cells_inputs_form'
   get 'cells_inputs_text', to: 'cells_inputs#text', as: 'cells_inputs_text'
+  get 'cells_inputs_number', to: 'cells_inputs#number', as: 'cells_inputs_number'
   get 'cells_inputs_password', to: 'cells_inputs#password', as: 'cells_inputs_password'
   get 'cells_inputs_email', to: 'cells_inputs#email', as: 'cells_inputs_email'
   get 'cells_inputs_select', to: 'cells_inputs#select', as: 'cells_inputs_select'

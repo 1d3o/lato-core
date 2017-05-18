@@ -5,6 +5,8 @@ module LatoCore
 
     def text; end
 
+    def number; end
+
     def password; end
 
     def email; end

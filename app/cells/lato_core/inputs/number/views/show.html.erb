@@ -1,0 +1,21 @@
+<div class="inputs-number inputs__container <%= @args[:class] %>">
+
+  <%= render '../../shared/label.html' %>
+
+  <input
+    class="inputs__input"
+    type="number"
+    value="<%= @args[:value] %>"
+    name="<%= @args[:name] %>"
+    placeholder="<%= @args[:placeholder] %>"
+    data-required="<%= @args[:required] %>"
+    
+    min="<%= @args[:min] %>"
+    max="<%= @args[:max] %>"
+    maxlength="<%= @args[:max_length] %>"
+    step="<%= @args[:step] %>"
+  />
+
+  <%= render '../../shared/help.html' %>
+  
+</div>

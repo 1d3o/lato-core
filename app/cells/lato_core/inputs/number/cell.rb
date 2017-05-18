@@ -1,6 +1,6 @@
 module LatoCore
 
-  class Inputs::Text::Cell < Cell
+  class Inputs::Number::Cell < Cell
 
     @@requested_args = [:name]
 
@@ -10,8 +10,10 @@ module LatoCore
       placeholder: '',
       help: '',
       required: false,
-      min_length: nil,
+      min: nil,
+      max: nil,
       max_length: nil,
+      step: 1,
       class: 'md-12'
     }
 
