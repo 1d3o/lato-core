@@ -7,7 +7,7 @@ module LatoCore
     # This function must be executed before every action and set metadata
     # used by cells.
     def core__cells_initialize
-      @core__authenticity_token = form_authenticity_token
+      @core__cells_authenticity_token = form_authenticity_token
     end
 
     # This function manage the widget index from front end.
