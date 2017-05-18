@@ -4,5 +4,6 @@
   method="<%= @form_method %>"
 >
 
-<input name="utf8" type="hidden" value="✓">
+<input type="hidden" name="utf8" value="✓">
+<input type="hidden" name="authenticity_token" value="<%= @core__authenticity_token %>">
 <input type="hidden" name="_method" value="<%= @args[:method] %>">

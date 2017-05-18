@@ -3,6 +3,7 @@ module LatoCore
 
     layout 'lato_core/admin'
 
+    before_action :core__cells_initialize
     before_action :core__manage_superuser_session
 
     before_action do

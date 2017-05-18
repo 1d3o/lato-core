@@ -4,8 +4,14 @@ module LatoCore
   # cells.
   module Interface::Cells
 
+    # This function must be executed before every action and set metadata
+    # used by cells.
+    def core__cells_initialize
+      @core__authenticity_token = form_authenticity_token
+    end
+
     # This function manage the widget index from front end.
-    def core__widgets_index records, search: nil, pagination: 50
+    def core__widgets_index(records, search: nil, pagination: 50)
       response = {
         records: records,
         total: records.length,
@@ -27,7 +33,7 @@ module LatoCore
         response[:records] = core__paginate_array(response[:records], pagination, response[:pagination])
       end
       # return response
-      return response
+      response
     end
 
   end
