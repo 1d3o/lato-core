@@ -110,7 +110,7 @@ var Inputs = (function () {
 
 
   return {
-    init
+    init: init
   }
 
 })()

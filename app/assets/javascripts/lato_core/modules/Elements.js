@@ -47,7 +47,8 @@ var Elements = (function () {
   }
 
   return {
-    init
+    init: init
   }
 
 })()
+

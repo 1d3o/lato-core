@@ -33,7 +33,7 @@ var Layout = (function () {
   }
 
   return {
-    init
+    init: init
   }
 
 })()
