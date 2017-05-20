@@ -11,15 +11,15 @@ var Elements = (function () {
   function tableHeadFixed () {
     var table = $('.elements-table--fixed .elements-table__table')
     table.floatThead({
-      scrollContainer: function(table) {
-          return table.closest('.elements-table--fixed')
+      scrollContainer: function (table) {
+        return table.closest('.elements-table--fixed')
       }
     })
   }
 
   function buttonConfirmation () {
     var button = $('.elements-button__element')
-    button.click(function(e) {
+    button.click(function (e) {
       if ($(this).attr('data-confirmation') && $(this).attr('data-confirmation') === 'true') {
         var confirmation = $(this).parent().find('.elements-button__confirmation')
 
@@ -32,7 +32,7 @@ var Elements = (function () {
           $(confirmation).removeClass('elements-button__confirmation--active')
           e.preventDefault()
         })
-        
+
         e.preventDefault()
       }
     })

@@ -8,7 +8,7 @@ var Inputs = (function () {
 
   function datetimeStyle () {
     $('.inputs__input--datetime').datetimepicker({
-      format:'d/m/Y H:i'
+      format: 'd/m/Y H:i'
     })
   }
 
@@ -51,7 +51,6 @@ var Inputs = (function () {
   }
 
   function validateInputRequired (input) {
-
     var inputValue = $(input).val()
     if (inputValue === null || inputValue === '' || inputValue === ' ') {
       addInputErrorStyle(input)

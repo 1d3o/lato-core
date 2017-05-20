@@ -1,17 +1,14 @@
 <div class="inputs-checkbox inputs__container <%= @args[:class] %>">
 
-  <%= render '../../shared/label.html' %>
+  <input type="hidden" name="<%= @args[:name] %>" value="0">
 
   <input
     class="inputs__input"
-    type="text"
+    type="checkbox"
     value="<%= @args[:value] %>"
     name="<%= @args[:name] %>"
-    placeholder="<%= @args[:placeholder] %>"
     data-required="<%= @args[:required] %>"
-    data-max-length="<%= @args[:max_length] %>"
-    data-min-length="<%= @args[:min_length] %>"
-  />
+  /><%= render '../../shared/label.html' %>
 
   <%= render '../../shared/help.html' %>
   
