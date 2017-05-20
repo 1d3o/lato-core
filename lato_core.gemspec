@@ -28,6 +28,10 @@ Gem::Specification.new do |s|
   # doc: https://github.com/lautis/uglifier
   s.add_dependency "uglifier", ">= 1.3.0"
 
+  # front-end -> javascript js race manager
+  # doc: https://github.com/cowboyd/therubyracer
+  s.add_dependency "therubyracer", ">= 0.12.2"
+
   # front-end -> use the old good jquery
   # doc: https://github.com/rails/jquery-rails
   s.add_dependency "jquery-rails", ">= 3.0.1"
