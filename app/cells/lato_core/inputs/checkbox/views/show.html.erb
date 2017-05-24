@@ -1,11 +1,11 @@
 <div class="inputs-checkbox inputs__container <%= @args[:class] %>">
 
-  <input type="hidden" name="<%= @args[:name] %>" value="0">
+  <input type="hidden" name="<%= @args[:name] %>" value="false">
 
   <input
     class="inputs__input"
     type="checkbox"
-    value="1"
+    value="true"
     name="<%= @args[:name] %>"
     data-required="<%= @args[:required] %>"
     <% if @args[:value] %>
