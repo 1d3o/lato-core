@@ -33,7 +33,9 @@ $> rails lato_load_configs
 
   <%=raw cell(:elements, :title).new(label: 'Menu', size: 4) %>
 
-  <p>The menu config is used to define the list of voices on the sidebar.</p>
+  <p>
+  The menu config is used to define the list of voices on the sidebar.
+  </p>
 
   <p>
   Every menu voice should have an icon, a title, a relative url, a position value, the minimum and
@@ -50,6 +52,83 @@ menu:
     position: 1
     permission_min: 0
     permission_max: 99
+
+<%=raw code.close %>
+
+  <p>
+  There is another optional option called "sub_items" for a menu voice used to set sub voices.
+  Every sub item should have a title, a relative url, the minimum and maximum level of user permissions to be showed.
+  </p>
+
+<%=raw code.open %>
+
+menu:
+  core_dashboard:
+    icon: tachometer
+    title: Dashboard
+    url: /lato/core/dashboard
+    position: 1
+    permission_min: 0
+    permission_max: 99
+    sub_items:
+      stat:
+        title: Stat
+        url: /lato/core/stat
+        permission_min: 0
+        permission_max: 99
+      other:
+        title: Other
+        url: /lato/core/other
+        permission_min: 0
+        permission_max: 99
+        
+<%=raw code.close %>
+
+  <p>
+  Sometimes you need to translate the title of a menu voice. You can set on the language file a list
+  of translations called "menu" and take one of its values on the menu configuration with a special title "translate[translation_key]".
+  </p>
+
+<%=raw code.open %>
+
+# configs yaml file
+
+menu:
+  core_dashboard:
+    icon: tachometer
+    title: translate[dashboard]
+    url: /lato/core/dashboard
+    position: 1
+    permission_min: 0
+    permission_max: 99
+
+# language yaml file
+
+menu:
+  dashboard: Dashboard
+
+<%=raw code.close %>
+
+  <%=raw cell(:elements, :title).new(label: 'Assets', size: 4) %>
+
+  <p>
+  The assets config is used to define the list of assets that the application should import on the main layout.
+  </p>
+
+  <p>
+  To add an assets file on the main layout you need to follow these instructions:
+  <ul>
+    <li>Require your assets on the file config/initializers/assets.rb</li>
+    <li>Add the assets on the configuration file.</li>
+  </ul>
+  </p>
+
+<%=raw code.open %>
+
+assets:
+  core_style:
+    path: lato_core/application # path of assets file
+    type: stylesheet # type of file (stylesheet / javascript)
 
 <%=raw code.close %>
 
