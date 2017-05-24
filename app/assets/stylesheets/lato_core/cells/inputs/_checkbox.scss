@@ -1,60 +1,43 @@
 .inputs-checkbox {
+  position: relative;
 
   .inputs__input {
     display: inline-block;
     width: auto;
     position: absolute;
     opacity: 0;
-    z-index: -1;
+    top: 4px;
+    left: 1px;
+    z-index: 1;
   }
 
   .inputs__label {
     display: inline-block;
 
-    &:after {
-      transform: scale(0);
-      content: "\2714";
-      color: #fff;
-      line-height: 1.5;
-      text-align: center;
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      border: solid 2px $color_main;
+      background-color: transparent;
+      position: relative;
+      top: 3px;
+      z-index: 0;
+      margin-right: 5px;
     }
   }
 
 }
 
+.inputs-checkbox .inputs__input:checked + .inputs__label {
+  &:before {
+    background-color: $color_main;
+  }
+}
 
-
-// .check, .radio {
-//   position: absolute;
-//   opacity: 0;
-//   z-index: -1;
-//   + .label-control:after {
-//     transform: scale(0);
-//   }
-//   &:checked {
-//     + .label-control:before {
-//       background: $form-control-checked-color;
-//       border-color: $form-control-checked-color;
-//     }
-//     + .label-control:after {
-//       transform: scale(1);
-//     }
-//   }
-//   &:disabled {
-//     + .label-control {
-//       color: mix($text-color, white, 50%);
-//       &:before {
-//         border-color: lighten($form-control-border-color, 10%);
-//       }
-//     }
-//   }
-// }
-
-// .check {
-//   + .label-control:after {
-//     content: "\2714";
-//     color: $form-control-checked-bg;
-//     line-height: 1.5;
-//     text-align: center;
-//   }
-// }
+.inputs-checkbox .inputs__input--error + .inputs__label {
+  &:before {
+    border-color: $input_color_border_error;
+  }
+}

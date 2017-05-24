@@ -12,7 +12,7 @@
 
     <%=raw cell(:elements, :title).new(label: 'Cells Inputs: Checkbox') %>
 
-    <p>TODO</p>
+    <p>A Checkbox is a simple input checkbox.</p>
 
   <%=raw block.close %>
 
@@ -32,8 +32,6 @@
 
         <%=raw cell(:inputs, :checkbox).new(name: 'sample', label: 'I accept to use Lato') %>
 
-        <p>TODO: Continue to develop</p>
-
       <%=raw row.close %>
 
     <%=raw form.close %>
@@ -41,3 +39,63 @@
   <%=raw block.close %>
 
 <%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :checkbox).new(name: 'sample', label: 'I accept to use Lato') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Checkbox input with some settings', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell(:inputs, :checkbox).new(name: 'sample', label: 'I accept to use Lato', value: true, help: 'Check this with a click', required: true) %>
+
+      <%=raw row.close %>
+
+      <%=raw cell(:elements, :button).new(type: 'submit', label: 'Submit') %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :checkbox).new(name: 'sample', label: 'I accept to use Lato', value: true, help: 'Check this with a click', required: true) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+

@@ -5,9 +5,12 @@
   <input
     class="inputs__input"
     type="checkbox"
-    value="<%= @args[:value] %>"
+    value="1"
     name="<%= @args[:name] %>"
     data-required="<%= @args[:required] %>"
+    <% if @args[:value] %>
+      checked
+    <% end %>
   /><%= render '../../shared/label.html' %>
 
   <%= render '../../shared/help.html' %>

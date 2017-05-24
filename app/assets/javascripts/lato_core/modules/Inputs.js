@@ -51,10 +51,18 @@ var Inputs = (function () {
   }
 
   function validateInputRequired (input) {
-    var inputValue = $(input).val()
-    if (inputValue === null || inputValue === '' || inputValue === ' ') {
-      addInputErrorStyle(input)
-      return false
+    if ($(input).is(':checkbox')) {
+      var inputChecked = $(input).is(':checked')
+      if (inputChecked === null || inputChecked === false) {
+        addInputErrorStyle(input)
+        return false
+      }
+    } else {
+      var inputValue = $(input).val()
+      if (inputValue === null || inputValue === '' || inputValue === ' ') {
+        addInputErrorStyle(input)
+        return false
+      }
     }
 
     return true
