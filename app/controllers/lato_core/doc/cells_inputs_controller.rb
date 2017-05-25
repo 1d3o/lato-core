@@ -21,5 +21,7 @@ module LatoCore
 
     def editor; end
 
+    def dropzone; end
+
   end
 end

@@ -18,6 +18,10 @@ var Inputs = (function () {
     });
   }
 
+  function dropzoneStyle () {
+    // TODO: Add configurations
+  }
+
   // Validations:
 
   function formInputsValidator () {
@@ -114,6 +118,7 @@ var Inputs = (function () {
     datetimeStyle()
     formInputsValidator()
     editorStyle()
+    dropzoneStyle()
   }
 
 

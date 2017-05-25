@@ -21,13 +21,13 @@ module LatoCore
         return
       end
     end
-    
+
     def new
       core__set_header_active_page_title(LANGUAGES[:lato_core][:pages][:superusers_new])
       @superuser = LatoCore::Superuser.new
       fetch_external_objects
     end
-    
+
     def create
       @superuser = LatoCore::Superuser.new(superuser_params)
 

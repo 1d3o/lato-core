@@ -1,10 +1,11 @@
 module LatoCore
 
-  class Inputs::Form::Cell < Cell
+  class Inputs::Dropzone::Cell < Cell
 
     @@requested_args = [:url]
+
     @@default_args = {
-      method: 'post'
+      input_name: 'file'
     }
 
     def initialize(args = {})
@@ -17,19 +18,13 @@ module LatoCore
       set_conditions
     end
 
-    def open
-      render 'open.html'
-    end
-
-    def close
-      render 'close.html'
+    def show
+      render 'show.html'
     end
 
     private
 
-      def set_conditions
-        @form_method = (@args[:method] === 'get' ? 'get' : 'post')
-      end
+    def set_conditions; end
 
   end
 
