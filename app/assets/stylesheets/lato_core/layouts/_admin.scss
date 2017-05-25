@@ -234,7 +234,6 @@
   display: inline-block;
   float: right;
   margin-top: 16px;
-  margin-right: 15px;
 }
 
 .layout-admin__widget-container {
@@ -246,7 +245,7 @@
 .layout-admin__widget-container--active {
 
   .layout-admin__widget-button {
-    color: $layout_admin_header_color_widget_icon_hover;
+    background-color: $layout_admin_header_color_widget_icon_background_hover;
   }
 
   .layout-admin__widget-content {
@@ -255,11 +254,21 @@
 }
 
 .layout-admin__widget-button {
-  font-size: 1.5em;
+  font-size: 1em;
   color: $layout_admin_header_color_widget_icon;
+  display: block;
+  background-color: $layout_admin_header_color_widget_icon_background;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: relative;
+
+  i {
+    @include centerElement(xy);
+  }
 
   &:hover {
-    color: $layout_admin_header_color_widget_icon_hover;
+    background-color: $layout_admin_header_color_widget_icon_background_hover;
   }
 }
 

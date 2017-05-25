@@ -39,8 +39,9 @@ $layout_admin_header_color_back_background: $color_main;
 $layout_admin_header_color_back_background_hover: darken($color_main, 10);
 $layout_admin_header_color_back_text: $color_white;
 
-$layout_admin_header_color_widget_icon: darken($color_clouds, 20);
-$layout_admin_header_color_widget_icon_hover: $color_main;
+$layout_admin_header_color_widget_icon_background: $color_main;
+$layout_admin_header_color_widget_icon: $color_white;
+$layout_admin_header_color_widget_icon_background_hover: darken($color_main, 10);
 
 $layout_admin_header_color_profile_menu_background: $color_white;
 $layout_admin_header_color_profile_menu_background_hover: $color_clouds;
