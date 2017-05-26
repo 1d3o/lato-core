@@ -32,6 +32,7 @@ namespace :doc do
   get 'cells_inputs_checkbox', to: 'cells_inputs#checkbox', as: 'cells_inputs_checkbox'
   get 'cells_inputs_editor', to: 'cells_inputs#editor', as: 'cells_inputs_editor'
   get 'cells_inputs_dropzone', to: 'cells_inputs#dropzone', as: 'cells_inputs_dropzone'
+  post 'cells_inputs_dropzone_exec', to: 'cells_inputs#dropzone_exec', as: 'cells_inputs_dropzone_exec'
 
   # cells widgets
   get 'cells_widgets_index', to: 'cells_widgets#index', as: 'cells_widgets_index'

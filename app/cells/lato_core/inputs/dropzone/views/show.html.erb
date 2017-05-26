@@ -1,5 +1,18 @@
-<form action="<%= @args[:url] %>" class="inputs__dropzone dropzone">
+<form
+  method="<%= @args[:method] %>"
+  action="<%= @args[:url] %>"
+  class="inputs__dropzone"
+  data-param-name="<%= @args[:param_name] %>"
+  data-max-size="<%= @args[:max_size] %>"
+  data-max-files="<%= @args[:max_files] %>"
+>
+
+  <input type="hidden" name="utf8" value="✓">
+  <input type="hidden" name="authenticity_token" value="<%= @core__cells_authenticity_token %>">
+  <input type="hidden" name="_method" value="<%= @args[:method] %>">
+  
   <div class="fallback">
-    <input name="<%= @args[:input_name] %>" type="file" multiple />
+    <input name="<%= @args[:param_name] %>" type="file" multiple />
   </div>
+
 </form>

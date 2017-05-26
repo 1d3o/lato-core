@@ -23,5 +23,7 @@ module LatoCore
 
     def dropzone; end
 
+    def dropzone_exec; end
+
   end
 end

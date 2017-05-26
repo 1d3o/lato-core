@@ -19,7 +19,16 @@ var Inputs = (function () {
   }
 
   function dropzoneStyle () {
-    // TODO: Add configurations
+    $('.inputs__dropzone').each(function () {
+      var paramName = $(this).attr('data-param-name')
+      var maxFilesize = $(this).attr('data-max-size')
+      var maxFiles = $(this).attr('data.max-files')
+      $(this).dropzone({
+        paramName: paramName,
+        maxFilesize: maxFilesize,
+        maxFiles: maxFiles
+      });
+    })
   }
 
   // Validations:

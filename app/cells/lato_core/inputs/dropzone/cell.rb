@@ -5,7 +5,10 @@ module LatoCore
     @@requested_args = [:url]
 
     @@default_args = {
-      input_name: 'file'
+      param_name: 'file',
+      max_size: 2, # MB
+      max_files: 99,
+      method: 'POST'
     }
 
     def initialize(args = {})
