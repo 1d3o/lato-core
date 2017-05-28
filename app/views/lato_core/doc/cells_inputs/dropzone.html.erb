@@ -49,3 +49,66 @@
 
 <%=raw row.close %>
 <!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Dropzone form with options', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:inputs, :dropzone).new(url: doc_cells_inputs_dropzone_exec_path, method: 'post',
+    max_size: 1, max_files: 5, label: 'Load a file', param_name: 'pippo') %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :dropzone).new(url: doc_cells_inputs_dropzone_exec_path, method: 'post',
+max_size: 1, max_files: 5, label: 'Load a file', param_name: 'pippo') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Server settings', size: 3) %>
+
+    <p>
+    The server should receive the files in an ayncronous way. To tells dropzone that there is an error on file loading
+    you need to return a 400 response with a JSON with an error key.
+    </p>
+
+<%=raw code.open %>
+
+@file = File.new(attachment: params[:file])
+
+unless @file.save
+  render json: { error: 'File can not be saved' }, status: 400
+  return
+end
+
+render json: {}, status: 200
+
+<%=raw code.close %>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->

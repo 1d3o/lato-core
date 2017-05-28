@@ -8,7 +8,7 @@ module LatoCore
       param_name: 'file',
       max_size: 2, # MB
       max_files: 99,
-      method: 'POST',
+      method: 'post',
       label: ''
     }
 
