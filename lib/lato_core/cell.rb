@@ -12,7 +12,7 @@ module LatoCore
     # This function is used from cells to validates arguments on constructor.
     def validate_args(args: {}, requested_args: [], default_args: {})
       requested_args.each do |requested_arg|
-        raise "ERROR" if args[requested_arg] === nil # TODO: Raise a better error
+        raise "Cell must have #{requested_arg} argument" if args[requested_arg] === nil
       end
 
       default_args.each do |key, value|
