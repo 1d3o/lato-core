@@ -8,7 +8,8 @@ module LatoCore
       param_name: 'file',
       max_size: 2, # MB
       max_files: 99,
-      method: 'POST'
+      method: 'POST',
+      label: ''
     }
 
     def initialize(args = {})
@@ -27,7 +28,9 @@ module LatoCore
 
     private
 
-    def set_conditions; end
+    def set_conditions
+      @show_label = !@args[:label].nil? && !@args[:label].blank?
+    end
 
   end
 

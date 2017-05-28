@@ -27,7 +27,7 @@ var Inputs = (function () {
         paramName: paramName,
         maxFilesize: maxFilesize,
         maxFiles: maxFiles
-      });
+      })
     })
   }
 
