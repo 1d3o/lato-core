@@ -40,6 +40,10 @@
   &:focus {
     border-color: $color_main;
   }
+
+  &:disabled {
+    background-color: darken($input_color_background, 5);
+  }
 }
 
 .inputs__input--error {

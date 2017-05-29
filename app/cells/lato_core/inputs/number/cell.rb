@@ -10,6 +10,7 @@ module LatoCore
       placeholder: '',
       help: '',
       required: false,
+      disabled: false,
       min: nil,
       max: nil,
       max_length: nil,

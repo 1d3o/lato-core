@@ -11,6 +11,9 @@
     data-required="<%= @args[:required] %>"
     data-max-length="<%= @args[:max_length] %>"
     data-min-length="<%= @args[:min_length] %>"
+    <% if @args[:disabled] %>
+      disabled
+    <% end %>
   />
 
   <%= render '../../shared/help.html' %>

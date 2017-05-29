@@ -10,6 +10,7 @@ module LatoCore
       placeholder: '',
       help: '',
       required: false,
+      disabled: false,
       class: 'md-12'
     }
 

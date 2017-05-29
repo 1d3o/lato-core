@@ -9,6 +9,9 @@
     name="<%= @args[:name] %>"
     placeholder="<%= @args[:placeholder] %>"
     data-required="<%= @args[:required] %>"
+    <% if @args[:disabled] %>
+      disabled
+    <% end %>
   />
 
   <%= render '../../shared/help.html' %>
