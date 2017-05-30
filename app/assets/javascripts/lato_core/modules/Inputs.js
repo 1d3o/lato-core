@@ -34,7 +34,7 @@ var Inputs = (function () {
   // Validations:
 
   function formInputsValidator () {
-    $('.inputs-form').submit(function (e) {
+    $('.inputs__form').submit(function (e) {
       $(e.target).find('input').each(function () {
         if (!validateInput(this)) { e.preventDefault() }
       })
@@ -66,7 +66,7 @@ var Inputs = (function () {
   function validateInputRequired (input) {
     if ($(input).is(':checkbox')) {
       var inputChecked = $(input).is(':checked')
-      if (inputChecked === null || inputChecked === false) {
+      if (!inputChecked || inputChecked === null || inputChecked === false) {
         addInputErrorStyle(input)
         return false
       }
