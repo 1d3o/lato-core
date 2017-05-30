@@ -5,5 +5,7 @@ module LatoCore
 
     def personalization; end
 
+    def languages; end
+
   end
 end

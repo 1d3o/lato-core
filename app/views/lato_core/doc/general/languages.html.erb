@@ -1,0 +1,67 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'General: Languages') %>
+
+    <p>
+    Every Lato module can contains its own language translations. Its translations can be personalized for the main application.
+    The first thing to do to personalize a module translations is to copy translactions files on your application:
+    </p>
+
+<%=raw code.open %>
+
+$> rails lato_load_languages
+
+<%=raw code.close %>
+
+  <p>
+  An example of translactions file should be:
+  </p>
+
+<%=raw code.open %>
+
+menu:
+  dashboard: Dashboard
+  superusers: Superusers
+  superusers_new: Add new
+  superusers_index: Show all
+  documentation: Doc. Core
+
+forms:
+  username: Username
+  password: Password
+  name: Name
+  surname: Surname
+  email: Email
+  password_confirmation: Confirm password
+  username_help: Username should have minimum 4 characters
+  password_help: Paasword should have minimum 6 characters
+  password_confirmation_help: We ask you to repeat the password to be sure that you know it
+  permission: Permission
+  id: Id
+  biography: Write something about you
+  last_login_ip_address: Last login IP address
+  last_login_datetime: Last login datetime
+
+flashes:
+  user_not_found: User not found
+  uncorrect_password: Password is not correct
+  logout_success: User correctly logged out
+  superuser_create_success: The Superuser was created successfully
+  superuser_not_found: The Superuser you search is not present on the system
+  superuser_not_permission: You don't have permission to do this action
+  superuser_update_success: The Superuser was updated successfully
+  superuser_destroy_success: The Superuser was destroied successfully
+
+<%=raw code.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
