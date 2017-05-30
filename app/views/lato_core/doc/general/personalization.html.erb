@@ -132,5 +132,22 @@ assets:
 
 <%=raw code.close %>
 
+  <%=raw cell(:elements, :title).new(label: 'Widgets', size: 4) %>
+
+  <p>
+  A widget is an element on the header that can be used to open a small popup with a content.
+  To add a new widget on the header you can set a widget object with an icon, the path of the code for the popup,
+  the position and the title.
+  </p>
+
+<%=raw code.open %>
+
+widgets:
+  core_system_info:
+    icon: info
+    path: lato_core/widgets/systeminfo # path of widget partial
+    position: 1
+    title: Info
+
 <%=raw row.close %>
 <!-- / PRESENTATION -->

@@ -53,6 +53,7 @@ module LatoCore
       widget[:icon] = values[:icon] ? values[:icon] : 'check-circle'
       widget[:path] = values[:path] ? values[:path] : ''
       widget[:position] = values[:position] ? values[:position] : 999
+      widget[:title] = values[:title] ? values[:title] : ''
       return widget
     end
 

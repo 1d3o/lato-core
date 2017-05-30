@@ -76,3 +76,4 @@ widgets:
     icon: info
     path: lato_core/widgets/systeminfo
     position: 1
+    title: Info
