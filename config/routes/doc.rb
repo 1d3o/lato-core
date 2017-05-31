@@ -35,6 +35,10 @@ namespace :doc do
   get 'cells_inputs_dropzone', to: 'cells_inputs#dropzone', as: 'cells_inputs_dropzone'
   post 'cells_inputs_dropzone_exec', to: 'cells_inputs#dropzone_exec', as: 'cells_inputs_dropzone_exec'
 
+  # cells charts
+
+  get 'cells_charts_bar_vertical', to: 'cells_charts#bar_vertical', as: 'cells_charts_bar_vertical'
+
   # cells widgets
   get 'cells_widgets_index', to: 'cells_widgets#index', as: 'cells_widgets_index'
 

@@ -19,4 +19,5 @@ $(document).ready(function () {
   Layout.init()
   Elements.init()
   Inputs.init()
+  Charts.init()
 })
