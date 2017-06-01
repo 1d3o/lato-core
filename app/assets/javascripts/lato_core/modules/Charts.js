@@ -22,29 +22,6 @@ var Charts = (function () {
     })
   }
 
-  // function initializeCharts () {
-  //   var charts = $('.charts-canvas')
-  //   charts.each(function () {
-  //     initializeChart(this)
-  //   })
-  // }
-
-  // function initializeChart (canvas) {
-  //   var context = canvas.getContext('2d')
-  //   var chartType = $(canvas).attr('data-chart-type')
-
-  //   var chart = new Chart(canvas, {
-  //     type: chartType,
-  //     data: {
-  //       labels: ["January", "February", "March", "April", "May", "June", "July"],
-  //       datasets: [
-  //         { label: 'Dati', data: [20, 10] },
-  //         { label: 'Dati 2', data: [3, 14] }
-  //       ]
-  //     }
-  //   })
-  // }
-
   // Init:
 
   function init () {

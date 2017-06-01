@@ -20,6 +20,7 @@ namespace :doc do
   get 'cells_elements_table_body', to: 'cells_elements#table_body', as: 'cells_elements_table_body'
   get 'cells_elements_table_row', to: 'cells_elements#table_row', as: 'cells_elements_table_row'
   get 'cells_elements_pagination', to: 'cells_elements#pagination', as: 'cells_elements_pagination'
+  get 'cells_elements_modal', to: 'cells_elements#modal', as: 'cells_elements_modal'
 
   # cells inputs
   get 'cells_inputs_form', to: 'cells_inputs#form', as: 'cells_inputs_form'
@@ -34,6 +35,7 @@ namespace :doc do
   get 'cells_inputs_editor', to: 'cells_inputs#editor', as: 'cells_inputs_editor'
   get 'cells_inputs_dropzone', to: 'cells_inputs#dropzone', as: 'cells_inputs_dropzone'
   post 'cells_inputs_dropzone_exec', to: 'cells_inputs#dropzone_exec', as: 'cells_inputs_dropzone_exec'
+  get 'cells_inputs_visualeditor', to: 'cells_inputs#visualeditor', as: 'cells_inputs_visualeditor'
 
   # cells charts
 

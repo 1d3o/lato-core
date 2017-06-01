@@ -1,5 +1,15 @@
 var Elements = (function () {
 
+  function modalCloseButton () {
+    $('.elements-modal__close-button').click(function (e) {
+      console.log('click')
+      var modal = $(this).parent()
+      var modalContainer = modal.parent()
+      modalContainer.removeClass('elements-modal--active')
+      e.preventDefault()
+    })
+  }
+
   function flashCloseButton () {
     $('.elements-flash__close-button').click(function (e) {
       var flash = $(this).parent()
@@ -41,6 +51,7 @@ var Elements = (function () {
   // Init:
 
   function init () {
+    modalCloseButton()
     flashCloseButton()
     tableHeadFixed()
     buttonConfirmation()

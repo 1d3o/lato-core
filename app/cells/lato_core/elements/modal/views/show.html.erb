@@ -1,0 +1,19 @@
+<div class="elements-modal elements-modal--active" id="<%= @args[:id] %>">
+
+  <div class="elements-modal__modal">
+
+    <button class="elements-modal__close-button" title="<%= LANGUAGES[:lato_core][:mixed][:close] %>"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+
+    <% if @show_header %>
+      <div class="elements-modal__header">
+        <div class="elements-modal__title"><%= @args[:title] %></fiv>
+      </div>
+    <% end %>
+
+    <div class="elements-modal__body">
+      <%= @args[:render] %>
+    </div>
+  
+  </div>
+
+</div>

@@ -25,5 +25,7 @@ module LatoCore
 
     def dropzone_exec; end
 
+    def visualeditor; end
+
   end
 end

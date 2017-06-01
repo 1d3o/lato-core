@@ -25,8 +25,5 @@ module LatoCore
       end
     end
 
-    # add cells to main application
-    config.autoload_paths << LatoCore::Engine.root.join('lib/interface')
-
   end
 end

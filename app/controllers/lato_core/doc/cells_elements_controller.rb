@@ -24,6 +24,8 @@ module LatoCore
     def table_row; end
 
     def pagination; end
+
+    def modal; end
     
   end
 end
