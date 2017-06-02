@@ -7,5 +7,6 @@
     @include centerElement(xy);
     font-size: 50px;
     color: $dropzone_color_icon;
+    pointer-events: none;
   }
 }
