@@ -2,23 +2,23 @@ var InputsInitializer = (function () {
 
   // Init plugins:
 
-  function selectsStyle () {
+  function selectsInitialize () {
     $('.inputs__select').selectize()
   }
 
-  function datetimeStyle () {
+  function datetimeInitialize () {
     $('.inputs__input--datetime').datetimepicker({
       format: 'd/m/Y H:i'
     })
   }
 
-  function editorStyle () {
+  function editorInitialize () {
     $('.inputs__editor').trumbowyg({
       svgPath: $('#ddtj__editor-icons-path').html()
     });
   }
 
-  function dropzoneStyle () {
+  function dropzoneInitialize () {
     $('.inputs__dropzone').each(function () {
       var paramName = $(this).attr('data-param-name')
       var maxFilesize = $(this).attr('data-max-size')
@@ -123,16 +123,20 @@ var InputsInitializer = (function () {
   // Init:
 
   function init () {
-    selectsStyle()
-    datetimeStyle()
+    selectsInitialize()
+    datetimeInitialize()
     formInputsValidator()
-    editorStyle()
-    dropzoneStyle()
+    editorInitialize()
+    dropzoneInitialize()
   }
 
 
   return {
-    init: init
+    init: init,
+    dropzoneInitialize: dropzoneInitialize,
+    selectsInitialize: selectsInitialize,
+    datetimeInitialize: datetimeInitialize,
+    editorInitialize: editorInitialize
   }
 
 })()
