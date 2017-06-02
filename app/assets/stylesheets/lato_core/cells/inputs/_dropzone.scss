@@ -1,4 +1,11 @@
 .inputs__dropzone {
-  border: solid 2px $color_main;
+  border: solid 2px $dropzone_color_border;
   border-radius: 10px;
+  position: relative;
+
+  .icon {
+    @include centerElement(xy);
+    font-size: 50px;
+    color: $dropzone_color_icon;
+  }
 }

@@ -59,6 +59,11 @@ $input_color_text: $color_black;
 $input_color_label: $color_main;
 $input_font_weight_label: 700;
 
+// Dropzone configurations:
+
+$dropzone_color_border: $color_clouds;
+$dropzone_color_icon: $color_clouds;
+
 // Button configurations:
 
 $button_color_background: $color_main;
@@ -120,4 +125,5 @@ $pagination_color_background_hover: $color_clouds;
 $modal_color_transarent_background: $color_main;
 $modal_color_background: $color_white;
 $modal_color_title: $color_main;
+$modal_color_header_border: $color_clouds;
 
