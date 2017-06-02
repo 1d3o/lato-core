@@ -2,16 +2,20 @@
 
   <div class="elements-modal__modal">
 
-    <button class="elements-modal__close-button" title="<%= LANGUAGES[:lato_core][:mixed][:close] %>"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+    <div class="elements-modal__content">
 
-    <% if @show_header %>
-      <div class="elements-modal__header">
-        <div class="elements-modal__title"><%= @args[:title] %></div>
+      <button class="elements-modal__close-button" title="<%= LANGUAGES[:lato_core][:mixed][:close] %>"><i class="fa fa-times-circle" aria-hidden="true"></i></button>
+
+      <% if @show_header %>
+        <div class="elements-modal__header">
+          <div class="elements-modal__title"><%= @args[:title] %></div>
+        </div>
+      <% end %>
+
+      <div class="elements-modal__body">
+        <%= @args[:render] %>
       </div>
-    <% end %>
 
-    <div class="elements-modal__body">
-      <%= @args[:render] %>
     </div>
   
   </div>

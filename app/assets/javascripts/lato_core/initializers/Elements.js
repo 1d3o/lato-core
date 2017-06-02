@@ -2,9 +2,9 @@ var ElementsInitializer = (function () {
 
   function modalCloseButton () {
     $('.elements-modal__close-button').click(function (e) {
-      console.log('click')
       var modal = $(this).parent()
-      var modalContainer = modal.parent()
+      var modalContent = modal.parent()
+      var modalContainer = modalContent.parent()
       modalContainer.removeClass('elements-modal--active')
       e.preventDefault()
     })
