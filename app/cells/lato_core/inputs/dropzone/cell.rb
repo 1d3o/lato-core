@@ -9,7 +9,8 @@ module LatoCore
       max_size: 2, # MB
       max_files: 99,
       method: 'post',
-      label: ''
+      label: '',
+      remote: false
     }
 
     def initialize(args = {})

@@ -83,6 +83,39 @@ max_size: 1, max_files: 5, label: 'Load a file', param_name: 'pippo') <%= erb_cl
 <%=raw row.close %>
 <!-- / CODE SECTION -->
 
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Dropzone form with remote', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:inputs, :dropzone).new(url: doc_cells_inputs_dropzone_exec_path, method: 'post',
+    label: 'Load a file', remote: true) %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :dropzone).new(url: doc_cells_inputs_dropzone_exec_path, method: 'post',
+label: 'Load a file', remote: true) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
 <!-- PRESENTATION -->
 <%=raw row.open %>
 
