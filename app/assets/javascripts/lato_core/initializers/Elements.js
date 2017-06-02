@@ -1,4 +1,4 @@
-var Elements = (function () {
+var ElementsInitializer = (function () {
 
   function modalCloseButton () {
     $('.elements-modal__close-button').click(function (e) {

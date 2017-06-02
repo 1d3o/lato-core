@@ -13,11 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree ./vendors
-//= require_tree ./modules
+//= require_tree ./initializers
+//= require_tree ./interfaces
 
 $(document).ready(function () {
-  Layout.init()
-  Elements.init()
-  Inputs.init()
-  Charts.init()
+  LayoutInitializer.init()
+  ElementsInitializer.init()
+  InputsInitializer.init()
+  ChartsInitializer.init()
 })

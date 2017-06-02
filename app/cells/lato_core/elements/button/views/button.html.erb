@@ -6,6 +6,9 @@
     <% if @show_submit %>
       type="submit"
     <% end %>
+    <% if @args[:onclick] %>
+      onclick="<%= @args[:onclick] %>"
+    <% end %>
   >
 
     <% if @show_icon && @icon_left %>

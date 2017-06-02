@@ -1,4 +1,4 @@
-var Inputs = (function () {
+var InputsInitializer = (function () {
 
   // Init plugins:
 

@@ -1,4 +1,4 @@
-var Layout = (function () {
+var LayoutInitializer = (function () {
 
   function toggleProfileMenu () {
     $('.layout-admin__profile-container').click(function () {

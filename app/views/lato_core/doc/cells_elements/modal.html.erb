@@ -25,8 +25,65 @@
 
   <%=raw block.open %>
 
-    <%=raw cell(:elements, :modal).new(id: 'my-modal', render: 'lato_core/doc/shared/modal_content') %>
+    <%=raw cell(:elements, :button).new(label: 'Open modal', style: 'info', onclick: "Modal.open('my-modal', event);") %>
+
+    <%=raw cell(:elements, :modal).new(id: 'my-modal', render: render('lato_core/doc/shared/modal_content')) %>
     
   <%=raw block.close %>
 
 <%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Open modal', style: 'info', onclick: "Modal.open('my-modal', event);") <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :modal).new(id: 'my-modal', render: render('lato_core/doc/shared/modal_content')) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Modal with title', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :button).new(label: 'Open modal', style: 'info', onclick: "Modal.open('my-modal-2', event);") %>
+
+    <%=raw cell(:elements, :modal).new(id: 'my-modal-2', title: 'Modal with title', render: render('lato_core/doc/shared/modal_content')) %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Open modal', style: 'info', onclick: "Modal.open('my-modal-2', event);") <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :modal).new(id: 'my-modal-2', title: 'Modal with title', render: render('lato_core/doc/shared/modal_content')) <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

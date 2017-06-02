@@ -16,7 +16,8 @@ module LatoCore
         message: nil,
         positive_response: nil,
         negative_response: nil
-      }
+      },
+      onclick: ''
     }
 
     def initialize(args = {})

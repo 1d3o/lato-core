@@ -1,4 +1,4 @@
-var Charts = (function () {
+var ChartsInitializer = (function () {
 
   function initializeBarCharts () {
     var charts = $('.charts-bar')
