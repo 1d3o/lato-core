@@ -22,5 +22,8 @@ module LatoCore
     require 'lato_core/interfaces/cells'
     include LatoCore::Interface::Cells
 
+    require 'lato_core/interfaces/api'
+    include LatoCore::Interface::Api
+
   end
 end
