@@ -77,7 +77,3 @@ widgets:
     path: lato_core/widgets/systeminfo
     position: 1
     title: Info
-
-# set cells path.
-
-cells: app/cells
