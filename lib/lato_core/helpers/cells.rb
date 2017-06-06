@@ -5,9 +5,11 @@ module LatoCore
 
     # This helper is used to create a new cell with a pretty format.
     def cell(*names)
+      # define variables
+      names_list = names.first.start_with?('lato_') ? names[1..-1] : names
+      cell_class = names.first.start_with?('lato_') ? "#{names.first.classify}::" : 'LatoCore::'
       # return correct cell
-      cell_class = 'LatoCore::'
-      names.each do |name|
+      names_list.each do |name|
         cell_class = "#{cell_class}#{name.capitalize}::"
       end
       "#{cell_class}Cell".constantize
