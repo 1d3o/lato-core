@@ -68,7 +68,7 @@ module LatoCore
       default_languages.each do |key, value|
         application_languages[key] = value unless application_languages[key]
       end
-      
+
       return application_languages
     end
 
@@ -76,7 +76,7 @@ module LatoCore
     def core__get_module_default_languages module_name
       application_language = core__get_application_language
       module_root_path = core__get_module_root_path(module_name)
-      
+
       # try to read language data
       language_data = core__read_yaml("#{module_root_path}/config/locales/#{application_language}.yml")
       language_data = core__read_yaml("#{module_root_path}/config/locales/default.yml") unless language_data

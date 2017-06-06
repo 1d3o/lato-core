@@ -11,7 +11,7 @@ module LatoCore
     # This function return the permission name for the user.
     def get_permission_name
       permission = CONFIGS[:lato_core][:superusers_permissions].values.select{|x| x[:value] === self.permission}
-      return permission[0][:title] if permission && permission.length
+      return permission[0][:title] if permission && !permission.empty?
     end
 
     # This function return the complete name for the user.
