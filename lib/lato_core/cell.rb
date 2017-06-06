@@ -7,6 +7,7 @@ module LatoCore
 
     # include cells dependencies
     include ::Cell::Erb
+    include ActionView::Helpers::UrlHelper
     include ActionView::Helpers::OutputSafetyHelper
 
     # This function is used from cells to validates arguments on constructor.
