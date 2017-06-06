@@ -130,7 +130,7 @@ module LatoCore
       default_config.each do |key, value|
         application_config[key] = value unless application_config[key]
       end
-      
+
       return application_config
     end
 
@@ -140,7 +140,7 @@ module LatoCore
       absolute_path = "#{application_config_path}/#{module_name}.yml"
       return core__read_yaml(absolute_path)
     end
-    
+
     # This function load default configs for a specific module.
     def core__get_module_default_configs module_name
       module_root_path = core__get_module_root_path(module_name)
