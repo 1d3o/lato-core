@@ -3,7 +3,7 @@ module LatoCore
   class Cell < Cell::Concept
 
     # set cells directory
-    view_paths = ["#{LatoCore::Engine.root}/app/cells", "#{LatoMedia::Engine.root}/app/cells"]
+    view_paths << "#{LatoCore::Engine.root}/app/cells"
 
     # include cells dependencies
     include ::Cell::Erb
