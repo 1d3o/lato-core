@@ -6,6 +6,8 @@ namespace :doc do
   get 'general_installation', to: 'general#installation', as: 'general_installation'
   get 'general_personalization', to: 'general#personalization', as: 'general_personalization'
   get 'general_languages', to: 'general#languages', as: 'general_languages'
+  get 'general_custom_controllers', to: 'general#custom_controllers', as: 'general_custom_controllers'
+  get 'general_custom_cells', to: 'general#custom_cells', as: 'general_custom_cells'
 
   # cells elements
   get 'cells_elements_row', to: 'cells_elements#row', as: 'cells_elements_row'
