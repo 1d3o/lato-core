@@ -5,7 +5,7 @@ module LatoCore
     @@requested_args = [:id, :render]
 
     @@default_args = {
-      title: nil
+      title: 'Modal'
     }
 
     def initialize(args = {})
@@ -24,9 +24,7 @@ module LatoCore
 
     private
 
-    def set_conditions
-      @show_header = !@args[:title].nil?
-    end
+    def set_conditions; end
 
   end
 

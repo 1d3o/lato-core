@@ -267,7 +267,7 @@
 
   <%=raw block.open %>
 
-    <%=raw cell(:elements, :button).new(label: 'Remote link button', style: 'info', url: '#') %>
+    <%=raw cell(:elements, :button).new(label: 'Remote link button', style: 'info', url: '#', remote: true) %>
     
   <%=raw block.close %>
 
@@ -286,7 +286,7 @@
 
 <%=raw code.open %>
 
-<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Remote link button', style: 'info', url: '#') <%= erb_close_tag %>
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Remote link button', style: 'info', url: '#', remote: true) <%= erb_close_tag %>
 
 <%=raw code.close %>
 
