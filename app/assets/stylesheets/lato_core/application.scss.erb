@@ -20,3 +20,33 @@
 @import "cells/cells";
 @import "layouts/layouts";
 @import "widgets/widgets";
+
+.dashboard__button {
+  display: block;
+  border: solid 1px transparent;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+
+  .icon {
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    transition: all 0.25s;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  &:hover {
+    .icon { transform: scale(1.2) }
+  }
+
+  &:focus {
+    border: solid 1px $color_main;
+    outline: 0;
+  }
+
+}

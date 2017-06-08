@@ -14,14 +14,24 @@ module LatoCore
       session[:lato_core__superuser_session_token] = nil
     end
 
+    # This function tells if the current session is valid.
+    def core__check_superuser_session_valid
+      decoded_token = core__decode_token(session[:lato_core__superuser_session_token])
+      return false unless decoded_token
+      true
+    end
+
     # This function check the session for a superuser and set the variable @core__current_superuser.
     # If session is not valid the user should be redirect to login path.
     def core__manage_superuser_session
       decoded_token = core__decode_token(session[:lato_core__superuser_session_token])
 
       if decoded_token
-         @core__current_superuser = LatoCore::Superuser.find_by(id: decoded_token[:superuser_id])
-         redirect_to lato_core.login_path unless @core__current_superuser
+        @core__current_superuser = LatoCore::Superuser.find_by(id: decoded_token[:superuser_id])
+        unless @core__current_superuser
+          core___destroy_superuser_session
+          redirect_to lato_core.login_path
+        end
       else
         redirect_to lato_core.login_path
       end

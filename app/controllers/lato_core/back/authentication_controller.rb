@@ -7,7 +7,9 @@ module LatoCore
 
     skip_before_action :core__manage_superuser_session
 
-    def index; end
+    def index
+      redirect_to lato_core.dashboard_path if core__check_superuser_session_valid
+    end
 
     def exec_login
       @superuser = LatoCore::Superuser.find_by(username: params[:username])

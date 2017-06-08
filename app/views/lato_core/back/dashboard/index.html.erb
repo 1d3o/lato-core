@@ -1,0 +1,29 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-6 md-3 lg-3')
+%>
+
+<!-- MAIN CONTAINER -->
+<%=raw row.open %>
+
+  <% LAYOUT[:menu_items].each do |menu_item| %>
+
+      <%
+        next if (@core__current_superuser.permission < menu_item[:permission_min])
+        next if (@core__current_superuser.permission > menu_item[:permission_max])
+      %>
+
+      <%=raw block.open %>
+        <a class="dashboard__button" href="<%= menu_item[:url] %>" title="<%= menu_item[:title] %>">
+          <div class="icon">
+            <i class="fa fa-<%= menu_item[:icon] %>" aria-hidden="true"></i>
+          </div>
+          <div class="title">
+             <%= menu_item[:title] %>
+          </div>
+        </a>
+      <%=raw block.close %>
+  <% end %>
+
+<%=raw row.close %>
+<!-- / MAIN CONTAINER -->
