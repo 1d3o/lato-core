@@ -2,8 +2,22 @@
 
   <div class="elements-pagination__arrows elements-pagination__arrows--prev <%= @prev_disabled_class %>">
 
-    <a href="<%= generate_page_link(1) %>"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
-    <a href="<%= generate_page_link(@prev_page_number) %>"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+    <a
+      href="<%= generate_page_link(1) %>"
+      <% if @args[:remote] %>
+        data-remote="true"
+      <% end %>
+    >
+      <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+    </a>
+    <a
+      href="<%= generate_page_link(@prev_page_number) %>"
+      <% if @args[:remote] %>
+        data-remote="true"
+      <% end %>
+    >
+      <i class="fa fa-angle-left" aria-hidden="true"></i>
+    </a>
 
   </div>
 
