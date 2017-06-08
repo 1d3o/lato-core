@@ -14,7 +14,8 @@ LAYOUT = {
   logo_sidebar: core__get_application_logo_sidebar_path,
   menu_items: core__get_menu,
   widgets: core__get_widgets,
-  assets: core_get_assets
+  assets: core__get_assets,
+  colors: core__get_colors
 }
 
 # Set global core variables:

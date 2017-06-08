@@ -23,7 +23,7 @@ module LatoCore
       # create list of widgets
       widgets = []
       lato_modules.each do |lato_module_name|
-        module_widgets = core_get_widgets_for_module(lato_module_name)
+        module_widgets = core__get_widgets_for_module(lato_module_name)
         widgets = widgets + module_widgets if module_widgets
       end
       # sort items and return them
@@ -32,7 +32,7 @@ module LatoCore
     end
 
     # This function return the list of widgets for a specific module.
-    def core_get_widgets_for_module module_name
+    def core__get_widgets_for_module module_name
       module_configs = core__get_module_configs(module_name)
       return [] unless module_configs
       # load module items
@@ -65,7 +65,7 @@ module LatoCore
       # create list of menu items
       menu = []
       lato_modules.each do |lato_module_name|
-        module_menu = core_get_menu_for_module(lato_module_name)
+        module_menu = core__get_menu_for_module(lato_module_name)
         menu = menu + module_menu if module_menu
       end
       # sort items and return them
@@ -74,7 +74,7 @@ module LatoCore
     end
 
     # This function returns the list of the items for the menu for a specific module.
-    def core_get_menu_for_module module_name
+    def core__get_menu_for_module module_name
       module_configs = core__get_module_configs(module_name)
       return [] unless module_configs
       # load module items
@@ -134,12 +134,12 @@ module LatoCore
     # Assets:
 
     # This function return an array with the list of assets for lato modules.
-    def core_get_assets
+    def core__get_assets
       lato_modules = core__get_modules_list
       # create list of menu assets
       assets = []
       lato_modules.each do |lato_module_name|
-        module_assets = core_get_assets_for_module(lato_module_name)
+        module_assets = core__get_assets_for_module(lato_module_name)
         assets = assets + module_assets if module_assets
       end
       # return assets
@@ -147,7 +147,7 @@ module LatoCore
     end
 
     # This function return the lists of assets for a specific module.
-    def core_get_assets_for_module module_name
+    def core__get_assets_for_module module_name
       module_configs = core__get_module_configs(module_name)
       return [] unless module_configs
       # load module assets
@@ -159,6 +159,14 @@ module LatoCore
       end
       # return module assets
       return module_assets
+    end
+
+    # Colors:
+
+    # This function return the list of colors set for the tamplate.
+    def core__get_colors
+      core_configs = core__get_module_configs('lato_core')
+      return core_configs[:colors]
     end
 
   end

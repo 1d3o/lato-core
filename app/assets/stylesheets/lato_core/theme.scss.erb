@@ -1,20 +1,18 @@
-// Colors:
+<%
+  colors = core__get_colors
+%>
 
-$color_clouds: #ecf0f1;
-$color_belize_hole: #2980b9;
-$color_wet_asphalt: #34495e;
-$color_alizarin: #e74c3c;
-$color_orange: #f39c12;
-$color_nephritis: #27ae60;
+$color_white: <%= colors[:white] %>;
+$color_black: <%= colors[:black] %>;
+$color_grey: <%= colors[:grey] %>;
+$color_main: <%= colors[:main] %>;
+$color_active: <%= colors[:active] %>;
+$color_danger: <%= colors[:danger] %>;
+$color_warning: <%= colors[:warning] %>;
+$color_success: <%= colors[:success] %>;
 
 // BASE STYLE -> do not edit variables after this line.
 // ///////////////////////////////////////////////////////////
-
-// Main colors:
-
-$color_white: #ffffff;
-$color_black: #000000;
-$color_main: $color_wet_asphalt;
 
 // Body main configurations:
 
@@ -25,14 +23,14 @@ $body_font_size: 14px;
 
 // Layouts configurations:
 
-$layout_authentication_background: $color_clouds;
-$layout_admin_background: $color_clouds;
+$layout_authentication_background: $color_grey;
+$layout_admin_background: $color_grey;
 
 $layout_admin_sidebar_background: $color_main;
 $layout_admin_sidebar_color_text: $color_white;
 
 $layout_admin_header_background: $color_white;
-$layout_admin_header_color_title: darken($color_clouds, 20);
+$layout_admin_header_color_title: darken($color_grey, 20);
 $layout_admin_header_color_text: $color_black;
 
 $layout_admin_header_color_back_background: $color_main;
@@ -44,7 +42,7 @@ $layout_admin_header_color_widget_icon: $color_white;
 $layout_admin_header_color_widget_icon_background_hover: darken($color_main, 10);
 
 $layout_admin_header_color_profile_menu_background: $color_white;
-$layout_admin_header_color_profile_menu_background_hover: $color_clouds;
+$layout_admin_header_color_profile_menu_background_hover: $color_grey;
 $layout_admin_header_color_profile_menu_text: $color_black;
 
 // CELLS STYLE
@@ -53,16 +51,16 @@ $layout_admin_header_color_profile_menu_text: $color_black;
 // Inputs configurations:
 
 $input_color_background: $color_white;
-$input_color_border: $color_clouds;
-$input_color_border_error: $color_alizarin;
+$input_color_border: $color_grey;
+$input_color_border_error: $color_danger;
 $input_color_text: $color_black;
 $input_color_label: $color_main;
 $input_font_weight_label: 700;
 
 // Dropzone configurations:
 
-$dropzone_color_border: $color_clouds;
-$dropzone_color_icon: $color_clouds;
+$dropzone_color_border: $color_grey;
+$dropzone_color_icon: $color_grey;
 
 // Button configurations:
 
@@ -70,13 +68,13 @@ $button_color_background: $color_main;
 $button_color_text: $color_white;
 $button_font_weight: 500;
 
-$button_info_background: $color_belize_hole;
+$button_info_background: $color_active;
 $button_info_color_text: $color_white;
-$button_success_background: $color_nephritis;
+$button_success_background: $color_success;
 $button_success_color_text: $color_white;
-$button_danger_background: $color_alizarin;
+$button_danger_background: $color_danger;
 $button_danger_color_text: $color_white;
-$button_warning_background: $color_orange;
+$button_warning_background: $color_warning;
 $button_warning_color_text: $color_white;
 
 // Flash configurations:
@@ -84,13 +82,13 @@ $button_warning_color_text: $color_white;
 $flash_color_background: $color_main;
 $flash_color_text: $color_white;
 
-$flash_info_background: $color_belize_hole;
+$flash_info_background: $color_active;
 $flash_info_color_text: $color_white;
-$flash_success_background: $color_nephritis;
+$flash_success_background: $color_success;
 $flash_success_color_text: $color_white;
-$flash_danger_background: $color_alizarin;
+$flash_danger_background: $color_danger;
 $flash_danger_color_text: $color_white;
-$flash_warning_background: $color_orange;
+$flash_warning_background: $color_warning;
 $flash_warning_color_text: $color_white;
 
 // Block configurations:
@@ -100,30 +98,30 @@ $block_color_background: $color_white;
 // Title configurations:
 
 $title_color_text: $color_main;
-$title_color_border: $color_clouds;
+$title_color_border: $color_grey;
 
 // Table configurations:
 
 $table_head_color_background: $color_main;
 $table_head_color_text: $color_white;
-$table_row_color_background_hover: $color_clouds;
-$table_row_color_boolean_true: $color_nephritis;
-$table_row_color_boolean_false: $color_alizarin;
+$table_row_color_background_hover: $color_grey;
+$table_row_color_boolean_true: $color_success;
+$table_row_color_boolean_false: $color_danger;
 
 // Code configurations:
 
-$code_color_background: $color_clouds;
+$code_color_background: $color_grey;
 
 // Pagination configurations:
 
 $pagination_color_text: $color_main;
 $pagination_color_text_disabled: darken($color_white, 20);
-$pagination_color_background_hover: $color_clouds;
+$pagination_color_background_hover: $color_grey;
 
 // Modal configurations:
 
 $modal_color_transarent_background: $color_main;
 $modal_color_background: $color_white;
 $modal_color_title: $color_main;
-$modal_color_header_border: $color_clouds;
+$modal_color_header_border: $color_grey;
 

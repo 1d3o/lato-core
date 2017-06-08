@@ -268,7 +268,8 @@
     @include centerElement(xy);
   }
 
-  &:hover {
+  &:hover, &:active, &:focus {
+    outline: 0;
     background-color: $layout_admin_header_color_widget_icon_background_hover;
   }
 }

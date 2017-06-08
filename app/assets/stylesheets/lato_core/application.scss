@@ -12,15 +12,16 @@
  *
  */
 
+
+@import "theme";
 @import "vendors/vendors";
-
-@import "themes/default";
-
 @import "base/base";
 @import "cells/cells";
 @import "layouts/layouts";
 @import "widgets/widgets";
 
+
+// Dashboard style
 .dashboard__button {
   display: block;
   border: solid 1px transparent;
@@ -33,7 +34,7 @@
     font-size: 40px;
     padding-top: 10px;
     padding-bottom: 20px;
-    transition: all 0.25s;
+    transition: transform 0.25s;
   }
 
   .title {
@@ -44,9 +45,10 @@
     .icon { transform: scale(1.2) }
   }
 
-  &:focus {
-    border: solid 1px $color_main;
+  &:focus, &:active {
     outline: 0;
+    background-color: $color_main;
+    color: $color_white;
   }
 
 }
