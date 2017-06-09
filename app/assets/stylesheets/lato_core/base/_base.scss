@@ -20,6 +20,11 @@ body {
   font-family: $body_font_family;
   font-size: $body_font_size;
   overflow-x: hidden;
+
+  &.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 a {
