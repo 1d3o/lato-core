@@ -16,7 +16,7 @@
 //= require_tree ./initializers
 //= require_tree ./interfaces
 
-$(document).ready(function () {
+$(window).load(function () {
   LayoutInitializer.init()
   ElementsInitializer.init()
   InputsInitializer.init()

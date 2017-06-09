@@ -27,5 +27,7 @@ module LatoCore
 
     def visualeditor; end
 
+    def geolocalization; end
+
   end
 end

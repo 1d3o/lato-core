@@ -130,7 +130,6 @@ var InputsInitializer = (function () {
     dropzoneInitialize()
   }
 
-
   return {
     init: init,
     dropzoneInitialize: dropzoneInitialize,
