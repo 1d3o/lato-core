@@ -19,36 +19,4 @@
 @import "cells/cells";
 @import "layouts/layouts";
 @import "widgets/widgets";
-
-
-// Dashboard style
-.dashboard__button {
-  display: block;
-  border: solid 1px transparent;
-  text-align: center;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 10px;
-
-  .icon {
-    font-size: 40px;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    transition: transform 0.25s;
-  }
-
-  .title {
-    font-size: 20px;
-  }
-
-  &:hover {
-    .icon { transform: scale(1.2) }
-  }
-
-  &:focus, &:active {
-    outline: 0;
-    background-color: $color_main;
-    color: $color_white;
-  }
-
-}
+@import "pages/pages";
