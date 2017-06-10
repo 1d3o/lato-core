@@ -27,7 +27,7 @@ default_superuser:
   password: WelcomeToLato!
 
 # google maps API key.
-google_maps_api_key: AIzaSyD3YbBKBXFU8n96XnnIa6vSwAjA_9wiaWw
+google_maps_api_key: AIzaSyBc45CKHFw7q3WK4FJO2jybNnYSZ3bKFW8
 
 # set main template colors.
 colors:

@@ -41,9 +41,7 @@
   <%= render 'layouts/lato_core/partials/dynamic_data_to_js' %>
 
   <% if CONFIGS[:lato_core][:google_maps_api_key] %>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=<%= CONFIGS[:lato_core][:google_maps_api_key] %>">
-    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=<%= CONFIGS[:lato_core][:google_maps_api_key] %>"></script>
   <% end %>
 
 </body>

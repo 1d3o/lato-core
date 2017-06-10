@@ -2,6 +2,19 @@
 
   <%= render '../../shared/label.html' %>
 
-  <div class="inputs-geolocalization__map"></div>
+  <input class="inputs-geolocalization__search inputs__input" type="text" placeholder="">
+
+  <div
+    class="inputs-geolocalization__map"
+    data-default-zoom="<%= @args[:default_zoom] %>"
+    data-default-type="<%= @args[:default_type] %>"
+    data-default-lat="<%= @default_lat %>"
+    data-default-lng="<%= @default_lng %>"
+  ></div>
+
+  <%= render '../../shared/help.html' %>
+
+  <input class="inputs-geolocalization__input-lat" type="hidden" name="<%= @args[:name_lat] %>" value="<%= @args[:value_lat] %>">
+  <input class="inputs-geolocalization__input-lng" type="hidden" name="<%= @args[:name_lng] %>" value="<%= @args[:value_lng] %>">
 
 </div>

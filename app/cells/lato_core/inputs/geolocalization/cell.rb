@@ -6,9 +6,16 @@ module LatoCore
 
     @@default_args = {
       label: '',
+      help: '',
       name_lat: 'lat',
       name_lng: 'lng',
-      class: 'md-12'
+      value_lat: nil,
+      value_lng: nil,
+      default_lat: 41.90278349999999,
+      default_lng: 12.496365500000024,
+      default_zoom: 5,
+      class: 'md-12',
+      default_type: 'roadmap'
     }
 
     def initialize(args = {})
@@ -29,6 +36,11 @@ module LatoCore
 
     def set_conditions
       @show_label = !@args[:label].nil? && !@args[:label].blank?
+      @show_help = !@args[:help].nil? && !@args[:help].blank?
+      # geolocalization info
+      @default_lat = @args[:value_lat] ? @args[:value_lat] : @args[:default_lat]
+      @default_lng = @args[:value_lng] ? @args[:value_lng] : @args[:default_lng]
+      @show_marker = @args[:value_lat] && @args[:value_lng]
     end
 
   end

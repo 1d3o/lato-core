@@ -31,6 +31,70 @@ var InputsInitializer = (function () {
     })
   }
 
+  function geolocalizationMapsInitialize () {
+    $('.inputs-geolocalization').each(function () {
+      // find dom elements
+      var mapContainer = $(this).find('.inputs-geolocalization__map')[0]
+      var searchBoxInput = $(this).find('.inputs-geolocalization__search')[0]
+      var latInput = $(this).find('.inputs-geolocalization__input-lat')[0]
+      var lngInput = $(this).find('.inputs-geolocalization__input-lng')[0]
+      // initialize map
+      var map = new google.maps.Map(mapContainer, {
+        zoom: parseInt($(mapContainer).attr('data-default-zoom')),
+        center: {
+          lat: parseFloat($(mapContainer).attr('data-default-lat')),
+          lng: parseFloat($(mapContainer).attr('data-default-lng'))
+        },
+        mapTypeId: $(mapContainer).attr('data-default-type'),
+        streetViewControl: false
+      })
+      // initialize markers
+      var markers = []
+      if ($(latInput).val() && $(lngInput).val()) {
+        var title = 'Lat: ' + $(latInput).val() + ' - Lng: ' + $(lngInput).val()
+        markers.push(new google.maps.Marker({
+          map: map,
+          position: {lat: parseFloat($(latInput).val()), lng: parseFloat($(lngInput).val())},
+          title: title
+        }))
+      }
+      // initialize searchbox
+      var searchBox = new google.maps.places.SearchBox(searchBoxInput)
+      // sync map bounds with search
+      map.addListener('bounds_changed', function () {
+        searchBox.setBounds(map.getBounds())
+      })
+      // sync searchbox search with map and hidden inputs
+      searchBox.addListener('places_changed', function () {
+        // get search palces
+        var places = searchBox.getPlaces()
+        if (places.length === 0) { return }
+        // clean old markers
+        markers.forEach(function (marker) { marker.setMap(null) })
+        markers = []
+        // show first place on map
+        var bounds = new google.maps.LatLngBounds()
+        var place = places[0]
+        if (!place.geometry) { return }
+        var title = 'Lat: ' + place.geometry.location.lat() + ' - Lng: ' + place.geometry.location.lng()
+        markers.push(new google.maps.Marker({
+          map: map,
+          position: place.geometry.location,
+          title: title
+        }))
+        if (place.geometry.viewport) {
+          bounds.union(place.geometry.viewport)
+        } else {
+          bounds.extend(place.geometry.location)
+        }
+        map.fitBounds(bounds)
+        // save place info on hidden inputs
+        $(latInput).val(place.geometry.location.lat())
+        $(lngInput).val(place.geometry.location.lng())
+      })
+    })
+  }
+
   // Validations:
 
   function formInputsValidator () {
@@ -128,6 +192,7 @@ var InputsInitializer = (function () {
     formInputsValidator()
     editorInitialize()
     dropzoneInitialize()
+    geolocalizationMapsInitialize()
   }
 
   return {

@@ -39,3 +39,117 @@
   <%=raw block.close %>
 
 <%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :geolocalization).new(label: 'Select a point on the map') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Geolocalization with some settings', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell(:inputs, :geolocalization).new(label: 'Select a point on the map', class: 'md-6',
+        default_zoom: 7, default_lat: 10, default_lng: 10, help: 'This map has a custom default zoom and position') %>
+
+        <%=raw cell(:inputs, :geolocalization).new(label: 'Select a point on the map', class: 'md-6',
+        default_zoom: 5, name_lat: 'custom_input_name_for_lat', name_lng: 'custom_input_name_for_lng',
+        help: 'This map has a custom input names') %>
+
+      <%=raw row.close %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :geolocalization).new(label: 'Select a point on the map', class: 'md-6',
+default_zoom: 7, default_lat: 10, default_lng: 10, help: 'This map has a custom default zoom and position') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :geolocalization).new(label: 'Select a point on the map', class: 'md-6',
+default_zoom: 5, name_lat: 'custom_input_name_for_lat', name_lng: 'custom_input_name_for_lng',
+help: 'This map has a custom input names') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Geolocalization with some settings', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell(:inputs, :geolocalization).new(label: 'Select a point on the map', class: 'md-6',
+        help: 'This map has a selected point', value_lat: 46, value_lng: 12) %>
+
+        <%=raw cell(:inputs, :geolocalization).new(label: 'Select a point on the map', class: 'md-6',
+        help: 'This map has a satellite view', default_type: 'satellite') %>
+
+      <%=raw row.close %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :geolocalization).new(label: 'Select a point on the map', class: 'md-6',
+help: 'This map has a selected point', value_lat: 46, value_lng: 12) <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :geolocalization).new(label: 'Select a point on the map', class: 'md-6',
+help: 'This map has a satellite view', default_type: 'satellite') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
