@@ -38,6 +38,7 @@ var InputsInitializer = (function () {
       var searchBoxInput = $(this).find('.inputs-geolocalization__search')[0]
       var latInput = $(this).find('.inputs-geolocalization__input-lat')[0]
       var lngInput = $(this).find('.inputs-geolocalization__input-lng')[0]
+      var addressInput = $(this).find('.inputs-geolocalization__input-address')[0]
       // initialize map
       var map = new google.maps.Map(mapContainer, {
         zoom: parseInt($(mapContainer).attr('data-default-zoom')),
@@ -51,11 +52,10 @@ var InputsInitializer = (function () {
       // initialize markers
       var markers = []
       if ($(latInput).val() && $(lngInput).val()) {
-        var title = 'Lat: ' + $(latInput).val() + ' - Lng: ' + $(lngInput).val()
         markers.push(new google.maps.Marker({
           map: map,
           position: {lat: parseFloat($(latInput).val()), lng: parseFloat($(lngInput).val())},
-          title: title
+          title: $(addressInput).val()
         }))
       }
       // initialize searchbox
@@ -76,11 +76,10 @@ var InputsInitializer = (function () {
         var bounds = new google.maps.LatLngBounds()
         var place = places[0]
         if (!place.geometry) { return }
-        var title = 'Lat: ' + place.geometry.location.lat() + ' - Lng: ' + place.geometry.location.lng()
         markers.push(new google.maps.Marker({
           map: map,
           position: place.geometry.location,
-          title: title
+          title: place.formatted_address
         }))
         if (place.geometry.viewport) {
           bounds.union(place.geometry.viewport)
@@ -91,6 +90,7 @@ var InputsInitializer = (function () {
         // save place info on hidden inputs
         $(latInput).val(place.geometry.location.lat())
         $(lngInput).val(place.geometry.location.lng())
+        $(addressInput).val(place.formatted_address)
       })
     })
   }

@@ -2,7 +2,12 @@
 
   <%= render '../../shared/label.html' %>
 
-  <input class="inputs-geolocalization__search inputs__input" type="text" placeholder="">
+  <input
+    class="inputs-geolocalization__search inputs__input"
+    type="text"
+    placeholder="<%= @args[:placeholder] %>"
+    value="<%= @args[:value_address] %>"
+  >
 
   <div
     class="inputs-geolocalization__map"
@@ -16,5 +21,6 @@
 
   <input class="inputs-geolocalization__input-lat" type="hidden" name="<%= @args[:name_lat] %>" value="<%= @args[:value_lat] %>">
   <input class="inputs-geolocalization__input-lng" type="hidden" name="<%= @args[:name_lng] %>" value="<%= @args[:value_lng] %>">
+  <input class="inputs-geolocalization__input-address" type="hidden" name="<%= @args[:name_address] %>" value="<%= @args[:value_address] %>">
 
 </div>

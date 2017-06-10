@@ -7,10 +7,13 @@ module LatoCore
     @@default_args = {
       label: '',
       help: '',
+      placeholder: '',
       name_lat: 'lat',
       name_lng: 'lng',
+      name_address: 'address',
       value_lat: nil,
       value_lng: nil,
+      value_address: nil,
       default_lat: 41.90278349999999,
       default_lng: 12.496365500000024,
       default_zoom: 5,
