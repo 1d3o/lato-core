@@ -1,5 +1,9 @@
 var LayoutInitializer = (function () {
 
+  function initializeScrollbar () {
+    $('body').scrollbar();
+  }
+
   function toggleProfileMenu () {
     $('.layout-admin__profile-container').click(function () {
       // close header widgets
@@ -28,12 +32,14 @@ var LayoutInitializer = (function () {
   // Init:
 
   function init () {
+    initializeScrollbar()
     toggleProfileMenu()
     toggleWidget()
   }
 
   return {
-    init: init
+    init: init,
+    initializeScrollbar: initializeScrollbar
   }
 
 })()

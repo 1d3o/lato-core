@@ -2,23 +2,23 @@ var InputsInitializer = (function () {
 
   // Init plugins:
 
-  function selectsInitialize () {
+  function initializeSelect () {
     $('.inputs__select').selectize()
   }
 
-  function datetimeInitialize () {
+  function initializeDatetime () {
     $('.inputs__input--datetime').datetimepicker({
       format: 'd/m/Y H:i'
     })
   }
 
-  function editorInitialize () {
+  function initializeEditor () {
     $('.inputs__editor').trumbowyg({
       svgPath: $('#ddtj__editor-icons-path').html()
     });
   }
 
-  function dropzoneInitialize () {
+  function initializeDropzone () {
     $('.inputs__dropzone').each(function () {
       var paramName = $(this).attr('data-param-name')
       var maxFilesize = $(this).attr('data-max-size')
@@ -31,7 +31,7 @@ var InputsInitializer = (function () {
     })
   }
 
-  function geolocalizationMapsInitialize () {
+  function initializeGeolocalizationMap () {
     $('.inputs-geolocalization').each(function () {
       // find dom elements
       var mapContainer = $(this).find('.inputs-geolocalization__map')[0]
@@ -187,20 +187,21 @@ var InputsInitializer = (function () {
   // Init:
 
   function init () {
-    selectsInitialize()
-    datetimeInitialize()
+    initializeSelect()
+    initializeDatetime()
+    initializeEditor()
+    initializeDropzone()
+    initializeGeolocalizationMap()
     formInputsValidator()
-    editorInitialize()
-    dropzoneInitialize()
-    geolocalizationMapsInitialize()
   }
 
   return {
     init: init,
-    dropzoneInitialize: dropzoneInitialize,
-    selectsInitialize: selectsInitialize,
-    datetimeInitialize: datetimeInitialize,
-    editorInitialize: editorInitialize
+    initializeDropzone: initializeDropzone,
+    initializeSelect: initializeSelect,
+    initializeDatetime: initializeDatetime,
+    initializeEditor: initializeEditor,
+    initializeGeolocalizationMap: initializeGeolocalizationMap
   }
 
 })()
