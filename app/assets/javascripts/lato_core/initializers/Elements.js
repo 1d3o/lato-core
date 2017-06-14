@@ -6,6 +6,7 @@ var ElementsInitializer = (function () {
       var modalContent = modal.parent()
       var modalContainer = modalContent.parent()
       modalContainer.removeClass('elements-modal--active')
+      modalContainer.find('.elements-modal__modal').removeClass('elements-modal__modal--active')
       $('body').removeClass('stop-scrolling')
       e.preventDefault()
     })
