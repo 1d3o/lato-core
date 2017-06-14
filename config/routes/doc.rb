@@ -37,7 +37,6 @@ namespace :doc do
   get 'cells_inputs_editor', to: 'cells_inputs#editor', as: 'cells_inputs_editor'
   get 'cells_inputs_dropzone', to: 'cells_inputs#dropzone', as: 'cells_inputs_dropzone'
   post 'cells_inputs_dropzone_exec', to: 'cells_inputs#dropzone_exec', as: 'cells_inputs_dropzone_exec'
-  get 'cells_inputs_visualeditor', to: 'cells_inputs#visualeditor', as: 'cells_inputs_visualeditor'
   get 'cells_inputs_geolocalization', to: 'cells_inputs#geolocalization', as: 'cells_inputs_geolocalization'
 
   # cells charts

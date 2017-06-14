@@ -162,6 +162,7 @@
 
 <%=raw row.close %>
 
+
 <!-- CODE SECTION -->
 <%=raw row.open %>
 
@@ -178,6 +179,45 @@
 <%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Button icon left', type: 'button', icon: 'diamond') <%= erb_close_tag %>
 
 <%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Button icon right', type: 'button', icon: 'diamond', icon_align: 'right') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Buttons with onclick option', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :button).new(label: 'Link button', url: '#', onclick: "alert('Hello World!');") %>
+
+    <%=raw cell(:elements, :button).new(type: 'button', label: 'Normal button', onclick: "alert('Hello World!');") %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Info', size: 6) %>
+
+<p>Remember to use ' an not " inside the code of the onclick.</p>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Link button', url: '#', onclick: "alert('Hello World!');") <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(type: 'button', label: 'Normal button', onclick: "alert('Hello World!');") <%= erb_close_tag %>
 
 <%=raw code.close %>
 
@@ -294,41 +334,3 @@
 
 <%=raw row.close %>
 <!-- / CODE SECTION -->
-
-<hr>
-<%=raw cell(:elements, :title).new(label: 'Link Button with onclick option', size: 3) %>
-
-<%=raw row.open %>
-
-  <%=raw block.open %>
-
-    <%=raw cell(:elements, :button).new(label: 'Click me!', style: 'info', url: '#', onclick: "alert('Hello World!');") %>
-    
-  <%=raw block.close %>
-
-<%=raw row.close %>
-
-<!-- CODE SECTION -->
-<%=raw row.open %>
-
-<%=raw block.open %>
-
-<%=raw cell(:elements, :title).new(label: 'Info', size: 6) %>
-
-<p>Remember to use ' an not " inside the code of the onclick.</p>
-
-<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
-
-<%=raw code.open %>
-
-<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Click me!', style: 'info', url: '#', onclick: "alert('Hello World!');") <%= erb_close_tag %>
-
-<%=raw code.close %>
-
-<%=raw block.close %>
-
-<%=raw row.close %>
-<!-- / CODE SECTION -->
-
-
-
