@@ -227,6 +227,45 @@
 <!-- / CODE SECTION -->
 
 <hr>
+<%=raw cell(:elements, :title).new(label: 'Buttons with custom id', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :button).new(label: 'Link button', url: '#', id: 'custom-id-1') %>
+
+    <%=raw cell(:elements, :button).new(type: 'button', label: 'Normal button', id: 'custom-id-2') %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Info', size: 6) %>
+
+<p>Remember to use ' an not " inside the code of the onclick.</p>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Link button', url: '#', id: 'custom-id-1') <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw cell(:elements, :button).new(type: 'button', label: 'Normal button', id: 'custom-id-2') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
 <%=raw cell(:elements, :title).new(label: 'Link Button with custom method', size: 3) %>
 
 <%=raw row.open %>
