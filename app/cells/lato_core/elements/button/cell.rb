@@ -5,6 +5,7 @@ module LatoCore
     @@requested_args = [:label]
 
     @@default_args = {
+      id: '',
       type: 'link',
       url: '',
       style: '',

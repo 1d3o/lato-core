@@ -4,6 +4,7 @@
     class="button elements-button__element elements-button__element--<%= @args[:style] %> elements-button__link"
     href="<%= @args[:url] %>"
     title="<%= @args[:label] %>"
+    id="<%= @args[:id] %>"
     <% if @show_method && !@show_confirmation %>
       data-method="<%= @args[:method] %>"
     <% end %>
