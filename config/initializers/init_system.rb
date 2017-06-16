@@ -14,6 +14,7 @@ LAYOUT = {
   logo_sidebar: core__get_application_logo_sidebar_path,
   menu_items: core__get_menu,
   widgets: core__get_widgets,
+  partials: core__get_partials,
   assets: core__get_assets,
   colors: core__get_colors
 }

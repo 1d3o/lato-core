@@ -91,3 +91,12 @@ widgets:
     path: lato_core/widgets/systeminfo
     position: 1
     title: Info
+
+# set partials added at the end of the layout.
+partials:
+  core_dynamic_data_to_js:
+    path: lato_core/partials/dynamic_data_to_js
+    position: 1
+  core_gmaps:
+    path: lato_core/partials/gmaps
+    position: 2

@@ -15,6 +15,46 @@ module LatoCore
       @core__menu_active_item = item_key
     end
 
+    # Partials:
+
+    # This function returns a list of partials for the page.
+    def core__get_partials
+      lato_modules = core__get_modules_list
+      # create list of widgets
+      partials = []
+      lato_modules.each do |lato_module_name|
+        module_partials = core__get_partials_for_module(lato_module_name)
+        partials = partials + module_partials if module_partials
+      end
+      # sort items and return them
+      partials = partials.sort_by {|partial| partial[:position]}
+      return partials.reverse
+    end
+
+    # This function return the list of partials for a specific module.
+    def core__get_partials_for_module module_name
+      module_configs = core__get_module_configs(module_name)
+      return [] unless module_configs
+      # load module items
+      module_partials = []
+      if module_configs[:partials]
+        module_configs[:partials].each do |key, value|
+          module_partials.push(core__generate_partial(key, value, module_name))
+        end
+      end
+      # return module items
+      return module_partials
+    end
+
+    # This function create a correct partial object for the header.
+    def core__generate_partial key, values, module_name
+      partial = {}
+      partial[:key] = key
+      partial[:path] = values[:path] ? values[:path] : ''
+      partial[:position] = values[:position] ? values[:position] : 999
+      return partial
+    end
+
     # Widgets:
 
     # This function return a list of widgets for the header of the layout.
@@ -105,7 +145,7 @@ module LatoCore
           menu_item[:sub_items].push(core__generate_menu_sub_item(key, value, module_name))
         end
       end
-      
+
       return menu_item
     end
 

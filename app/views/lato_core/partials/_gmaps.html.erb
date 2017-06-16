@@ -1,0 +1,5 @@
+<% if CONFIGS[:lato_core][:google_maps_api_key] %>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=<%= CONFIGS[:lato_core][:google_maps_api_key] %>"></script>
+<% else %>
+  <!-- No google maps api key -->
+<% end %>
