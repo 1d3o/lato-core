@@ -152,5 +152,26 @@ widgets:
     position: 1
     title: Info
 
+<%=raw code.close %>
+
+  <br>
+  <%=raw cell(:elements, :title).new(label: 'Partials', size: 4) %>
+
+  <p>
+  A partial is a part of code that can be added to every page.
+  To Add a new partial you can set the partials list.
+  </p>
+
+<%=raw code.open %>
+
+partials:
+  core_gmaps:
+    path: lato_core/partials/gmaps
+    position: 2
+
+<%=raw code.close %>
+
+  <%=raw block.close %>
+
 <%=raw row.close %>
 <!-- / PRESENTATION -->
