@@ -29,7 +29,7 @@ flashes:
   superuser_not_found: The Superuser you search is not present on the system
   superuser_not_permission: You don't have permission to do this action
   superuser_update_success: The Superuser was updated successfully
-  superuser_destroy_success: The Superuser was destroied successfully
+  superuser_destroy_success: The Superuser was destroyed successfully
 
 pages:
   dashboard: Dashboard
