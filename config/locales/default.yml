@@ -12,9 +12,9 @@ forms:
   surname: Surname
   email: Email
   password_confirmation: Confirm password
-  username_help: Username should have minimum 4 characters
-  password_help: Paasword should have minimum 6 characters
-  password_confirmation_help: We ask you to repeat the password to be sure that you know it
+  username_help: Username should have 4 characters minimum
+  password_help: Paasword should have 6 characters minimum
+  password_confirmation_help: Please, repeat your password
   permission: Permission
   id: Id
   biography: Write something about you
@@ -23,13 +23,13 @@ forms:
 
 flashes:
   user_not_found: User not found
-  uncorrect_password: Password is not correct
+  uncorrect_password: Password not correct
   logout_success: User correctly logged out
-  superuser_create_success: The Superuser was created successfully
-  superuser_not_found: The Superuser you search is not present on the system
-  superuser_not_permission: You don't have permission to do this action
-  superuser_update_success: The Superuser was updated successfully
-  superuser_destroy_success: The Superuser was destroyed successfully
+  superuser_create_success: The Superuser was successfully created
+  superuser_not_found: The Superuser searched is not present on the system
+  superuser_not_permission: You don't have the right permission to do this action
+  superuser_update_success: The Superuser was successfully updated
+  superuser_destroy_success: The Superuser was successfully destroyed
 
 pages:
   dashboard: Dashboard
@@ -45,7 +45,7 @@ mixed:
   login: Login
   save: Save
   cancel: Cancel
-  no_records: There are not records to show
+  no_records: No records to show
   actions: Actions
   show: Show
   edit: Edit
