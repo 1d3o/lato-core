@@ -7,7 +7,7 @@ module LatoCore
     def cell(*names)
       # define variables
       names_list = names.first.to_s.start_with?('laro_') ? names[1..-1] : names
-      cell_class = names.first.to_s.start_with?('laro_') ? "#{names.first.camelize}::" : 'LatoCore::'
+      cell_class = names.first.to_s.start_with?('laro_') ? "#{names.first.classify}::" : 'LatoCore::'
       # return correct cell
       names_list.each do |name|
         cell_class = "#{cell_class}#{name.capitalize}::"
