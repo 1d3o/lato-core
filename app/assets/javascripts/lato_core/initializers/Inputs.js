@@ -196,12 +196,7 @@ var InputsInitializer = (function () {
   }
 
   return {
-    init: init,
-    initializeDropzone: initializeDropzone,
-    initializeSelect: initializeSelect,
-    initializeDatetime: initializeDatetime,
-    initializeEditor: initializeEditor,
-    initializeGeolocalizationMap: initializeGeolocalizationMap
+    init: init
   }
 
 })()
