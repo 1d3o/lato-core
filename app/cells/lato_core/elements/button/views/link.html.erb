@@ -11,10 +11,10 @@
     <% if @show_confirmation %>
       data-confirmation="true"
     <% end %>
-    <% if @args[:remote] %>
+    <% if @args[:remote] && !@show_confirmation %>
       data-remote="true"
     <% end %>
-    <% if @args[:onclick] %>
+    <% if @args[:onclick] && !@show_confirmation %>
       onclick="<%= @args[:onclick] %>"
     <% end %>
   >
@@ -40,6 +40,12 @@
       title="<%= @args[:confirmation][:positive_response] %>"
       <% if @show_method %>
         data-method="<%= @args[:method] %>"
+      <% end %>
+      <% if @args[:remote] %>
+        data-remote="true"
+      <% end %>
+      <% if @args[:onclick] %>
+        onclick="<%= @args[:onclick] %>"
       <% end %>
     >
       <i class="fa fa-check" aria-hidden="true"></i> <%= @args[:confirmation][:positive_response] %>
