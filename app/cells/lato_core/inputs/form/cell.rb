@@ -4,7 +4,8 @@ module LatoCore
 
     @@requested_args = [:url]
     @@default_args = {
-      method: 'post'
+      method: 'post',
+      remote: false
     }
 
     def initialize(args = {})

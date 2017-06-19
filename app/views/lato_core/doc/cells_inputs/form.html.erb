@@ -101,6 +101,47 @@
 <!-- / CODE SECTION -->
 
 <hr>
+<%=raw cell(:elements, :title).new(label: 'Form with remote true', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <% example_form = cell(:inputs, :form).new(url: '#', remote: true) %>
+
+    <%=raw example_form.open %>
+
+      <%=raw cell(:inputs, :text).new(name: 'sample', label: 'Input inside remote form') %>
+
+    <%=raw example_form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %> example_form = cell(:inputs, :form).new(url: '#', remote: true) <%= erb_close_tag %>
+
+<%= erb_open_tag %>=raw example_form.open <%= erb_close_tag %>
+  ...
+<%= erb_open_tag %>=raw example_form.close <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
 <%=raw cell(:elements, :title).new(label: 'Form with responsive inputs', size: 3) %>
 
 <%=raw row.open %>

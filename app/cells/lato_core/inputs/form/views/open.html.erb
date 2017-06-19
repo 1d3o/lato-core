@@ -2,6 +2,9 @@
   class="inputs__form"
   action="<%= @args[:url] %>"
   method="<%= @form_method %>"
+  <% if @args[:remote] %>
+    data-remote="true"
+  <% end %>
 >
 
 <input type="hidden" name="utf8" value="✓">
