@@ -38,8 +38,7 @@ var LayoutInitializer = (function () {
   }
 
   return {
-    init: init,
-    initializeScrollbar: initializeScrollbar
+    init: init
   }
 
 })()
