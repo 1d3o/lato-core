@@ -38,6 +38,7 @@ namespace :doc do
   get 'cells_inputs_dropzone', to: 'cells_inputs#dropzone', as: 'cells_inputs_dropzone'
   post 'cells_inputs_dropzone_exec', to: 'cells_inputs#dropzone_exec', as: 'cells_inputs_dropzone_exec'
   get 'cells_inputs_geolocalization', to: 'cells_inputs#geolocalization', as: 'cells_inputs_geolocalization'
+  get 'cells_inputs_sortableblock', to: 'cells_inputs#sortableblock', as: 'cells_inputs_sortableblock'
 
   # cells charts
 

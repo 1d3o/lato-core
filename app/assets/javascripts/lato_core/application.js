@@ -17,8 +17,13 @@
 //= require_tree ./interfaces
 
 $(window).load(function () {
-  LayoutInitializer.init()
+
+})
+
+$(document).ready(function() {
+  ChartsInitializer.init()
   ElementsInitializer.init()
   InputsInitializer.init()
-  ChartsInitializer.init()
+  LayoutInitializer.init()
+  SortableManager.init()
 })

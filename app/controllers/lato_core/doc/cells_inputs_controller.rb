@@ -27,5 +27,7 @@ module LatoCore
 
     def geolocalization; end
 
+    def sortableblock; end
+
   end
 end

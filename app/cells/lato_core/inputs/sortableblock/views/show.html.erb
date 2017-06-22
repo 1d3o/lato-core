@@ -1,0 +1,31 @@
+<div class="inputs-text inputs__container <%= @args[:class] %>">
+
+  <%= render '../../shared/label.html' %>
+
+  <!-- <input
+    class="inputs__input"
+    type="text"
+    name="<%= @args[:name] %>"
+    placeholder="<%= @args[:placeholder] %>"
+    data-required="<%= @args[:required] %>"
+    <% if @args[:disabled] %>
+      disabled
+    <% end %>
+  /> -->
+
+  <div class="js-sortable__main-container">
+
+    <% @args[:components].each do |component| %>
+
+      <div
+        class="c-sortable__element js-sortable__element"
+        data-position="<%= component[:position] %>"
+      >
+        <%= component[:component].show %>
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>

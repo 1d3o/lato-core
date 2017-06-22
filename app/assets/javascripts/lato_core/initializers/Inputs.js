@@ -185,7 +185,6 @@ var InputsInitializer = (function () {
   }
 
   // Init:
-
   function init () {
     initializeSelect()
     initializeDatetime()
