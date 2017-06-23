@@ -43,3 +43,31 @@
   <%=raw block.close %>
 
 <%=raw row.close %>
+
+<hr>
+
+<%=raw cell(:elements, :title).new(label: 'figa', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <% text3 = cell(:inputs, :text).new(name: 'sample-3', label: 'Insert your text vecch') %>
+        <% text4 = cell(:inputs, :text).new(name: 'sample-4', label: 'Insert your text here') %>
+        <% component3 = {id: 1, position: 1, component: text3 }  %>
+        <% component4 = {id: 2, position: 2, component: text4 }  %>
+        <%=raw cell(:inputs, :sortableblock).new(name: 'sample', components: [component3, component4]) %>
+
+      <%=raw row.close %>
+
+    <%=raw form.close %>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<div style="margin-top: 1000px;"></div>
