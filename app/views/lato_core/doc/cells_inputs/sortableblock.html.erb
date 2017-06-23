@@ -20,7 +20,7 @@
 <!-- / PRESENTATION -->
 
 <hr>
-<%=raw cell(:elements, :title).new(label: 'Normal Select input', size: 3) %>
+<%=raw cell(:elements, :title).new(label: 'Field group', size: 3) %>
 
 <%=raw row.open %>
 
@@ -46,7 +46,7 @@
 
 <hr>
 
-<%=raw cell(:elements, :title).new(label: 'figa', size: 3) %>
+<%=raw cell(:elements, :title).new(label: 'Other field group', size: 3) %>
 
 <%=raw row.open %>
 
@@ -57,10 +57,19 @@
       <%=raw row.open %>
 
         <% text3 = cell(:inputs, :text).new(name: 'sample-3', label: 'Insert your text vecch') %>
-        <% text4 = cell(:inputs, :text).new(name: 'sample-4', label: 'Insert your text here') %>
+
+        <% map = cell(:inputs, :geolocalization).new(label: 'Select a point on the map') %>
+        <% grafico = cell(:charts, :bar, :vertical).new(
+          labels: ['01', '02', '03'],
+          datasets: [
+            {label: 'Interactions', data: [403, 959, 234]},
+            {label: 'Downloads', data: [124, 390, 87]}
+          ]
+        ) %>
         <% component3 = {id: 1, position: 1, component: text3 }  %>
-        <% component4 = {id: 2, position: 2, component: text4 }  %>
-        <%=raw cell(:inputs, :sortableblock).new(name: 'sample', components: [component3, component4]) %>
+        <% component4 = {id: 2, position: 2, component: map }  %>
+        <% component5 = {id: 2, position: 2, component: grafico }  %>
+        <%=raw cell(:inputs, :sortableblock).new(name: 'sample', components: [component3, component4, component5]) %>
 
       <%=raw row.close %>
 

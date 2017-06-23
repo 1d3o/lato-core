@@ -1,4 +1,47 @@
 .c-sortable__element {
   width: 100%;
+  padding-top: 20px;
+  position: relative;
   @include clearfix();
+  &:hover {
+    .c-sortable__handle {
+      opacity: 1;
+    }
+  }
+}
+
+.c-sortable__destination {
+  background-color: darken($color_grey, 5%);
+  opacity: 0.3;
+  transition: all 0.25s;
+}
+
+.c-sortable__handle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background: $color_grey;
+  border-radius: 3px;
+  text-align: center;
+  opacity: 0;
+  cursor: move;
+  transition: all 0.25s;
+  z-index: 10;
+  svg {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin: 5px auto 0 auto;
+    path {
+      fill: $color_main;
+    }
+  }
+}
+
+@media only screen and(max-width: 1023px) {
+  .c-sortable__handle {
+    opacity: 1;
+  }
 }

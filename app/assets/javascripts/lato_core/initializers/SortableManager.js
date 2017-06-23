@@ -6,8 +6,10 @@ var SortableManager = (function () {
       for (var i = 0; i < sortableContainer.length; i++) {
 
         var sort = Sortable.create(sortableContainer[i], {
-          animation: 150,
+          animation: 100,
+          handle: '.c-sortable__handle',
           draggable: '.js-sortable__element',
+          ghostClass: 'c-sortable__destination',
           onChoose: function (e) {
             console.info('Element is chosen', e)
           },
@@ -39,7 +41,9 @@ var SortableManager = (function () {
     for (var i = 0; i < sortableElements.length; i++) {
       var sortableElement = sortableElements[i]
       var sortableElementId = sortableElement.dataset.id
-      var relativeInput = document.querySelector('.js-sortable__hidden-input[data-id="' + sortableElementId + '"]')
+      var relativeInput = container.querySelector('.js-sortable__hidden-input[data-id="' + sortableElementId + '"]')
+
+      console.log(relativeInput)
 
       relativeInput.value = i + 1
       sortableElement.dataset.position = i + 1
