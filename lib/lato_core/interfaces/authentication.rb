@@ -10,7 +10,7 @@ module LatoCore
     end
 
     # This function delete a cookie to destroy the superuser session.
-    def core___destroy_superuser_session
+    def core__destroy_superuser_session
       session[:lato_core__superuser_session_token] = nil
     end
 
@@ -29,7 +29,7 @@ module LatoCore
       if decoded_token
         @core__current_superuser = LatoCore::Superuser.find_by(id: decoded_token[:superuser_id])
         unless @core__current_superuser
-          core___destroy_superuser_session
+          core__destroy_superuser_session
           redirect_to lato_core.login_path
         end
       else

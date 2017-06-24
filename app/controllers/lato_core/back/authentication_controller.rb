@@ -29,7 +29,7 @@ module LatoCore
     end
 
     def exec_logout
-      core___destroy_superuser_session
+      core__destroy_superuser_session
       flash[:success] = LANGUAGES[:lato_core][:flashes][:logout_success]
       redirect_to lato_core.login_path
     end
