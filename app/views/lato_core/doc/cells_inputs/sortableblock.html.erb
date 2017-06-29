@@ -35,7 +35,8 @@
 
         <%=raw cell(:inputs, :sortableblock).new(name: 'sample', components: [
           {id: 'input-1-sortable', position: 1, component: input1 },
-          {id: 'input-2-sortable', position: 2, component: input2 }
+          {id: 'input-2-sortable', position: 2, component: input2 },
+          {id: 'parial-sortable', position: 3, render: render('lato_core/doc/shared/sortableblock_partial') }
         ]) %>
 
       <%=raw row.close %>
@@ -59,7 +60,8 @@
 <%= erb_open_tag %>input2 = cell(:inputs, :text).new(name: 'input-2', label: 'Insert your surname') <%= erb_close_tag %>
 <%= erb_open_tag %>=raw cell(:inputs, :sortableblock).new(name: 'sample', components: [
   {id: 'input-1-sortable', position: 1, component: input1 },
-  {id: 'input-2-sortable', position: 2, component: input2 }
+  {id: 'input-2-sortable', position: 2, component: input2 },
+  {id: 'parial-sortable', position: 3, render: render('lato_core/doc/shared/sortableblock_partial') }
 ])<%= erb_close_tag %>
 
 <%=raw code.close %>
