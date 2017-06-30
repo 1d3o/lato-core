@@ -1,5 +1,5 @@
 <form
-  class="inputs__form"
+  class="inputs__form <%= @args[:class] %>"
   action="<%= @args[:url] %>"
   method="<%= @form_method %>"
   <% if @args[:remote] %>

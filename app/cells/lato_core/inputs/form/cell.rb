@@ -3,9 +3,11 @@ module LatoCore
   class Inputs::Form::Cell < Cell
 
     @@requested_args = [:url]
+
     @@default_args = {
       method: 'post',
-      remote: false
+      remote: false,
+      class: ''
     }
 
     def initialize(args = {})
