@@ -15,33 +15,28 @@
   .inputs__label {
     display: inline-block;
     color: $input_color_text;
-
-    &:before {
-      content: "";
-      display: inline-block;
-      width: 15px;
-      height: 15px;
-      border: solid 2px $color_main;
-      background-color: transparent;
-      position: relative;
-      top: 3px;
-      z-index: 0;
-      margin-right: 3px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
   }
 
 }
 
-.inputs-checkbox .inputs__input:checked + .inputs__label {
-  &:before {
-    background-color: $color_main;
-  }
+.inputs-checkbox__check {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: solid 2px $color_main;
+  background-color: transparent;
+  position: relative;
+  top: 3px;
+  z-index: 0;
+  margin-right: 3px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.inputs-checkbox .inputs__input--error + .inputs__label {
-  &:before {
-    border-color: $input_color_border_error;
-  }
+.inputs-checkbox .inputs__input:checked + .inputs-checkbox__check {
+  background-color: $color_main;
+}
+
+.inputs-checkbox .inputs__input--error + .inputs-checkbox__check {
+  border-color: $input_color_border_error;
 }
