@@ -98,3 +98,26 @@
 
 <%=raw row.close %>
 <!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Flash messages with custom id', size: 3) %>
+
+<%=raw cell(:elements, :flash).new(message: 'Info Hello world', close: true, style: 'info', id: 'custom-flash') %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:elements, :flash).new(message: 'Info Hello world', close: true, style: 'info', id: 'custom-flash') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

@@ -6,7 +6,8 @@ module LatoCore
 
     @@default_args = {
       style: nil,
-      close: false
+      close: false,
+      id: nil
     }
 
     def initialize(args = {})
