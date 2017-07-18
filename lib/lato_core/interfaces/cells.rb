@@ -17,6 +17,7 @@ module LatoCore
         total: records.length,
         per_page: pagination,
         search: '',
+        search_key: search,
         pagination: 1,
       }
       # manage search

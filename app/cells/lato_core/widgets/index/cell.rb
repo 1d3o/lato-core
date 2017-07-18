@@ -108,7 +108,7 @@ module LatoCore
       # This function generate the rows for a list of columns.
       def generate_table_rows_from_columns_functions columns_functions
         table_rows = []
-        
+
         @records.each do |record|
           labels = []
           # add function result to row columns
@@ -181,8 +181,9 @@ module LatoCore
 
       # This function generate and return the search input.
       def generate_search_input
+        search_key = @args[:records].is_a?(Hash) ? @args[:records][:search_key] : ''
         search_value = @args[:records].is_a?(Hash) ? @args[:records][:search] : ''
-        return LatoCore::Inputs::Text::Cell.new(name: 'widget_index[search]', value: search_value)
+        return LatoCore::Inputs::Text::Cell.new(name: 'widget_index[search]', value: search_value, placeholder: search_key)
       end
 
       # This function generate the search submit button.
