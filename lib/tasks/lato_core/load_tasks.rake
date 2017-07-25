@@ -1,6 +1,6 @@
 include LatoCore::Interface
 
-namespace :lato do
+namespace :lato_core do
 
   task load_all: [:load_configs, :load_languages]
 
