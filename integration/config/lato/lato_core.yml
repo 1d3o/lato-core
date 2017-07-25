@@ -1,0 +1,102 @@
+# This file contain all settings for the core module.
+
+# set application name used for titles, links ecc.
+application_name: Lato 2.0
+
+# set possible permissions for superusers.
+superusers_permissions:
+  operator:
+    value: 1
+    title: Operator
+  editor:
+    value: 2
+    title: Editor
+  admin:
+    value: 3
+    title: Admin
+  developer:
+    value: 4
+    title: Developer
+
+# set the default superuser info created if no users are present on th system.
+default_superuser:
+  name: Core
+  surname: Lato
+  email: lato@mail.com
+  username: lato
+  password: WelcomeToLato!
+
+# google maps API key (used for maps inputs).
+google_maps_api_key: AIzaSyBc45CKHFw7q3WK4FJO2jybNnYSZ3bKFW8
+
+# set main template colors.
+colors:
+  white: '#ffffff'
+  black: '#000000'
+  grey: '#ecf0f1'
+  main: '#34495e'
+  active: '#2980b9'
+  danger: '#e74c3c'
+  warning: '#f39c12'
+  success: '#27ae60'
+
+# set menu for the module.
+menu:
+  core_dashboard:
+    icon: tachometer
+    title: translate[dashboard]
+    url: /lato/core/dashboard
+    position: 1
+    permission_min: 0
+    permission_max: 99
+  core_superusers:
+    icon: users
+    title: translate[superusers]
+    url: /lato/core/superusers
+    position: 2
+    permission_min: 0
+    permission_max: 99
+    sub_items:
+      new:
+        title: translate[superusers_new]
+        url: /lato/core/superusers/new
+        permission_min: 0
+        permission_max: 99
+      all:
+        title: translate[superusers_index]
+        url: /lato/core/superusers
+        permission_min: 0
+        permission_max: 99
+  core_documentation:
+    icon: book
+    title: translate[documentation]
+    url: /lato/core/doc
+    position: 1001
+    permission_min: 4
+    permission_max: 99
+
+# set assets for the module. -> Please, do not edit default assets.
+assets:
+  core_style:
+    path: lato_core/application
+    type: stylesheet
+  core_script:
+    path: lato_core/application
+    type: javascript
+
+# set widgets for the module. -> This is a test widget. Remove it.
+widgets:
+  core_system_info:
+    icon: info
+    path: lato_core/widgets/systeminfo
+    position: 1
+    title: Info
+
+# set partials added at the end of the layout.
+partials:
+  core_dynamic_data_to_js:
+    path: lato_core/partials/dynamic_data_to_js
+    position: 1
+  core_gmaps:
+    path: lato_core/partials/gmaps
+    position: 2

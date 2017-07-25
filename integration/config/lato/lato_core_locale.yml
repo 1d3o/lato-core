@@ -1,0 +1,64 @@
+menu:
+  dashboard: Dashboard
+  superusers: Superusers
+  superusers_new: Add new
+  superusers_index: Show all
+  documentation: Doc. Core
+
+forms:
+  username: Username
+  password: Password
+  name: Name
+  surname: Surname
+  email: Email
+  password_confirmation: Confirm password
+  username_help: Username should have 4 characters minimum
+  password_help: Paasword should have 6 characters minimum
+  password_confirmation_help: Please, repeat your password
+  permission: Permission
+  id: Id
+  biography: Write something about you
+  last_login_ip_address: Last login IP address
+  last_login_datetime: Last login datetime
+
+flashes:
+  user_not_found: User not found
+  uncorrect_password: Password not correct
+  logout_success: User correctly logged out
+  superuser_create_success: The Superuser was successfully created
+  superuser_not_found: The Superuser searched is not present on the system
+  superuser_not_permission: You don't have the right permission to do this action
+  superuser_update_success: The Superuser was successfully updated
+  superuser_destroy_success: The Superuser was successfully destroyed
+
+pages:
+  dashboard: Dashboard
+  documentation: Documentation
+  superusers: Superusers
+  superusers_new: Create superuser
+  superusers_edit: Edit superuser
+  superusers_show: Superuser profile
+
+mixed:
+  close_message: Close message
+  logout: Logout
+  login: Login
+  save: Save
+  cancel: Cancel
+  no_records: No records to show
+  actions: Actions
+  show: Show
+  edit: Edit
+  delete: Delete
+  new: New
+  default_delete_message: Are you sure to complete the delete action?
+  default_delete_positive_response: 'Yes'
+  default_delete_negative_response: 'No'
+  search: Search
+  main_informations: Main informations
+  login_informations: Login informations
+  my_profile: My profile
+  main_informations: Main informations
+  security_informations: Security informations
+  back: Back
+  close: Close
