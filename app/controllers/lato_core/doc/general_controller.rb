@@ -7,9 +7,7 @@ module LatoCore
 
     def languages; end
 
-    def custom_controllers; end
-
-    def custom_cells; end
+    def generators; end
 
   end
 end

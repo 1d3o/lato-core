@@ -17,7 +17,7 @@ module LatoCore
       )
       # copy view
       copy_file(
-        'views/index.html.erb',
+        'views/application/index.html.erb',
         'app/views/lato/application/index.html.erb'
       )
       # copy stylesheets theme file
