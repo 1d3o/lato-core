@@ -8,7 +8,9 @@
 
   <%=raw block.open %>
 
-    <%=raw cell(:elements, :title).new(label: "Welcome to this Lato sample page", size: 2) %>
+    <%=raw cell(:elements, :title).new(label: 'New data', size: 2) %>
+
+    <%= render 'lato/crud/shared/form', url: lato_datas_path, method: :post %>
 
   <%=raw block.close %>
 
