@@ -28,7 +28,7 @@ bundle exec rake db:migrate
 
 Now you can start the server and go to the relative url */lato/core*
 
-## Rails integration
+## Generators
 
 Lato core gem contains a list of generators used to speed up the rails integration.
 
@@ -38,4 +38,12 @@ To initialize Lato core on a Rails application run:
 
 ```console
 rails generate lato_core:initializer
+```
+
+### Sample CRUD
+
+To create all the code used to manage a simple CRUD (views and controllers) you can run:
+
+```console
+rails generate lato_core:crud
 ```
