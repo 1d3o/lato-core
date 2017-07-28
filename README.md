@@ -40,9 +40,9 @@ To initialize Lato core on a Rails application run:
 rails generate lato_core:initializer
 ```
 
-### Sample CRUD
+### Sample crud
 
-To create all the code used to manage a simple CRUD (views and controllers) you can run:
+To create all the code used to manage a simple crud (views and controllers) you can run:
 
 ```console
 rails generate lato_core:crud
