@@ -109,7 +109,7 @@ module LatoCore
         menu = menu + module_menu if module_menu
       end
       # sort items and return them
-      menu = menu.sort_by {|menu_item| menu_item[:position]}
+      menu = menu.sort_by {|menu_item| [menu_item[:position], menu_item[:title]]}
       return menu
     end
 
