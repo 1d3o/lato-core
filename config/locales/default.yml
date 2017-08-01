@@ -13,7 +13,7 @@ forms:
   email: Email
   password_confirmation: Confirm password
   username_help: Username should have 4 characters minimum
-  password_help: Paasword should have 6 characters minimum
+  password_help: Password should have 6 characters minimum
   password_confirmation_help: Please, repeat your password
   permission: Permission
   id: Id
