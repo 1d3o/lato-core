@@ -1,0 +1,63 @@
+menu:
+  dashboard: Dashboard
+  superusers: Amministratori
+  superusers_new: Aggiungi nuovo
+  superusers_index: Visualizza tutti
+  documentation: Doc. Core
+
+forms:
+  username: Username
+  password: Password
+  name: Nome
+  surname: Cognome
+  email: Email
+  password_confirmation: Conferma password
+  username_help: L'username deve contenere almeno 4 caratteri
+  password_help: La password deve contenere almeno 6 caratteri
+  password_confirmation_help: Perfavore, ripeti la password inserita
+  permission: Permessi
+  id: Id
+  biography: Biografia
+  last_login_ip_address: Indirizzo IP dell'ultimo accesso
+  last_login_datetime: Timestamp dell'ultimo accesso
+
+flashes:
+  user_not_found: Utente non trovato
+  uncorrect_password: Password non corretta
+  logout_success: Logout avvenuto correttamente
+  superuser_create_success: Amministratore creato con successo
+  superuser_not_found: L'amministratore cercato non è presente nel sistema
+  superuser_not_permission: Non disponi dei permessi necessari per compiere questa azione
+  superuser_update_success: Amministratore aggiornato con successo
+  superuser_destroy_success: Amministratore eliminato con successo
+
+pages:
+  dashboard: Dashboard
+  documentation: Documentazione
+  superusers: Amministratori
+  superusers_new: Crea amministratore
+  superusers_edit: Modifica amministratore
+  superusers_show: Profilo amministratore
+
+mixed:
+  close_message: Chiudi messaggio
+  logout: Logout
+  login: Login
+  save: Salva
+  cancel: Cancella
+  no_records: Nessun dato da visualizzare
+  actions: Azioni
+  show: Visualizza
+  edit: Modifica
+  delete: Elimina
+  new: Nuovo
+  default_delete_message: Sei sicuro di completare l'eliminazione?
+  default_delete_positive_response: Conferma
+  default_delete_negative_response: Annulla
+  search: Cerca
+  main_informations: Informazioni principali
+  login_informations: Informazioni di accesso
+  my_profile: Il mio profilo
+  security_informations: Informazioni di sicurezza
+  back: Indietro
+  close: Chiudi
