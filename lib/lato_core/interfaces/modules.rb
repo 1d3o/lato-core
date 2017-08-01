@@ -37,8 +37,8 @@ module LatoCore
       application_config_path = core__get_application_lato_configs_path
       module_root_path = core__get_module_root_path(module_name)
       application_language = core__get_application_language
-      default_language_file_path = "#{module_root_path}/config/locales/default.yml"
-      language_file_path = "#{module_root_path}/config/locales/#{application_language}.yml"  
+      default_language_file_path = "#{module_root_path}/config/languages/default.yml"
+      language_file_path = "#{module_root_path}/config/languages/#{application_language}.yml"  
       # copy file from module to main application
       if File.exist?(language_file_path)
         FileUtils.cp language_file_path, "#{application_config_path}/#{module_name}_locale.yml"
@@ -47,7 +47,7 @@ module LatoCore
       end
     end
 
-     # This function returns an object with languages for every module.
+    # This function returns an object with languages for every module.
     def core_get_modules_languages
       lato_modules = core__get_modules_list
       languages = {}
@@ -78,8 +78,8 @@ module LatoCore
       module_root_path = core__get_module_root_path(module_name)
 
       # try to read language data
-      language_data = core__read_yaml("#{module_root_path}/config/locales/#{application_language}.yml")
-      language_data = core__read_yaml("#{module_root_path}/config/locales/default.yml") unless language_data
+      language_data = core__read_yaml("#{module_root_path}/config/languages/#{application_language}.yml")
+      language_data = core__read_yaml("#{module_root_path}/config/languages/default.yml") unless language_data
 
       return language_data
     end
