@@ -3,8 +3,9 @@
   <%=raw cell(:elements, :title).new(label: 'Lato Modules', size: 6) %>
 
   <% lato_modules = core__get_modules_list %>
+  <% application_gems = core__get_application_gems %>
   <% lato_modules.each do |module_name| %>
-    <span class="widgets-systeminfo__module-name"><%= module_name %></span>
+    <span class="widgets-systeminfo__module-name"><%= module_name %> <%= application_gems[module_name] %></span>
   <% end %>
 
   <p class="widgets-systeminfo__footer">

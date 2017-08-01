@@ -11,7 +11,11 @@ module LatoCore
 
     # This function return the list of gems used by the application.
     def core__get_application_gems
-      return Bundler.load.specs.map { |spec| spec.name }
+      gems = {}
+      Bundler.load.specs.each do |spec|
+        gems[spec.name] = spec.version
+      end
+      return gems
     end
 
     # This function return the root path of the application.

@@ -12,7 +12,7 @@ module LatoCore
 
     # This function returns the list of lato modules installed on main application.
     def core__get_modules_list
-      all_gems = core__get_application_gems
+      all_gems = core__get_application_gems.keys
       lato_gems = []
       # check every gem
       all_gems.each do |name|
