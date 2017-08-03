@@ -1,7 +1,7 @@
 # This file contain all settings for the core module.
 
 # set application name used for titles, links ecc.
-application_name: Lato 2.0
+application_name: Lato Management System
 
 # set possible permissions for superusers.
 superusers_permissions:

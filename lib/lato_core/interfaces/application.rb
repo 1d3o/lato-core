@@ -4,9 +4,9 @@ module LatoCore
   # Information about the application are saved on a global variable APPLICATION.
   module Interface::Application
 
-    # This function return the default language set on main application.
+    # This function return the default language set on main application (I18l).
     def core__get_application_language
-      return I18n.locale
+      I18n.locale
     end
 
     # This function return the list of gems used by the application.
@@ -15,12 +15,12 @@ module LatoCore
       Bundler.load.specs.each do |spec|
         gems[spec.name] = spec.version
       end
-      return gems
+      gems
     end
 
     # This function return the root path of the application.
     def core__get_application_root_path
-      return "#{Rails.root}"
+      Rails.root.to_s
     end
 
     # This function return the path of the application logo for the sidebar.

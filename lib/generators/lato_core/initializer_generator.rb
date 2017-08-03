@@ -40,9 +40,6 @@ module LatoCore
         'assets/images/logo.svg',
         'app/assets/images/lato/logo.svg'
       )
-      # copy modules settings
-      core__generate_modules_application_configs
-      core__generate_modules_application_languages
     end
 
   end

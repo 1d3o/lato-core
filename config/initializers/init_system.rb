@@ -6,7 +6,8 @@ include LatoCore::Interface
 CONFIGS = core__get_modules_configs
 
 # save on a global variable languages of all lato modules.
-LANGUAGES = core_get_modules_languages
+puts core__get_modules_languages
+LANGUAGES = core__get_modules_languages
 
 # save on a global variable settings and informations used to render layout.
 LAYOUT = {

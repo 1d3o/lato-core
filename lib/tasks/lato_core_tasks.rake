@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :lato_media do
+# task :lato_core do
 #   # Task goes here
 # end
