@@ -4,7 +4,7 @@ module LatoCore
   module Interface::Authentication
 
     # This function set a cookie to create the superuser session.
-    def core__create_superuser_session superuser, lifetime
+    def core__create_superuser_session(superuser, lifetime)
       token = core__encode_token(lifetime, superuser_id: superuser.id)
       session[:lato_core__superuser_session_token] = token
     end

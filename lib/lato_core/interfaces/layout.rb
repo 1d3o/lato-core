@@ -6,12 +6,12 @@ module LatoCore
     # Helpers:
 
     # This function set the current active page title on the header.
-    def core__set_header_active_page_title title
+    def core__set_header_active_page_title(title)
       @core__header_active_page_title = title
     end
 
     # This function set the current active page on the menu.
-    def core__set_menu_active_item item_key
+    def core__set_menu_active_item(item_key)
       @core__menu_active_item = item_key
     end
 
@@ -24,15 +24,15 @@ module LatoCore
       partials = []
       lato_modules.each do |lato_module_name|
         module_partials = core__get_partials_for_module(lato_module_name)
-        partials = partials + module_partials if module_partials
+        partials += module_partials if module_partials
       end
       # sort items and return them
       partials = partials.sort_by {|partial| partial[:position]}
-      return partials.reverse
+      partials.reverse
     end
 
     # This function return the list of partials for a specific module.
-    def core__get_partials_for_module module_name
+    def core__get_partials_for_module(module_name)
       module_configs = core__get_module_configs(module_name)
       return [] unless module_configs
       # load module items
@@ -43,16 +43,16 @@ module LatoCore
         end
       end
       # return module items
-      return module_partials
+      module_partials
     end
 
     # This function create a correct partial object for the header.
-    def core__generate_partial key, values, module_name
+    def core__generate_partial(key, values, module_name)
       partial = {}
       partial[:key] = key
       partial[:path] = values[:path] ? values[:path] : ''
       partial[:position] = values[:position] ? values[:position] : 999
-      return partial
+      partial
     end
 
     # Widgets:
