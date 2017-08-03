@@ -13,6 +13,7 @@
 
   .elements-table__row td:last-child {
     text-align: center;
+    min-width: 250px;
 
     .elements-button__element {
       font-size: 0.8em;
@@ -65,15 +66,6 @@
 // Responsive layout:
 
 @media(max-width:767px) {
-  .widgets-index--actions {
-    .elements-table__row td:last-child {
-      .elements-button__element {
-        border-radius: 10px;
-        margin: 2px;
-      }
-    }
-  }
-
   .widgets-index__search { 
     .inputs-text {
       width: 120px;
