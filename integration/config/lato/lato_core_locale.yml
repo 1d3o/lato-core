@@ -1,63 +1,63 @@
 menu:
   dashboard: Dashboard
-  superusers: Amministratori
-  superusers_new: Aggiungi nuovo
-  superusers_index: Visualizza tutti
+  superusers: Superusers
+  superusers_new: Add new
+  superusers_index: Show all
   documentation: Doc. Core
 
 forms:
   username: Username
   password: Password
-  name: Nome
-  surname: Cognome
+  name: Name
+  surname: Surname
   email: Email
-  password_confirmation: Conferma password
-  username_help: L'username deve contenere almeno 4 caratteri
-  password_help: La password deve contenere almeno 6 caratteri
-  password_confirmation_help: Perfavore, ripeti la password inserita
-  permission: Permessi
+  password_confirmation: Confirm password
+  username_help: Username should have 4 characters minimum
+  password_help: Password should have 6 characters minimum
+  password_confirmation_help: Please, repeat your password
+  permission: Permission
   id: Id
-  biography: Biografia
-  last_login_ip_address: Indirizzo IP dell'ultimo accesso
-  last_login_datetime: Timestamp dell'ultimo accesso
+  biography: Write something about you
+  last_login_ip_address: Last login IP address
+  last_login_datetime: Last login datetime
 
 flashes:
-  user_not_found: Utente non trovato
-  uncorrect_password: Password non corretta
-  logout_success: Logout avvenuto correttamente
-  superuser_create_success: Amministratore creato con successo
-  superuser_not_found: L'amministratore cercato non è presente nel sistema
-  superuser_not_permission: Non disponi dei permessi necessari per compiere questa azione
-  superuser_update_success: Amministratore aggiornato con successo
-  superuser_destroy_success: Amministratore eliminato con successo
+  user_not_found: User not found
+  uncorrect_password: Password not correct
+  logout_success: User correctly logged out
+  superuser_create_success: The Superuser was successfully created
+  superuser_not_found: The Superuser searched is not present on the system
+  superuser_not_permission: You don't have the right permission to do this action
+  superuser_update_success: The Superuser was successfully updated
+  superuser_destroy_success: The Superuser was successfully destroyed
 
 pages:
   dashboard: Dashboard
-  documentation: Documentazione
-  superusers: Amministratori
-  superusers_new: Crea amministratore
-  superusers_edit: Modifica amministratore
-  superusers_show: Profilo amministratore
+  documentation: Documentation
+  superusers: Superusers
+  superusers_new: Create superuser
+  superusers_edit: Edit superuser
+  superusers_show: Superuser profile
 
 mixed:
-  close_message: Chiudi messaggio
+  close_message: Close message
   logout: Logout
   login: Login
-  save: Salva
-  cancel: Cancella
-  no_records: Nessun dato da visualizzare
-  actions: Azioni
-  show: Visualizza
-  edit: Modifica
-  delete: Elimina
-  new: Nuovo
-  default_delete_message: Sei sicuro di completare l'eliminazione?
-  default_delete_positive_response: Conferma
-  default_delete_negative_response: Annulla
-  search: Cerca
-  main_informations: Informazioni principali
-  login_informations: Informazioni di accesso
-  my_profile: Il mio profilo
-  security_informations: Informazioni di sicurezza
-  back: Indietro
-  close: Chiudi
+  save: Save
+  cancel: Cancel
+  no_records: No records to show
+  actions: Actions
+  show: Show
+  edit: Edit
+  delete: Delete
+  new: New
+  default_delete_message: Are you sure to complete the delete action?
+  default_delete_positive_response: 'Yes'
+  default_delete_negative_response: 'No'
+  search: Search
+  main_informations: Main informations
+  login_informations: Login informations
+  my_profile: My profile
+  security_informations: Security informations
+  back: Back
+  close: Close

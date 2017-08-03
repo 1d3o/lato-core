@@ -26,30 +26,6 @@ module LatoCore
     # Languages:
     ############################################################################
 
-    # This function generates on the main application the languages files
-    # for every lato module.
-    def core__generate_modules_application_languages(language)
-      lato_modules = core__get_modules_list
-      lato_modules.each do |lato_module_name|
-        core__generate_module_application_languages(lato_module_name, language)
-      end
-    end
-
-    # This function generates on the main application the languages files for
-    # a specific lato module.
-    def core__generate_module_application_languages(module_name, language)
-      application_config_path = core__get_application_lato_configs_path
-      module_root_path = core__get_module_root_path(module_name)
-      default_language_file_path = "#{module_root_path}/config/languages/default.yml"
-      language_file_path = "#{module_root_path}/config/languages/#{language}.yml"
-      # copy file from module to main application
-      if File.exist?(language_file_path)
-        FileUtils.cp language_file_path, "#{application_config_path}/#{module_name}_locale.yml"
-      else
-        FileUtils.cp default_language_file_path, "#{application_config_path}/#{module_name}_locale.yml"
-      end
-    end
-
     # This function returns an object with languages for every module.
     def core__get_modules_languages
       lato_modules = core__get_modules_list
@@ -90,24 +66,6 @@ module LatoCore
 
     # Configs:
     ############################################################################
-
-    # This function generates on the main application the configs files for
-    # every lato module.
-    def core__generate_modules_application_configs
-      lato_modules = core__get_modules_list
-      lato_modules.each do |lato_module_name|
-        core__generate_module_application_configs(lato_module_name)
-      end
-    end
-
-    # This function generates on the main application the configs files for
-    # a specific lato module.
-    def core__generate_module_application_configs(module_name)
-      application_config_path = core__get_application_lato_configs_path
-      module_root_path = core__get_module_root_path(module_name)
-      # copy file from module to main application
-      FileUtils.cp "#{module_root_path}/config/configs.yml", "#{application_config_path}/#{module_name}.yml"
-    end
 
     # This function returns an object with configs for every module.
     def core__get_modules_configs
