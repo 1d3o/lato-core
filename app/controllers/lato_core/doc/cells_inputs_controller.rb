@@ -29,5 +29,7 @@ module LatoCore
 
     def sortableblock; end
 
+    def youtube; end
+
   end
 end

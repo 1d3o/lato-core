@@ -1,6 +1,6 @@
 module LatoCore
 
-  class Inputs::Textarea::Cell < Cell
+  class Inputs::Youtube::Cell < Cell
 
     @@requested_args = [:name]
 
@@ -10,8 +10,6 @@ module LatoCore
       placeholder: '',
       help: '',
       required: false,
-      min_length: nil,
-      max_length: nil,
       class: 'md-12'
     }
 

@@ -1,11 +1,11 @@
 PATH
   remote: ..
   specs:
-    lato_core (2.1)
+    lato_core (2.1.2)
       bcrypt (>= 3.1.7)
       cells (>= 4.0.0)
       cells-erb
-      jquery-rails (>= 3.0.1)
+      jquery-rails (>= 2.1.0)
       jwt (>= 1.5.4)
       rails (>= 5.1.0)
       sass-rails (>= 5.0)
@@ -227,4 +227,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.1
+   1.15.3

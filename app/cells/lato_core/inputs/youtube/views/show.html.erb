@@ -1,0 +1,20 @@
+<div class="inputs-youtube inputs__container <%= @args[:class] %>">
+
+  <%= render '../../shared/label.html' %>
+
+  <input
+    class="inputs__input"
+    type="text"
+    value="<%= @args[:value] %>"
+    name="<%= @args[:name] %>"
+    placeholder="<%= @args[:placeholder] %>"
+    data-required="<%= @args[:required] %>"
+  />
+
+  <%= render '../../shared/help.html' %>
+
+  <div class="inputs-youtube__video">
+    
+  </div>
+  
+</div>

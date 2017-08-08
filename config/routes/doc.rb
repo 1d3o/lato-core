@@ -7,6 +7,7 @@ namespace :doc do
   get 'general_personalization', to: 'general#personalization', as: 'general_personalization'
   get 'general_languages', to: 'general#languages', as: 'general_languages'
   get 'general_generators', to: 'general#generators', as: 'general_generators'
+
   # cells elements
   get 'cells_elements_row', to: 'cells_elements#row', as: 'cells_elements_row'
   get 'cells_elements_block', to: 'cells_elements#block', as: 'cells_elements_block'
@@ -37,6 +38,7 @@ namespace :doc do
   post 'cells_inputs_dropzone_exec', to: 'cells_inputs#dropzone_exec', as: 'cells_inputs_dropzone_exec'
   get 'cells_inputs_geolocalization', to: 'cells_inputs#geolocalization', as: 'cells_inputs_geolocalization'
   get 'cells_inputs_sortableblock', to: 'cells_inputs#sortableblock', as: 'cells_inputs_sortableblock'
+  get 'cells_inputs_youtube', to: 'cells_inputs#youtube', as: 'cells_inputs_youtube'
 
   # cells charts
 

@@ -95,6 +95,33 @@ var InputsInitializer = (function () {
     })
   }
 
+  function initializeYoutube () {
+    $('.inputs-youtube .inputs__input').change(function () {
+      var inputVal = $(this).val()
+      var videoId = getId(inputVal)
+      var iframeMarkup = '<iframe src="//www.youtube.com/embed/' + videoId + '" frameborder="0" allowfullscreen></iframe>'
+      var videoContainer = $(this).parent().find('.inputs-youtube__video')
+      if (inputVal && inputVal !== '') {
+        $(videoContainer).html(iframeMarkup)
+        $(videoContainer).addClass('inputs-youtube__video--active')
+      } else {
+        $(videoContainer).html('')
+        $(videoContainer).removeClass('inputs-youtube__video--active')
+      }
+    })
+
+    function getId (url) {
+      var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/
+      var match = url.match(regExp)
+
+      if (match && match[2].length === 11) {
+        return match[2]
+      } else {
+        return 'error'
+      }
+    }
+  }
+
   // Validations:
 
   function formInputsValidator () {
@@ -191,6 +218,7 @@ var InputsInitializer = (function () {
     initializeEditor()
     initializeDropzone()
     initializeGeolocalizationMap()
+    initializeYoutube()
     formInputsValidator()
   }
 
