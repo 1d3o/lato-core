@@ -96,6 +96,7 @@ var InputsInitializer = (function () {
   }
 
   function initializeYoutube () {
+    // manage input change
     $('.inputs-youtube .inputs__input').change(function () {
       var inputVal = $(this).val()
       var videoId = getId(inputVal)
@@ -110,6 +111,10 @@ var InputsInitializer = (function () {
       }
     })
 
+    // trigger initial change
+    $('.inputs-youtube .inputs__input').trigger('change')
+
+    // function to get youtube video
     function getId (url) {
       var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/
       var match = url.match(regExp)
