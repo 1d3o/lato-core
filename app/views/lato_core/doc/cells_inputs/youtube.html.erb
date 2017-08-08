@@ -78,3 +78,21 @@
   <%=raw block.close %>
 
 <%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :youtube).new(name: 'sample', label: 'Insert a video', value: 'https://www.youtube.com/watch?v=Sagg08DrO5U') <%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
