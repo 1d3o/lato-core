@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
 
   # front-end -> use the old good jquery
   # doc: https://github.com/rails/jquery-rails
-  s.add_runtime_dependency 'jquery-rails', '>= 3.0.1'
+  s.add_runtime_dependency 'jquery-rails', '>= 2.1.0'
 
   # front-end -> use view components
   # doc: https://github.com/trailblazer/cells
