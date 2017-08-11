@@ -32,7 +32,7 @@ if ActiveRecord::Base.connection.table_exists? 'lato_core_superusers'
   if LatoCore::Superuser.all.empty?
     user_params = CONFIGS[:lato_core][:default_superuser]
     user_params[:password_confirmation] = user_params[:password]
-    user_params[:permission] = CORE_SUPERUSERS_PERMISSIONS.first
+    user_params[:permission] = user_params[:permission] || CORE_SUPERUSERS_PERMISSIONS.first
     user = LatoCore::Superuser.new(user_params)
     throw "Default user can not be created: #{user.errors.full_messages.to_sentence}" unless user.save
   end

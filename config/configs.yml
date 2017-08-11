@@ -25,6 +25,7 @@ default_superuser:
   email: lato@mail.com
   username: lato
   password: WelcomeToLato!
+  permission: 4
 
 # google maps API key (used for maps inputs).
 google_maps_api_key: AIzaSyBc45CKHFw7q3WK4FJO2jybNnYSZ3bKFW8
