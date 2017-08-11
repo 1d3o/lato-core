@@ -10,6 +10,7 @@ module LatoCore
       placeholder: '',
       help: '',
       required: false,
+      create: false,
       options: [],
       option_value: 'value',
       option_name: 'name',

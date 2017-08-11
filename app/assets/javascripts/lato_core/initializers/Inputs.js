@@ -3,7 +3,11 @@ var InputsInitializer = (function () {
   // Init plugins:
 
   function initializeSelect () {
-    $('.inputs__select').selectize()
+    $('.inputs__select').each(function () {
+      $(this).selectize({
+        create: $(this).attr('data-create')
+      })
+    })
   }
 
   function initializeDatetime () {

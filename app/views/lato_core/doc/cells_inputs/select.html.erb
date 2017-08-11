@@ -105,6 +105,45 @@
 <%=raw row.close %>
 <!-- / CODE SECTION -->
 
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Select input with create option', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell(:inputs, :select).new(name: 'sample', label: 'Select an item', options: ['Pippo', 'Luigi', 'Gino'], create: true) %>
+
+      <%=raw row.close %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :select).new(name: 'sample', label: 'Select an item', options: ['Pippo', 'Luigi', 'Gino'], create: true)<%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
 <!-- PRESENTATION -->
 <%=raw row.open %>
 
