@@ -5,7 +5,7 @@
   <input
     class="inputs__input"
     type="text"
-    value="<%= @args[:value] %>"
+    value="<%= h @args[:value] %>"
     name="<%= @args[:name] %>"
     placeholder="<%= @args[:placeholder] %>"
     data-required="<%= @args[:required] %>"

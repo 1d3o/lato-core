@@ -110,7 +110,7 @@
 
       <%=raw row.open %>
 
-        <%=raw cell(:inputs, :text).new(name: 'sample', label: 'Input with value', class: 'md-6', value: 'Im a value ;)') %>
+        <%=raw cell(:inputs, :text).new(name: 'sample', label: 'Input with value', class: 'md-6', value: 'Im a "value" ;)') %>
 
         <%=raw cell(:inputs, :text).new(name: 'sample', label: 'Input with placeholder', class: 'md-6', placeholder: 'Im a placeholder ;)') %>
 
@@ -143,7 +143,7 @@
 
 <%= erb_open_tag %>=raw row.open <%= erb_close_tag %>
 
-  <%= erb_open_tag %>=raw cell(:inputs, :text).new(name: 'sample', label: 'Input with value', class: 'md-6', value: 'Im a value ;)') <%= erb_close_tag %>
+  <%= erb_open_tag %>=raw cell(:inputs, :text).new(name: 'sample', label: 'Input with value', class: 'md-6', value: 'Im a "value" ;)') <%= erb_close_tag %>
 
   <%= erb_open_tag %>=raw cell(:inputs, :text).new(name: 'sample', label: 'Input with placeholder', class: 'md-6', placeholder: 'Im a placeholder ;)') <%= erb_close_tag %>
 

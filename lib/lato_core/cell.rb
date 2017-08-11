@@ -9,6 +9,9 @@ module LatoCore
     include ::Cell::Erb
     include ActionView::Helpers::UrlHelper
     include ActionView::Helpers::OutputSafetyHelper
+    include ActionView::Helpers::JavaScriptHelper
+    include ActionView::Helpers::SanitizeHelper
+    include ERB::Util
 
     # This function is used from cells to validates arguments on constructor.
     def validate_args(args: {}, requested_args: [], default_args: {})
