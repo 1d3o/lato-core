@@ -5,6 +5,11 @@
   border-bottom: solid 1px $title_color_border;
   padding-bottom: 5px;
   margin: 5px 0;
+
+  .icon {
+    display: inline-block;
+    margin-right: 10px;
+  }
 }
 
 .elements-title--size-1 {

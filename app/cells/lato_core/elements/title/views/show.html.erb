@@ -1,4 +1,9 @@
 <<%= @html_tag %>
   class="elements-title
   elements-title--size-<%= @args[:size] %>"
-><%= @args[:label] %></<%= @html_tag %>>
+>
+<% if @show_icon %>
+  <i class="fa fa-<%= @args[:icon] %> icon" aria-hidden="true"></i>
+<% end %>
+<%= @args[:label] %>
+</<%= @html_tag %>>
