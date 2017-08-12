@@ -13,7 +13,7 @@
 
 .elements-modal--active {
   transform: scale(1);
-  background-color: rgba($modal_color_transarent_background, 0.5);
+  background-color: rgba($modal_color_transparent_background, 0.5);
   transition: transform 0.25s, background-color 1s;
 }
 
