@@ -33,7 +33,7 @@ google_maps_api_key: AIzaSyBc45CKHFw7q3WK4FJO2jybNnYSZ3bKFW8
 # set main template colors.
 colors:
   white: '#ffffff'
-  black: '#000000'
+  black: '#414a4c'
   grey: '#ecf0f1'
   main: '#34495e'
   active: '#2980b9'
