@@ -1,0 +1,19 @@
+<div class="inputs-date inputs__container <%= @args[:class] %>">
+
+  <%= render '../../shared/label.html' %>
+
+  <input
+    class="inputs__input inputs__input--date"
+    type="text"
+    value="<%= @value %>"
+    name="<%= @args[:name] %>"
+    placeholder="<%= @args[:placeholder] %>"
+    data-required="<%= @args[:required] %>"
+    <% if @args[:disabled] %>
+      disabled
+    <% end %>
+  />
+
+  <%= render '../../shared/help.html' %>
+  
+</div>

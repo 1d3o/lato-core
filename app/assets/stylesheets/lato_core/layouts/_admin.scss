@@ -313,6 +313,15 @@
 @media(max-width:767px) {
   .layout-admin {
     padding-left: 60px;
+    padding-top: 60px;
+  }
+
+  .layout-admin__header-container {
+    position: fixed;
+    top: 0;
+    left: 60px;
+    width: calc(100% - 60px);
+    z-index: 99;
   }
 
   .layout-admin__logo-container {

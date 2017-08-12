@@ -16,6 +16,13 @@ var InputsInitializer = (function () {
     })
   }
 
+  function initializeDate () {
+    $('.inputs__input--date').datetimepicker({
+      timepicker: false,
+      format: 'd/m/Y'
+    })
+  }
+
   function initializeEditor () {
     $('.inputs__editor').trumbowyg({
       svgPath: $('#ddtj__editor-icons-path').html()
@@ -224,6 +231,7 @@ var InputsInitializer = (function () {
   function init () {
     initializeSelect()
     initializeDatetime()
+    initializeDate()
     initializeEditor()
     initializeDropzone()
     initializeGeolocalizationMap()

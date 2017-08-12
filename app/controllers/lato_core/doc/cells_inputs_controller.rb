@@ -17,6 +17,8 @@ module LatoCore
 
     def datetime; end
 
+    def date; end
+
     def checkbox; end
 
     def editor; end
