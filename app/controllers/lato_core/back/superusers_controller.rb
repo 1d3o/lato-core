@@ -3,6 +3,7 @@ module LatoCore
 
     before_action do
       core__set_menu_active_item('core_superusers')
+      check_superuser_permissions
     end
 
     def index
@@ -105,27 +106,36 @@ module LatoCore
         redirect_to lato_core.superusers_path
         return
       end
-      
+
       flash[:success] = LANGUAGES[:lato_core][:flashes][:superuser_destroy_success]
       redirect_to lato_core.superusers_path
     end
 
     private
 
-      def superuser_params
-        params.require(:superuser).permit(:name, :surname, :email, :username, :password,
-        :password_confirmation, :permission, :biography)
-      end
+    def superuser_params
+      params.require(:superuser).permit(:name, :surname, :email, :username, :password,
+      :password_confirmation, :permission, :biography)
+    end
 
-      def fetch_external_objects
-        @permissions_list = get_permissions_list_for_current_superuser
-      end
+    def fetch_external_objects
+      @permissions_list = get_permissions_list_for_current_superuser
+    end
 
-      def get_permissions_list_for_current_superuser
-        return CONFIGS[:lato_core][:superusers_permissions].values.select {
-          |x| x[:value] <= @core__current_superuser.permission
-        }
+    def get_permissions_list_for_current_superuser
+      return CONFIGS[:lato_core][:superusers_permissions].values.select {
+        |x| x[:value] <= @core__current_superuser.permission
+      }
+    end
+
+    def check_superuser_permissions
+      min = CONFIGS[:lato_core][:superusers_management_permissions][:min]
+      max = CONFIGS[:lato_core][:superusers_management_permissions][:max]
+      if @core__current_superuser.permission < min || @core__current_superuser.permission > max
+        flash[:warning] = LANGUAGES[:lato_core][:flashes][:superuser_not_permission]
+        redirect_to root_path
       end
+    end
 
   end
 end

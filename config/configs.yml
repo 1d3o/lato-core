@@ -18,6 +18,11 @@ superusers_permissions:
     value: 4
     title: Developer
 
+# set permissions to access to superusers management.
+superusers_management_permissions:
+  min: 1
+  max: 4
+
 # set the default superuser info created if no users are present on th system.
 default_superuser:
   name: Core
