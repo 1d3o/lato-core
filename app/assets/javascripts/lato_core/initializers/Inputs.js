@@ -5,7 +5,7 @@ var InputsInitializer = (function () {
   function initializeSelect () {
     $('.inputs__select').each(function () {
       $(this).selectize({
-        create: $(this).attr('data-create')
+        create: $(this).attr('data-create') === 'true'
       })
     })
   }
