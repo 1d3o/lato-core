@@ -19,6 +19,7 @@ body {
   font-family: $body_font_family;
   font-size: $body_font_size;
   overflow-x: hidden;
+  font-weight: normal;
 
   &.stop-scrolling {
     height: 100%;

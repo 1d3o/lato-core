@@ -11,6 +11,7 @@ module LatoCore
       help: '',
       required: false,
       create: false,
+      multiple: false,
       options: [],
       option_value: 'value',
       option_name: 'name',
