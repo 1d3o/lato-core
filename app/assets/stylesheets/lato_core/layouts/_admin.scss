@@ -46,6 +46,7 @@
 .layout-admin__menu-item {
   border-bottom: solid 1px lighten($layout_admin_sidebar_background, 2);
   position: relative;
+  font-family: 'latolight';
 
   &:hover {
     background: darken($layout_admin_sidebar_background, 5);

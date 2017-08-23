@@ -1,23 +1,32 @@
 @font-face {
     font-family: 'latoregular';
-    src: font-url('lato_core/lato-regular-webfont.eot');
-    src: font-url('lato_core/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('lato_core/lato-regular-webfont.woff2') format('woff2'),
-         font-url('lato_core/lato-regular-webfont.woff') format('woff'),
-         font-url('lato_core/lato-regular-webfont.ttf') format('truetype'),
-         font-url('lato_core/lato-regular-webfont.svg#latoregular') format('svg');
+    src: font-url('lato_core/Lato-Regular.eot');
+    src: font-url('lato_core/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+         font-url('lato_core/Lato-Regular.woff2') format('woff2'),
+         font-url('lato_core/Lato-Regular.woff') format('woff'),
+         font-url('lato_core/Lato-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'latobold';
-    src: font-url('lato_core/lato-bold-webfont.eot');
-    src: font-url('lato_core/lato-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('lato_core/lato-bold-webfont.woff2') format('woff2'),
-         font-url('lato_core/lato-bold-webfont.woff') format('woff'),
-         font-url('lato_core/lato-bold-webfont.ttf') format('truetype'),
-         font-url('lato_core/lato-bold-webfont.svg#latobold') format('svg');
+    src: font-url('lato_core/Lato-Bold.eot');
+    src: font-url('lato_core/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+         font-url('lato_core/Lato-Bold.woff2') format('woff2'),
+         font-url('lato_core/Lato-Bold.woff') format('woff'),
+         font-url('lato_core/Lato-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'latolight';
+    src: font-url('lato_core/Lato-Light.eot');
+    src: font-url('lato_core/Lato-Light.eot?#iefix') format('embedded-opentype'),
+         font-url('lato_core/Lato-Light.woff2') format('woff2'),
+         font-url('lato_core/Lato-Light.woff') format('woff'),
+         font-url('lato_core/Lato-Light.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
