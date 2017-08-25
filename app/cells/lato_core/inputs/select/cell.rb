@@ -16,7 +16,8 @@ module LatoCore
       option_value: 'value',
       option_name: 'name',
       option_blank: true,
-      class: 'md-12'
+      class: 'md-12',
+      attributes: {}
     }
 
     def initialize(args = {})

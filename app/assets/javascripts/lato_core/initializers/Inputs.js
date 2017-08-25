@@ -240,6 +240,7 @@ var InputsInitializer = (function () {
     formInputsValidator()
 
     SortableManager.init()
+    MultipleSelect.init()
   }
 
   return {

@@ -1,0 +1,16 @@
+<div class="inputs-multipleselect inputs__container <%= @args[:class] %>">
+
+  <%= render '../../shared/label.html' %>
+
+  <div class="row">
+    
+    <% @args[:selects].each_with_index do |select_settings, index| %>
+      <% select = generate_select(select_settings, index) %>
+      <%= select %>
+    <% end %>
+
+  </div>
+
+  <%= render '../../shared/help.html' %>
+  
+</div>

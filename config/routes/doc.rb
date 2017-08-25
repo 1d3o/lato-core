@@ -40,6 +40,11 @@ namespace :doc do
   get 'cells_inputs_geolocalization', to: 'cells_inputs#geolocalization', as: 'cells_inputs_geolocalization'
   get 'cells_inputs_sortableblock', to: 'cells_inputs#sortableblock', as: 'cells_inputs_sortableblock'
   get 'cells_inputs_youtube', to: 'cells_inputs#youtube', as: 'cells_inputs_youtube'
+  get 'cells_inputs_multipleselect', to: 'cells_inputs#multipleselect', as: 'cells_inputs_multipleselect'
+
+  # multipleselect helpers
+  get 'cells_inputs_multipleselect_categories', to: 'cells_inputs#multipleselect_categories', as: 'cells_inputs_multipleselect_categories'
+  get 'cells_inputs_multipleselect_values', to: 'cells_inputs#multipleselect_values', as: 'cells_inputs_multipleselect_values'
 
   # cells charts
 

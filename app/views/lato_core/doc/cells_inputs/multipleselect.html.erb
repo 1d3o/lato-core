@@ -1,0 +1,110 @@
+<%
+  row = cell(:elements, :row).new
+  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  code = cell(:elements, :code).new
+  form = cell(:inputs, :form).new(url: '#', method: 'get')
+%>
+
+<!-- PRESENTATION -->
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:elements, :title).new(label: 'Cells Inputs: Multipleselect') %>
+
+    <p>A group of select used in a realtime way.</p>
+
+  <%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / PRESENTATION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Normal Multipleselect input', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell(:inputs, :multipleselect).new(name: 'sample', label: 'Select an item', selects: [
+          {name: 'category', label: 'Category', api: lato_core.doc_cells_inputs_multipleselect_categories_path, value: '', class: 'xs-12 sm-12 md-6 lg-6'},
+          {name: 'element', label: 'Element', api: lato_core.doc_cells_inputs_multipleselect_values_path, value: '', class: 'xs-12 sm-12 md-6 lg-6'}
+        ]) %>
+
+      <%=raw row.close %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :multipleselect).new(name: 'sample', label: 'Select an item', selects: [
+  {name: 'category', label: 'Category', api: lato_core.doc_cells_inputs_multipleselect_categories_path, value: '', class: 'xs-12 sm-12 md-6 lg-6'},
+  {name: 'element', label: 'Element', api: lato_core.doc_cells_inputs_multipleselect_values_path, value: '', class: 'xs-12 sm-12 md-6 lg-6'}
+])<%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Multipleselect input with selected values', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw form.open %>
+
+      <%=raw row.open %>
+
+        <%=raw cell(:inputs, :multipleselect).new(name: 'sample', label: 'Select an item', selects: [
+          {name: 'category', label: 'Category', api: lato_core.doc_cells_inputs_multipleselect_categories_path, value: 'cat2'},
+          {name: 'element', label: 'Element', api: lato_core.doc_cells_inputs_multipleselect_values_path, value: 3}
+        ]) %>
+
+      <%=raw row.close %>
+
+    <%=raw form.close %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>=raw cell(:inputs, :multipleselect).new(name: 'sample', label: 'Select an item', selects: [
+  {name: 'category', label: 'Category', api: lato_core.doc_cells_inputs_multipleselect_categories_path, value: 'cat2'},
+  {name: 'element', label: 'Element', api: lato_core.doc_cells_inputs_multipleselect_values_path, value: 3}
+])<%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

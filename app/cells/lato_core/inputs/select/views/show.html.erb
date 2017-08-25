@@ -11,6 +11,10 @@
     data-required="<%= @args[:required] %>"
     data-create="<%= @args[:create] %>"
     data-multiple="<%= @args[:multiple] %>"
+    
+    <% @args[:attributes].each do |key, value| %>
+      data-<%= key%>="<%= value %>"
+    <% end %>
   >
     <% if @args[:option_blank] %>
       <option value=""></option>
