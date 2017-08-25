@@ -4,6 +4,7 @@
   min-height: 100vh;
   padding-left: 160px;
   background: $layout_admin_background;
+  padding-top: 60px;
 }
 
 // Sidebar section:
@@ -128,8 +129,13 @@
 
 .layout-admin__header-container {
   background: $layout_admin_header_background;
-  height: 55px;
   box-shadow: 0px 11px 20px rgba(41,59,90,0.08);
+  position: fixed;
+  top: 0;
+  left: 160px;
+  width: calc(100% - 160px);
+  height: 55px;
+  z-index: 99;
 }
 
 .layout-admin__title-container {
@@ -316,15 +322,11 @@
 @media(max-width:767px) {
   .layout-admin {
     padding-left: 60px;
-    padding-top: 60px;
   }
 
   .layout-admin__header-container {
-    position: fixed;
-    top: 0;
     left: 60px;
     width: calc(100% - 60px);
-    z-index: 99;
   }
 
   .layout-admin__logo-container {

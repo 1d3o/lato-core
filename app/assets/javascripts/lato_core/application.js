@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require_tree ./vendors
 //= require_tree ./initializers
+//= require_tree ./initializers/inputs
 //= require_tree ./interfaces
 
 $(window).load(function () {
@@ -24,5 +25,4 @@ $(document).ready(function() {
   ChartsInitializer.init()
   ElementsInitializer.init()
   LayoutInitializer.init()
-  SortableManager.init()
 })

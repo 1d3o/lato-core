@@ -238,6 +238,8 @@ var InputsInitializer = (function () {
     initializeGeolocalizationMap()
     initializeYoutube()
     formInputsValidator()
+
+    SortableManager.init()
   }
 
   return {
