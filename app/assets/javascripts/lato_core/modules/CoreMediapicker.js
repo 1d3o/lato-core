@@ -74,7 +74,7 @@ var CoreMediapicker = (function () {
   }
 
   function initializeYoutube (youtube) {
-    var youtubeInput = $(youtube).find('inputs__input')
+    var youtubeInput = $(youtube).find('.inputs__input')
     $(youtubeInput).change(function () {
       var inputVal = $(this).val()
       var videoId = _getYoutubeVideoId(inputVal)
@@ -112,7 +112,7 @@ var CoreMediapicker = (function () {
 
   function _initGeolocalizationMap () {
     $('.inputs-geolocalization').each(function () {
-      initializeGeolocalizationMap(this)
+      initializeGelocalizationMap(this)
     })
   }
 

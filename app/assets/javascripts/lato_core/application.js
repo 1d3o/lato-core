@@ -13,16 +13,18 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree ./vendors
-//= require_tree ./initializers
-//= require_tree ./initializers/inputs
-//= require_tree ./interfaces
+//= require_tree ./modules
 
 $(window).load(function () {
-  InputsInitializer.init()
-})
-
-$(document).ready(function() {
-  ChartsInitializer.init()
-  ElementsInitializer.init()
-  LayoutInitializer.init()
+  CoreButton.init()
+  CoreChart.init()
+  CoreDatepicker.init()
+  CoreFlash.init()
+  CoreFormValidator.init()
+  CoreLayout.init()
+  CoreMediapicker.init()
+  CoreModal.init()
+  CoreSelect.init()
+  CoreSortableManager.init()
+  CoreTable.init()
 })
