@@ -1,24 +1,28 @@
-<%= render '../../shared/label.html' %>
+<div class="inputs-dropzone inputs__container">
 
-<form
-  method="<%= @args[:method] %>"
-  action="<%= @args[:url] %>"
-  class="inputs__dropzone"
-  data-param-name="<%= @args[:param_name] %>"
-  data-max-size="<%= @args[:max_size] %>"
-  data-max-files="<%= @args[:max_files] %>"
->
+  <%= render '../../shared/label.html' %>
 
-  <input type="hidden" name="utf8" value="✓">
-  <input type="hidden" name="authenticity_token" value="<%= @core__cells_authenticity_token %>">
-  <input type="hidden" name="_method" value="<%= @args[:method] %>">
-  
-  <div class="fallback">
-    <input name="<%= @args[:param_name] %>" type="file" multiple />
-  </div>
+  <form
+    method="<%= @args[:method] %>"
+    action="<%= @args[:url] %>"
+    class="inputs__dropzone"
+    data-param-name="<%= @args[:param_name] %>"
+    data-max-size="<%= @args[:max_size] %>"
+    data-max-files="<%= @args[:max_files] %>"
+  >
 
-  <div class="icon">
-    <i class="fa fa-file-o" aria-hidden="true"></i>
-  </div>
+    <input type="hidden" name="utf8" value="✓">
+    <input type="hidden" name="authenticity_token" value="<%= @core__cells_authenticity_token %>">
+    <input type="hidden" name="_method" value="<%= @args[:method] %>">
+    
+    <div class="fallback">
+      <input name="<%= @args[:param_name] %>" type="file" multiple />
+    </div>
 
-</form>
+    <div class="icon">
+      <i class="fa fa-file-o" aria-hidden="true"></i>
+    </div>
+
+  </form>
+
+</div>
