@@ -15,17 +15,23 @@
 //= require_tree ./vendors
 //= require_tree ./modules
 
-$(window).load(function () {
+$(document).ready(function () {
   CoreButton.init()
   CoreChart.init()
   CoreDatepicker.init()
   CoreFlash.init()
   CoreFormValidator.init()
   CoreLayout.init()
-  CoreMediapicker.init()
   CoreModal.init()
   CoreSelect.init()
   CoreSortableManager.init()
   CoreTable.init()
   CoreEditor.init()
+})
+
+$(window).load(function () {
+  // DISCUSSION: Messo al load per attendere caricamento dipendenze Google mappe.
+  // Valutare se fare un modulo solo per le mappe e spostare solo
+  // quelllo al load.
+  CoreMediapicker.init()
 })
