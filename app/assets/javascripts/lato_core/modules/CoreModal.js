@@ -21,7 +21,7 @@ var CoreModal = (function () {
   }
 
   function initializeModalCloseButton (modal) {
-    var closeButton = $h(modal).find('.elements-modal__close-button')
+    var closeButton = $(modal).find('.elements-modal__close-button')
     $(closeButton).click(function (e) {
       e.preventDefault()
       // find modal element
