@@ -9,7 +9,7 @@ var CoreFlash = (function () {
   }
 
   function _initFlashCloseButton () {
-    $('elements-flash').each(function () {
+    $('.elements-flash').each(function () {
       initializeFlashCloseButton(this)
     })
   }

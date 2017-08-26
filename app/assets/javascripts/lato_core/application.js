@@ -27,4 +27,5 @@ $(window).load(function () {
   CoreSelect.init()
   CoreSortableManager.init()
   CoreTable.init()
+  CoreEditor.init()
 })
