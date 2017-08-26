@@ -24,12 +24,9 @@ var CoreModal = (function () {
     var closeButton = $(modal).find('.elements-modal__close-button')
     $(closeButton).click(function (e) {
       e.preventDefault()
-      // find modal element
-      var modalContent = modal.parent()
-      var modalContainer = modalContent.parent()
       // close modal
-      modalContainer.removeClass('elements-modal--active')
-      modalContainer.find('.elements-modal__modal').removeClass('elements-modal__modal--active')
+      $(modal).removeClass('elements-modal--active')
+      $(modal).find('.elements-modal__modal').removeClass('elements-modal__modal--active')
       // active body scrolling
       $('body').removeClass('stop-scrolling')
     })

@@ -25,7 +25,7 @@
 
   <%=raw block.open %>
 
-    <%=raw cell(:elements, :button).new(label: 'Open modal', style: 'info', onclick: "Modal.open('my-modal', event);") %>
+    <%=raw cell(:elements, :button).new(label: 'Open modal', style: 'info', onclick: "CoreModal.open('my-modal', event);") %>
 
     <%=raw cell(:elements, :modal).new(id: 'my-modal', render: render('lato_core/doc/shared/modal_content')) %>
     
@@ -42,7 +42,7 @@
 
 <%=raw code.open %>
 
-<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Open modal', style: 'info', onclick: "Modal.open('my-modal', event);") <%= erb_close_tag %>
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Open modal', style: 'info', onclick: "CoreModal.open('my-modal', event);") <%= erb_close_tag %>
 
 <%= erb_open_tag %>=raw cell(:elements, :modal).new(id: 'my-modal', render: render('lato_core/doc/shared/modal_content')) <%= erb_close_tag %>
 
@@ -60,7 +60,7 @@
 
   <%=raw block.open %>
 
-    <%=raw cell(:elements, :button).new(label: 'Open modal', style: 'info', onclick: "Modal.open('my-modal-2', event);") %>
+    <%=raw cell(:elements, :button).new(label: 'Open modal', style: 'info', onclick: "CoreModal.open('my-modal-2', event);") %>
 
     <%=raw cell(:elements, :modal).new(id: 'my-modal-2', title: 'Modal with title', render: render('lato_core/doc/shared/modal_content')) %>
     
@@ -77,7 +77,7 @@
 
 <%=raw code.open %>
 
-<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Open modal', style: 'info', onclick: "Modal.open('my-modal-2', event);") <%= erb_close_tag %>
+<%= erb_open_tag %>=raw cell(:elements, :button).new(label: 'Open modal', style: 'info', onclick: "CoreModal.open('my-modal-2', event);") <%= erb_close_tag %>
 
 <%= erb_open_tag %>=raw cell(:elements, :modal).new(id: 'my-modal-2', title: 'Modal with title', render: render('lato_core/doc/shared/modal_content')) <%= erb_close_tag %>
 
