@@ -3,8 +3,8 @@ var CoreSelect = (function () {
   function initializeSelect (select) {
     var selectInput = $(select).find('.inputs__select')
     $(selectInput).selectize({
-      create: $(this).attr('data-create') === 'true',
-      maxItems: $(this).attr('data-multiple') === 'true' ? null : 1
+      create: $(selectInput).attr('data-create') === 'true',
+      maxItems: $(selectInput).attr('data-multiple') === 'true' ? null : 1
     })
   }
 
