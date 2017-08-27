@@ -34,6 +34,17 @@ module LatoCore
       render 'show.html'
     end
 
+    # This function return a string used on the HTML option to
+    # set a an option value selected or not.
+    def get_option_value_selected(option_value)
+      if @args[:multiple]
+        values = @args[:value].is_a?(Array) ? @args[:value] : @args[:value].split(',')
+        return values.include?(option_value) ? 'selected' : ''
+      end
+
+      @args[:value] == option[:value] ? 'selected' : ''
+    end
+
     private
 
       def set_conditions

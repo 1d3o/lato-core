@@ -20,7 +20,7 @@
       <option value=""></option>
     <% end %>
     <% @options.each do |option| %>
-      <option value="<%= option[:value] %>" <%= @args[:value] == option[:value] ? 'selected' : '' %>>
+      <option value="<%= option[:value] %>" <%= get_option_value_selected(option[:value]) %>>
         <%= option[:name] %>
       </option>
     <% end %>
