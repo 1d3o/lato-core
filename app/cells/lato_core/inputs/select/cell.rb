@@ -42,7 +42,7 @@ module LatoCore
         return values.include?(option_value) ? 'selected' : ''
       end
 
-      @args[:value] == option[:value] ? 'selected' : ''
+      @args[:value] == option_value ? 'selected' : ''
     end
 
     private
