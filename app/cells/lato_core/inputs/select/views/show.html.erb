@@ -5,12 +5,16 @@
   <select
     class="inputs__select"
     type="text"
-    value="<%= @args[:value] %>"
+    value="<%= @value %>"
     name="<%= @args[:name] %>"
     placeholder="<%= @args[:placeholder] %>"
     data-required="<%= @args[:required] %>"
     data-create="<%= @args[:create] %>"
     data-multiple="<%= @args[:multiple] %>"
+
+    <% if @args[:multiple] %>
+      multiple="multiple"
+    <% end %>
     
     <% @args[:attributes].each do |key, value| %>
       data-<%= key%>="<%= value %>"

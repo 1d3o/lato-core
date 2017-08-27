@@ -155,7 +155,8 @@
 
       <%=raw row.open %>
 
-        <%=raw cell(:inputs, :select).new(name: 'sample', label: 'Select multiple items', options: ['Pippo', 'Luigi', 'Gino'], multiple: true) %>
+        <%=raw cell(:inputs, :select).new(name: 'sample', label: 'Select multiple items',
+        options: ['Pippo', 'Luigi', 'Gino'], multiple: true, value: ['Pippo', 'Luigi']) %>
 
       <%=raw row.close %>
 
@@ -174,7 +175,7 @@
 
 <%=raw code.open %>
 
-<%= erb_open_tag %>=raw cell(:inputs, :select).new(name: 'sample', label: 'Select multiple items', options: ['Pippo', 'Luigi', 'Gino'], multiple: true)<%= erb_close_tag %>
+<%= erb_open_tag %>=raw cell(:inputs, :select).new(name: 'sample', label: 'Select multiple items', options: ['Pippo', 'Luigi', 'Gino'], multiple: true, value: ['Pippo', 'Luigi'])<%= erb_close_tag %>
 
 <%=raw code.close %>
 
@@ -194,7 +195,7 @@
 
       <%=raw row.open %>
 
-        <%=raw cell(:inputs, :select).new(name: 'sample', label: 'Select multiple items',
+        <%=raw cell(:inputs, :select).new(name: 'sample', label: 'Select an item',
         options: ['Pippo', 'Luigi', 'Gino'], attributes: {
           foo: 'bar'
         }) %>
@@ -216,7 +217,7 @@
 
 <%=raw code.open %>
 
-<%= erb_open_tag %>=raw cell(:inputs, :select).new(name: 'sample', label: 'Select multiple items',
+<%= erb_open_tag %>=raw cell(:inputs, :select).new(name: 'sample', label: 'Select an item',
   options: ['Pippo', 'Luigi', 'Gino'], attributes: {
     foo: 'bar'
 })<%= erb_close_tag %>

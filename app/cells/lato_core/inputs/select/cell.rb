@@ -39,10 +39,10 @@ module LatoCore
     def get_option_value_selected(option_value)
       if @args[:multiple]
         values = @args[:value].is_a?(Array) ? @args[:value] : @args[:value].split(',')
-        return values.include?(option_value) ? 'selected' : ''
+        return values.include?(option_value) ? "selected='selected'" : ''
       end
 
-      @args[:value] == option_value ? 'selected' : ''
+      @args[:value] == option_value ? "selected='selected'" : ''
     end
 
     private
@@ -51,6 +51,7 @@ module LatoCore
         @show_label = !@args[:label].nil? && !@args[:label].blank?
         @show_help = !@args[:help].nil? && !@args[:help].blank?
         @options = generate_options
+        @value = generate_value
       end
 
       def generate_options
@@ -63,6 +64,11 @@ module LatoCore
           end
         end
         return options
+      end
+
+      def generate_value
+        return @args[:value].is_a?(Array) ? @args[:value].join(',') : @args[:value] if @args[:multiple]
+        @args[:value]
       end
 
   end
