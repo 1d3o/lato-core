@@ -38,6 +38,7 @@ module LatoCore
 
       def set_conditions
         @records = @args[:records].is_a?(Hash) ? @args[:records][:records] : @args[:records]
+        @total = @args[:records].is_a?(Hash) ? @args[:records][:total] : @args[:records].length
         # conditions for show
         @show_row_actions = @args[:index_url] && @args[:actions] && (@args[:actions][:show] || @args[:actions][:edit] || @args[:actions][:delete])
         @show_row_actions_class = @show_row_actions ? 'widgets-index--actions' : ''

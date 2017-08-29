@@ -63,6 +63,15 @@
   }
 }
 
+.widgets-index__counter {
+  height: 31px;
+  float: left;
+  padding-top: 10px;
+  padding-right: 15px;
+  border-bottom: solid 1px $color_grey;
+  font-size: 0.8em;
+}
+
 // Responsive layout:
 
 @media(max-width:767px) {
