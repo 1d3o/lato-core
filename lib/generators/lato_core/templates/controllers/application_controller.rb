@@ -2,7 +2,7 @@
 
 module Lato
   # ApplicationController.
-  class ApplicationController < ApplicationController
+  class ApplicationController < ::ApplicationController
 
     # set lato layout
     layout 'lato_core/admin'
