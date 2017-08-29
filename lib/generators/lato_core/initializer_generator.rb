@@ -9,7 +9,7 @@ module LatoCore
     source_root File.expand_path('../templates', __FILE__)
 
     desc 'This function initialize your Rails project to support Lato.'
-    def create_initializer_file
+    def create_initializer
       manage_controllers
       manage_views
       manage_assets_stylesheets
