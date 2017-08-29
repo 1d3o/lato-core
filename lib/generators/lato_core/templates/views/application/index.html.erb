@@ -1,16 +1,20 @@
 <%
-  row = cell(:elements, :row).new
-  block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  # initialize a new row
+  main_row = cell(:elements, :row).new
+  # initialize a new block
+  main_block = cell(:elements, :block).new(class: 'xs-12 sm-12 md-12')
+  # initialize block title
+  main_block_title = cell(:elements, :title).new(label: "Welcome to this Lato sample page", size: 2)
 %>
 
-<!-- MAIN CONTAINER -->
-<%=raw row.open %>
+<!-- MAIN ROW -->
+<%=raw main_row.open %>
+  <!-- MAIN BLOCK -->
+  <%=raw main_block.open %>
 
-  <%=raw block.open %>
+    <%=raw main_block_title %>
 
-    <%=raw cell(:elements, :title).new(label: "Welcome to this Lato sample page", size: 2) %>
-
-  <%=raw block.close %>
-
-<%=raw row.close %>
-<!-- / MAIN CONTAINER -->
+  <%=raw main_block.close %>
+  <!-- / MAIN BLOCK -->
+<%=raw main_row.close %>
+<!-- / MAIN ROW -->

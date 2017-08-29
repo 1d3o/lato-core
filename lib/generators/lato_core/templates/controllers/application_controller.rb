@@ -1,13 +1,23 @@
-class Lato::ApplicationController < ApplicationController
+# frozen_string_literal: true
 
-  layout 'lato_core/admin'
+module Lato
+  # ApplicationController.
+  class ApplicationController < ApplicationController
 
-  before_action :core__cells_initialize
-  before_action :core__manage_superuser_session
+    # set lato layout
+    layout 'lato_core/admin'
 
-  def index
-    core__set_menu_active_item('sample_page')
-    core__set_header_active_page_title('Sample page')
+    # initialize cells dependencies
+    before_action :core__cells_initialize
+    # manage superuser session for security
+    before_action :core__manage_superuser_session
+
+    def index
+      # set current menu active page
+      core__set_menu_active_item('sample_page')
+      # set current page title
+      core__set_header_active_page_title('Sample page')
+    end
+
   end
-
 end
