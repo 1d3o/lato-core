@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.name        = 'lato_core'
   s.version     = LatoCore::VERSION
   s.authors     = ['Ideonetwork']
-  s.email       = ['info@ideonetwork.it']
+  s.email       = ['dev@ideonetwork.it']
   s.homepage    = 'http://ideonetwork.it/'
   s.summary     = 'Lato core module'
   s.description = 'Lato is a modular management system for Rails'
