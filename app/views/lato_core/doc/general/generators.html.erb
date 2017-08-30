@@ -13,6 +13,9 @@
 
     <p>Generators are used to speed up your development with lato.</p>
 
+    <br>
+    <%=raw cell(:elements, :title).new(label: 'Initialize project', size: 2) %>
+
     <p>To initialize your project with lato you can run:</p>
 
 <%=raw code.open %>
@@ -32,6 +35,43 @@ $> rails generate lato_core:initializer
       </ul>
     </p>
 
+    <br>
+    <%=raw cell(:elements, :title).new(label: 'Create a scaffold', size: 2) %>
+
+<%=raw code.open %>
+
+$> rails generate lato_core:scaffold ModelName
+
+<%=raw code.close %>
+
+    <br>
+    <%=raw cell(:elements, :title).new(label: 'Create a crud', size: 2) %>
+
+<%=raw code.open %>
+
+$> rails generate lato_core:crud ModelName
+
+<%=raw code.close %>
+
+    <br>
+    <%=raw cell(:elements, :title).new(label: 'Create only crud controller', size: 2) %>
+
+<%=raw code.open %>
+
+$> rails generate lato_core:crud_controller ModelName
+
+<%=raw code.close %>
+
+    <br>
+    <%=raw cell(:elements, :title).new(label: 'Create only crud views', size: 2) %>
+
+<%=raw code.open %>
+
+$> rails generate lato_core:crud_views ModelName
+
+<%=raw code.close %>
+
+  <br>
   <%=raw block.close %>
 
 <%=raw row.close %>
