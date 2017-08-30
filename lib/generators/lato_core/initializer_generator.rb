@@ -6,7 +6,7 @@ module LatoCore
   # InitializerGenerator.
   class InitializerGenerator < Rails::Generators::Base
 
-    source_root File.expand_path('../templates', __FILE__)
+    source_root File.expand_path('../templates/initializer', __FILE__)
 
     desc 'This function initialize your Rails project to support Lato.'
     def create_initializer
