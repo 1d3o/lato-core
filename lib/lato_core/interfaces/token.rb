@@ -8,13 +8,14 @@ module LatoCore
     def core__encode_token exp, payload
       exp = 1.day.from_now unless exp
       payload[:exp] = exp.to_i
-      return JWT.encode(payload, Rails.application.secrets.secret_key_base)
+      JWT.encode(payload, Rails.application.secrets.secret_key_base, 'HS256')
     end
 
     # This function return the payload of a token.
     def core__decode_token token
       begin
-        body = JWT.decode(token, Rails.application.secrets.secret_key_base)[0]
+        body = JWT.decode(token, Rails.application.secrets.secret_key_base,
+                          true, algorithm: 'HS256')[0]
         return HashWithIndifferentAccess.new body
       rescue => exception
         return nil
