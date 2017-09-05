@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Lato
+
   # ApplicationController.
   class ApplicationController < ::ApplicationController
 
@@ -20,4 +21,5 @@ module Lato
     end
 
   end
+
 end

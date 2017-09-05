@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module Lato
+
   # <%= @controller_name %>Controller.
   class <%= @controller_name %>Controller < Lato::ApplicationController
 
@@ -89,4 +90,5 @@ module Lato
     end
 
   end
+
 end
