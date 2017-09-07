@@ -16,7 +16,7 @@
 
     <%%=raw title %>
 
-    <%%= render 'lato/<%= @plural_name %>/shared/form', url: lato_<%= @singular_name %>_path(@<%= @singular_name %>.id), method: :post %>
+    <%%= render 'lato/<%= @plural_name %>/shared/form', url: lato_<%= @singular_name %>_path(@<%= @singular_name %>.id), method: :put %>
 
   <%%=raw block.close %>
 
