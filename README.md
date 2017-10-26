@@ -1,5 +1,9 @@
 # Lato Core
 
+A Rails engine used to develop modular admin panels.
+
+![Alt text](lib/screen.png "Title")
+
 ## Installation
 
 Add the lato_core gem on your Gemfile
