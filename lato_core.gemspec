@@ -45,7 +45,7 @@ Gem::Specification.new do |s|
 
   # JWT management
   # doc: https://github.com/jwt/ruby-jwt
-  s.add_runtime_dependency 'jwt', '>= 1.5.4'
+  s.add_runtime_dependency 'jwt', '>= 2.0.0'
 
   # Dev dependencies:
 
