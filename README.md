@@ -1,6 +1,6 @@
 # Lato Core
 
-A Rails engine used to develop modular admin panels.
+Lato is a Rails engine used to develop modular admin panels. This is the module used to initialize the panel.
 The complete documentation is inside the application panel, so you must [install](#installation) it before.
 
 ![Alt text](lib/screen.png "Title")
