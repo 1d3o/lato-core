@@ -1,8 +1,15 @@
 # Lato Core
 
 A Rails engine used to develop modular admin panels.
+The complete documentation is inside the application panel, so you must [install](#installation) it before.
 
 ![Alt text](lib/screen.png "Title")
+
+## Ecosystem
+
+- [Lato core](https://github.com/ideonetwork/lato-core): The core module used to initialize the panel.
+- [Lato media](https://github.com/ideonetwork/lato-media): A module used to manage attachments and media files.
+- [Lato blog](https://github.com/ideonetwork/lato-blog): A module used to manage a blog.
 
 ## Installation
 
