@@ -1,9 +1,11 @@
 <div class="layout-admin__logo-container">
 
-  <% if LAYOUT[:logo] %>
-    <%= image_tag(LAYOUT[:logo_sidebar], alt: CONFIGS[:lato_core][:application_name]) %>
-  <% else %>
-    <%= image_tag('lato_core/logo-negative.svg', alt: CONFIGS[:lato_core][:application_name]) %>
-  <% end %>
+  <a href="<%= lato_core.root_path %>">
+    <% if LAYOUT[:logo] %>
+      <%= image_tag(LAYOUT[:logo_sidebar], alt: CONFIGS[:lato_core][:application_name]) %>
+    <% else %>
+      <%= image_tag('lato_core/logo-negative.svg', alt: CONFIGS[:lato_core][:application_name]) %>
+    <% end %>
+  </a>
 
 </div>
