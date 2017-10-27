@@ -4,7 +4,7 @@ var CoreFlash = (function () {
     var closeButton = $(flash).find('.elements-flash__close-button')
     $(closeButton).click(function (e) {
       e.preventDefault()
-      flash.addClass('elements-flash--hidden')
+      $(flash).addClass('elements-flash--hidden')
     })
   }
 
