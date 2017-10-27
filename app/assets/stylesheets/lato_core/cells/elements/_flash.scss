@@ -1,58 +1,58 @@
 .elements-flash {
   display: block;
   width: 100%;
-  padding: 10px 12px;
+  padding: 15px 10px;
   box-sizing: border-box;
-  border-radius: 10px;
   margin: 10px 0;
   position: relative;
-  background-color: rgba($flash_color_background, 0.8);
-  border-color: $flash_color_background;
+  background-color: $flash_color_background;
+  border-color: $flash_color_main_color;
   color: $flash_color_text;
   max-height: 999px;
   transition: all 0.25s;
   box-shadow: 0px 11px 20px rgba(41,59,90,0.08);
-  border-width: 2px;
-  border-style: solid;
+  border-left-width: 4px;
+  border-left-style: solid;
+  font-size: 0.9em;
 }
 
 .elements-flash--info {
-  background-color: rgba($flash_info_background, 0.7);
-  border-color: $flash_info_background;
+  background-color: $flash_info_background;
+  border-color: $flash_info_main_color;
   color: $flash_info_color_text;
 
   .elements-flash__close-button {
-    color: $flash_info_color_text;
+    color: $flash_close_button_color;
   }
 }
 
 .elements-flash--success {
-  background-color: rgba($flash_success_background, 0.7);
-  border-color: $flash_success_background;
+  background-color: $flash_success_background;
+  border-color: $flash_success_main_color;
   color: $flash_success_color_text;
 
   .elements-flash__close-button {
-    color: $flash_success_color_text;
+    color: $flash_close_button_color;
   }
 }
 
 .elements-flash--danger {
-  background-color: rgba($flash_danger_background, 0.7);
-  border-color: $flash_danger_background;
+  background-color: $flash_danger_background;
+  border-color: $flash_danger_main_color;
   color: $flash_danger_color_text;
 
   .elements-flash__close-button {
-    color: $flash_danger_color_text;
+    color: $flash_close_button_color;
   }
 }
 
 .elements-flash--warning {
-  background-color: rgba($flash_warning_background, 0.7);
-  border-color: $flash_warning_background;
+  background-color: $flash_warning_background;
+  border-color: $flash_warning_main_color;
   color: $flash_warning_color_text;
   
   .elements-flash__close-button {
-    color: $flash_warning_color_text;
+    color: $flash_close_button_color;
   }
 }
 
@@ -65,7 +65,7 @@
 }
 
 .elements-flash__close-button {
-  color: $flash_info_color_text;
+  color: $flash_close_button_color;
   position: absolute;
   top: 3px;
   right: 5px;
