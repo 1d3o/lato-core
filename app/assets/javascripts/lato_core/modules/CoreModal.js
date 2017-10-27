@@ -4,7 +4,7 @@ var CoreModal = (function () {
     $('#' + modalId + '.elements-modal').addClass('elements-modal--active')
     setTimeout(function () {
       $('#' + modalId + '.elements-modal').find('.elements-modal__modal').addClass('elements-modal__modal--active')
-    }, 500)
+    }, 250)
     $('body').addClass('stop-scrolling')
     if (event) {
       event.preventDefault()

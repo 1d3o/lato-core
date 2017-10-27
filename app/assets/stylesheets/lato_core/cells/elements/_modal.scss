@@ -1,20 +1,20 @@
 .elements-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color_black, 0.5);
+  z-index: 99;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  background-color: transparent;
   z-index: 100;
+  opacity: 0;
   transform: scale(0);
-  transition: transform 0.5s;
+  transition: opacity 0.25s;
 }
 
 .elements-modal--active {
+  opacity: 1;
   transform: scale(1);
-  background-color: rgba($modal_color_transparent_background, 0.5);
-  transition: transform 0.25s, background-color 1s;
 }
 
 .elements-modal__modal {
@@ -26,12 +26,13 @@
   box-shadow: 0px 11px 20px rgba(41,59,90,0.08);
   overflow: hidden;
   opacity: 0;
-  transition: none;
+  transform: translate(-50%, -60%);
+  transition: all 0.5s;
 }
 
 .elements-modal__modal--active {
   opacity: 1;
-  transition: all 0.25s;
+  transform: translate(-50%, -50%);
 }
 
 .elements-modal__close-button {

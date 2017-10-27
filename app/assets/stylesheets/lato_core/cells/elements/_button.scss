@@ -88,29 +88,26 @@
 }
 
 .elements-button__confirmation {
-  @include centerElement(xy);
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color_black, 0.5);
   z-index: 99;
-  background-color: $color_white;
-  min-width: 200px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0px 11px 20px rgba(41,59,90,0.08);
-  min-height: 50px;
-  padding: 15px;
-  border: solid 1px darken($color_white, 3);
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
   opacity: 0;
-  transform: scale(0) translateX(-50%) translateY(-50%);
+  transform: scale(0);
   transition: opacity 0.25s;
   
   .message {
     display: block;
     margin-bottom: 10px;
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   .popup {
-    font-size: 0.8em;
+    font-size: 1em;
     padding: 4px 10px;
     margin: 2.5px;
   }
@@ -128,5 +125,17 @@
 
 .elements-button__confirmation--active {
   opacity: 1;
-  transform: scale(1) translateX(-50%) translateY(-50%);
+  transform: scale(1);
+}
+
+.elements-button__confirmation-content {
+  background-color: $color_white;
+  min-width: 300px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 11px 20px rgba(41,59,90,0.08);
+  min-height: 50px;
+  padding: 15px;
+  border: solid 1px darken($color_white, 3);
+  @include centerElement(xy);
 }

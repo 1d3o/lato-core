@@ -34,30 +34,32 @@
   <% if @show_confirmation %>
 
   <div class="elements-button__confirmation">
-    <span class="message"><%= @args[:confirmation][:message] %></span>
+    <div class="elements-button__confirmation-content">
+      <span class="message"><%= @args[:confirmation][:message] %></span>
 
-    <a
-      class="button popup true"
-      href="<%= @args[:url] %>"
-      title="<%= @args[:confirmation][:positive_response] %>"
-      <% if @show_method %>
-        data-method="<%= @args[:method] %>"
-      <% end %>
-      <% if @args[:remote] %>
-        data-remote="true"
-      <% end %>
-      <% if @args[:onclick] %>
-        onclick="<%= @args[:onclick] %>"
-      <% end %>
-    >
-      <i class="fa fa-check" aria-hidden="true"></i> <%= @args[:confirmation][:positive_response] %>
-    </a>
-    <button
-      class="button popup false"
-      title="<%= @args[:confirmation][:negative_response] %>"
-    >
-      <i class="fa fa-ban" aria-hidden="true"></i> <%= @args[:confirmation][:negative_response] %>
-    </button>
+      <a
+        class="button popup true"
+        href="<%= @args[:url] %>"
+        title="<%= @args[:confirmation][:positive_response] %>"
+        <% if @show_method %>
+          data-method="<%= @args[:method] %>"
+        <% end %>
+        <% if @args[:remote] %>
+          data-remote="true"
+        <% end %>
+        <% if @args[:onclick] %>
+          onclick="<%= @args[:onclick] %>"
+        <% end %>
+      >
+        <i class="fa fa-check" aria-hidden="true"></i> <%= @args[:confirmation][:positive_response] %>
+      </a>
+      <button
+        class="button popup false"
+        title="<%= @args[:confirmation][:negative_response] %>"
+      >
+        <i class="fa fa-ban" aria-hidden="true"></i> <%= @args[:confirmation][:negative_response] %>
+      </button>
+    </div>
   </div>
 
   <% end %>
