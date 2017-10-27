@@ -5,21 +5,20 @@
   box-sizing: border-box;
   margin: 10px 0;
   position: relative;
-  background-color: $flash_color_background;
-  border-color: $flash_color_main_color;
+  background-color: rgba($flash_color_background, 0.75);
+  border-color: $flash_color_background;
+  border-bottom-width: 5px;
+  border-bottom-style: solid;
   color: $flash_color_text;
   max-height: 999px;
   transition: all 0.25s;
   box-shadow: 0px 11px 20px rgba(41,59,90,0.08);
-  border-left-width: 5px;
-  border-left-style: solid;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-radius: 10px;
 }
 
 .elements-flash--info {
-  background-color: $flash_info_background;
-  border-color: $flash_info_main_color;
+  background-color: rgba($flash_info_background, 0.75);
+  border-color: $flash_info_background;
   color: $flash_info_color_text;
 
   .elements-flash__close-button {
@@ -28,8 +27,8 @@
 }
 
 .elements-flash--success {
-  background-color: $flash_success_background;
-  border-color: $flash_success_main_color;
+  background-color: rgba($flash_success_background, 0.75);
+  border-color: $flash_success_background;
   color: $flash_success_color_text;
 
   .elements-flash__close-button {
@@ -38,8 +37,8 @@
 }
 
 .elements-flash--danger {
-  background-color: $flash_danger_background;
-  border-color: $flash_danger_main_color;
+  background-color: rgba($flash_danger_background, 0.75);
+  border-color: $flash_danger_background;
   color: $flash_danger_color_text;
 
   .elements-flash__close-button {
@@ -48,8 +47,8 @@
 }
 
 .elements-flash--warning {
-  background-color: $flash_warning_background;
-  border-color: $flash_warning_main_color;
+  background-color: rgba($flash_warning_background, 0.75);
+  border-color: $flash_warning_background;
   color: $flash_warning_color_text;
   
   .elements-flash__close-button {
