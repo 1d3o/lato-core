@@ -7,7 +7,8 @@ module LatoCore
     @@default_args = {
       method: 'post',
       remote: false,
-      class: ''
+      class: '',
+      multipart: false
     }
 
     def initialize(args = {})

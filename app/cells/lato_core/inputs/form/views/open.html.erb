@@ -5,6 +5,9 @@
   <% if @args[:remote] %>
     data-remote="true"
   <% end %>
+  <% if @args[:multipart] %>
+    data-multipart="true"
+  <% end %>
 >
 
 <input type="hidden" name="utf8" value="✓">
