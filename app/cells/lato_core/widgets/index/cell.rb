@@ -20,7 +20,7 @@ module LatoCore
       },
       table: {
         fixed: false,
-        height: 150
+        height: nil
       },
       table_body: {
         hover: false
