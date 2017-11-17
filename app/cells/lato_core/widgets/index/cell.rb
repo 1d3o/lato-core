@@ -20,7 +20,10 @@ module LatoCore
       },
       table: {
         fixed: false,
-        height: 400
+        height: 150
+      },
+      table_body: {
+        hover: false
       }
     }
 
@@ -95,7 +98,9 @@ module LatoCore
 
       # This function generate the table body.
       def generate_table_body
-        return LatoCore::Elements::Table::Body::Cell.new
+        return LatoCore::Elements::Table::Body::Cell.new(
+          hover: @args[:table_body][:hover]
+        )
       end
 
       # This function generate the rows fr the table.
