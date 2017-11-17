@@ -17,6 +17,10 @@ module LatoCore
         edit: false,
         delete: false,
         new: false
+      },
+      table: {
+        fixed: false,
+        height: 400
       }
     }
 
@@ -65,7 +69,10 @@ module LatoCore
 
       # This function generate the table.
       def generate_table
-        return LatoCore::Elements::Table::Container::Cell.new
+        return LatoCore::Elements::Table::Container::Cell.new(
+          fixed: @args[:table][:fixed],
+          height: @args[:table][:height]
+        )
       end
 
       # This function generate the head for the table.
