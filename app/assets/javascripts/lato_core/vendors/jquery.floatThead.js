@@ -20,7 +20,7 @@
   $.floatThead = $.floatThead || {};
   $.floatThead.defaults = {
     headerCellSelector: 'tr:visible:first>*:visible', //thead cells are this.
-    zIndex: 1001, //zindex of the floating thead (actually a container div)
+    zIndex: 99, //zindex of the floating thead (actually a container div)
     position: 'auto', // 'fixed', 'absolute', 'auto'. auto picks the best for your table scrolling type.
     top: 0, //String or function($table) - offset from top of window where the header should not pass above
     bottom: 0, //String or function($table) - offset from the bottom of the table where the header should stop scrolling
