@@ -52,5 +52,6 @@ namespace :doc do
 
   # cells widgets
   get 'cells_widgets_index', to: 'cells_widgets#index', as: 'cells_widgets_index'
+  get 'cells_widgets_index_v2', to: 'cells_widgets#index_v2', as: 'cells_widgets_index_v2'
 
 end
