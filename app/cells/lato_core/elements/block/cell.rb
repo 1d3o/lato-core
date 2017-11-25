@@ -6,7 +6,7 @@ module LatoCore
 
     @@default_args = {
       class: 'md-12',
-      round: true
+      round: false
     }
 
     def initialize(args = {})

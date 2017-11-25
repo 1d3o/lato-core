@@ -4,20 +4,12 @@
 
     .elements-button__element {
       border-radius: 0;
-      margin: 0 1px;
+      margin: 0;
+      margin-right: 1px;
     }
 
-    &:first-child {
-      .elements-button__element {
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        margin-left: 0;
-      }
-    }
     &:last-child {
       .elements-button__element {
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
         margin-right: 0;
       }
     }

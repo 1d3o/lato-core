@@ -7,11 +7,13 @@
         next if (@core__current_superuser.permission > menu_item[:permission_max])
 
         active = ''
-        active = 'layout-admin__menu-item-link--active' if  @core__menu_active_item && @core__menu_active_item === menu_item[:key]
+        active = 'layout-admin__menu-item--active' if @core__menu_active_item && @core__menu_active_item === menu_item[:key]
+        active_link = ''
+        active_link = 'layout-admin__menu-item-link--active' if  @core__menu_active_item && @core__menu_active_item === menu_item[:key]
       %>
-      <li class="layout-admin__menu-item">
+      <li class="layout-admin__menu-item <%= active %>">
         <a
-          class="layout-admin__menu-item-link <%= active %>"
+          class="layout-admin__menu-item-link <%= active_link %>"
           href="<%= menu_item[:url] %>"
           title="<%= menu_item[:title] %>"
         >

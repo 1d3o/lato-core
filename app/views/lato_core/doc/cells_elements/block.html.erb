@@ -121,11 +121,11 @@
 <!-- / CODE SECTION -->
 
 <hr>
-<%=raw cell(:elements, :title).new(label: 'Blocks without rounded borders', size: 3) %>
+<%=raw cell(:elements, :title).new(label: 'Blocks with rounded borders', size: 3) %>
 
 <%=raw row.open %>
 
-  <% example_block = cell(:elements, :block).new(class: 'md-6', round: false) %>
+  <% example_block = cell(:elements, :block).new(class: 'md-6', round: true) %>
 
   <%=raw example_block.open %>
 
@@ -150,7 +150,7 @@
 
 <%=raw code.open %>
 
-<%= erb_open_tag %> example_block = cell(:elements, :block).new(class: 'md-6', round: false) <%= erb_close_tag %>
+<%= erb_open_tag %> example_block = cell(:elements, :block).new(class: 'md-6', round: true) <%= erb_close_tag %>
 
 <%= erb_open_tag %>=raw example_block.open <%= erb_close_tag %>
 
