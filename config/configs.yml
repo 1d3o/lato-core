@@ -40,7 +40,7 @@ colors:
   white: '#ffffff'
   black: '#414a4c'
   grey: '#ecf0f1'
-  main: '#34495e'
+  main: '#232b2b'
   active: '#2980b9'
   danger: '#e74c3c'
   warning: '#f39c12'

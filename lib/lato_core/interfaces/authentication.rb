@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module LatoCore
 
   # This module contains a list of functions used to authenticate a superuser.
@@ -23,7 +25,7 @@ module LatoCore
 
     # This function check the session for a superuser and set the variable @core__current_superuser.
     # If session is not valid the user should be redirect to login path.
-    def core__manage_superuser_session
+    def core__manage_superuser_session(permission = nil)
       decoded_token = core__decode_token(session[:lato_core__superuser_session_token])
 
       if decoded_token
@@ -31,6 +33,11 @@ module LatoCore
         unless @core__current_superuser
           core__destroy_superuser_session
           redirect_to lato_core.login_path
+        end
+
+        if permission && @core__current_superuser.permission < permission
+          flash[:danger] = 'PERMISSION ERROR'
+          redirect_to lato_core.root_path
         end
       else
         redirect_to lato_core.login_path
