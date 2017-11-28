@@ -1,7 +1,10 @@
-<div class="elements-button">
+<div class="elements-button <%= @block_class %>">
 
   <a
-    class="button elements-button__element elements-button__element--<%= @args[:style] %> elements-button__link"
+    class="
+    button elements-button__element
+    elements-button__element--<%= @args[:style] %>
+    elements-button__link"
     title="<%= @args[:label] %>"
     id="<%= @args[:id] %>"
     <% if !@show_confirmation %>

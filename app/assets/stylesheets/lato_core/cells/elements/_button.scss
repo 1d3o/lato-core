@@ -27,6 +27,14 @@
   }
 }
 
+.elements-button--block {
+  display: block;
+
+  > .elements-button__element {
+    display: block;
+  }
+}
+
 .elements-button__element--info {
   background-color: $button_info_background;
   color: $button_info_color_text;

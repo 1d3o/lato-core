@@ -12,6 +12,7 @@ module LatoCore
       icon: nil,
       icon_align: 'left',
       method: 'get',
+      block: false,
       remote: false,
       confirmation: {
         message: nil,
@@ -52,6 +53,8 @@ module LatoCore
                               @args[:confirmation][:negative_response])
         @icon_left = (@args[:icon_align] === 'left')
         @icon_right = (@args[:icon_align] === 'right')
+
+        @block_class = @args[:block] ? ' elements-button--block ' : ' '
       end
 
   end

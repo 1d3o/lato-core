@@ -1,7 +1,7 @@
 PATH
   remote: ..
   specs:
-    lato_core (2.1.5)
+    lato_core (2.2.1)
       bcrypt (>= 3.1.7)
       cells (>= 4.0.0)
       cells-erb
