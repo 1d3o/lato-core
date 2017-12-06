@@ -203,3 +203,50 @@ options</p>
 
 <%=raw row.close %>
 <!-- / CODE SECTION -->
+
+<hr>
+<%=raw cell(:elements, :title).new(label: 'Index with sortable attributes', size: 3) %>
+
+<%=raw row.open %>
+
+  <%=raw block.open %>
+
+    <%=raw cell(:widgets, :index).new(records: @widget_index_superusers,
+    head: [
+      {label: 'Name', sort: 'name'},
+      {label: 'Surname', sort: 'surname'},
+      'Email', 'Username'
+    ],
+    columns: ['name', 'surname', 'email', 'username'], index_url: lato_core.doc_cells_widgets_index_path,
+    actions: {show: false, edit: false, delete: false, new: false}, search: true, pagination: true,
+    table: { fixed: true, height: 150 }, table_body: { hover: true }) %>
+    
+  <%=raw block.close %>
+
+<%=raw row.close %>
+
+<!-- CODE SECTION -->
+<%=raw row.open %>
+
+<%=raw block.open %>
+
+<%=raw cell(:elements, :title).new(label: 'Code', size: 6) %>
+
+<%=raw code.open %>
+
+<%= erb_open_tag %>raw cell(:widgets, :index).new(records: @widget_index_superusers,
+    head: [
+      {label: 'Name', sort: 'name'},
+      {label: 'Surname', sort: 'surname'},
+      'Email', 'Username'
+    ],
+    columns: ['name', 'surname', 'email', 'username'], index_url: lato_core.doc_cells_widgets_index_path,
+    actions: {show: false, edit: false, delete: false, new: false}, search: true, pagination: true,
+    table: { fixed: true, height: 150 }, table_body: { hover: true })<%= erb_close_tag %>
+
+<%=raw code.close %>
+
+<%=raw block.close %>
+
+<%=raw row.close %>
+<!-- / CODE SECTION -->

@@ -6,6 +6,30 @@
 
   thead {
     border-bottom: solid 1px darken($color_white, 3);
+
+    .attr-active {
+      color: $color_active;
+    }
+
+    .attr-sort-ASC {
+      position: relative;
+
+      &:after {
+        content: '\2193';
+        position: absolute;
+        right: -1em;
+      }
+    }
+
+    .attr-sort-DESC {
+      position: relative;
+      
+      &:after {
+        content: '\2191';
+        position: absolute;
+        right: -1em;
+      }
+    }
   }
 
   tbody:before {

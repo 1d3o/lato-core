@@ -18,13 +18,22 @@ module LatoCore
         per_page: pagination,
         search: '',
         search_key: search,
+        sort: '',
+        sort_dir: 'ASC',
         pagination: 1,
       }
+
       # manage search
       if search && params[:widget_index] && params[:widget_index][:search] && !params[:widget_index][:search].blank?
         response[:records] = response[:records].where("#{search} like ?", "%#{params[:widget_index][:search]}%")
         response[:total] = response[:records].length
         response[:search] = params[:widget_index][:search]
+      end
+      # manage sort
+      if params[:widget_index] && !params[:widget_index][:sort].blank? && !params[:widget_index][:sort_dir].blank?
+        response[:sort] = params[:widget_index][:sort]
+        response[:sort_dir] = params[:widget_index][:sort_dir]
+        response[:records] = response[:records].order("#{params[:widget_index][:sort]} #{params[:widget_index][:sort_dir]}")
       end
       # manage pagination
       if pagination

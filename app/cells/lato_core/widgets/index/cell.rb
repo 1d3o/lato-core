@@ -84,9 +84,26 @@ module LatoCore
 
         if @args[:head] && @args[:head].length > 0
           # manage case with custom head
-          labels = @args[:head]
+          labels = []
+          @args[:head].each do |head|
+            if head.is_a?(Hash)
+              sort_value = @args[:records].is_a?(Hash) ? @args[:records][:sort] : ''
+              sort_dir_value = @args[:records].is_a?(Hash) ? @args[:records][:sort_dir] : 'ASC'
+              active_class = sort_value == head[:sort] ? "attr-active attr-sort-#{sort_dir_value}" : ''
+              active_sort = sort_value == head[:sort] ? (sort_dir_value == 'ASC' ? 'DESC' : 'ASC') : sort_dir_value
+              search_value = @args[:records].is_a?(Hash) ? @args[:records][:search] : ''
+
+              url = core__add_param_to_url(@args[:index_url], 'widget_index[search]', search_value)
+              url = core__add_param_to_url(url, 'widget_index[sort]', head[:sort])
+              url = core__add_param_to_url(url, 'widget_index[sort_dir]', active_sort)
+              string = "<a href='#{url}' class='#{active_class}'>#{head[:label]}</a>"
+              labels.push(string)
+            else
+              labels.push(head)
+            end
+          end
           labels.push(LANGUAGES[:lato_core][:mixed][:actions]) if @show_row_actions
-        elsif @records && @records.length > 0
+        elsif @records&.length > 0
           # manage case without custom head
           labels = @records.first.attributes.keys.map {|s| s.gsub('_', ' ')}
           labels = labels.map(&:capitalize)
@@ -216,9 +233,14 @@ module LatoCore
         total_records_per_page = @args[:records].is_a?(Hash) ? @args[:records][:per_page] : @args[:records].length
         total_pages = (total_records.to_f / total_records_per_page.to_f).ceil
         current_page = @args[:records].is_a?(Hash) ? @args[:records][:pagination] : 1
+
         search_value = @args[:records].is_a?(Hash) ? @args[:records][:search] : ''
+        sort_value = @args[:records].is_a?(Hash) ? @args[:records][:sort] : ''
+        sort_dir_value = @args[:records].is_a?(Hash) ? @args[:records][:sort_dir] : ''
 
         url = core__add_param_to_url(@args[:index_url], 'widget_index[search]', search_value)
+        url = core__add_param_to_url(url, 'widget_index[sort]', sort_value)
+        url = core__add_param_to_url(url, 'widget_index[sort_dir]', sort_dir_value)
         return LatoCore::Elements::Pagination::Cell.new(total: total_pages, current: current_page, url: url,
         param: 'widget_index[pagination]')
       end
