@@ -29,9 +29,12 @@
 
 .elements-button--block {
   display: block;
+  width: 100%;
 
   > .elements-button__element {
     display: block;
+    width: 100%;
+    text-align: left;
   }
 }
 

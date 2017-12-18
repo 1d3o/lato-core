@@ -377,7 +377,8 @@
 
   <%=raw block.open %>
 
-    <%=raw cell(:elements, :button).new(label: 'Block button', block: true, url: '#', remote: true) %>
+    <%=raw cell(:elements, :button).new(label: 'Block link button', block: true, url: '#', remote: true) %>
+    <%=raw cell(:elements, :button).new(label: 'Block button', type: 'button', block: true, url: '#', remote: true) %>
     
   <%=raw block.close %>
 
