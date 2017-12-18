@@ -5,7 +5,7 @@ The complete documentation is inside the application panel, so you must [install
 
 You can always try a demo here: https://lato-server.herokuapp.com
 
-![Alt text](lib/screen.png "Title")
+![Lato dashboard screenshot](lib/screen.png "Title")
 
 ## Ecosystem
 
