@@ -3,7 +3,7 @@
 Lato is a Rails engine used to develop modular admin panels. This is the module used to initialize the admin panel.
 The complete documentation is inside the application panel, so you must [install](#installation) it before.
 
-You can always try a demo here: https://lato-server.herokuapp.com
+You can always try a demo here: https://lato-gem.herokuapp.com
 
 ![Alt text](lib/screen.png "Title")
 
