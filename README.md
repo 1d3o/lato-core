@@ -13,7 +13,7 @@ You can always try a demo here: https://lato-gem.herokuapp.com
 
 - [Lato core](https://github.com/ideonetwork/lato-core): The core module used to initialize the panel.
 - [Lato media](https://github.com/ideonetwork/lato-media): A module used to manage attachments and media files.
-- [Lato blog](https://github.com/ideonetwork/lato-blog): A module used to manage a blog.
+- [Lato blog](https://github.com/ideonetwork/lato-blog): A module to manage blog contents.
 
 ## Installation
 
