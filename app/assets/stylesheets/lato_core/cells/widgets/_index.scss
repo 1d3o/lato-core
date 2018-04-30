@@ -7,7 +7,22 @@
 
 }
 
-.widgets-index--actions {
+.widgets-index--actions-start {
+  .elements-table__table thead th:first-child {
+    text-align: center;
+  }
+
+  .elements-table__row td:first-child {
+    text-align: center;
+    min-width: 250px;
+
+    .elements-button__element {
+      font-size: 0.8em;
+    }
+  }
+}
+
+.widgets-index--actions-end {
   .elements-table__table thead th:last-child {
     text-align: center;
   }

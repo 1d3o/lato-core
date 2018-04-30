@@ -49,7 +49,8 @@ module LatoCore
         @total = @args[:records].is_a?(Hash) ? @args[:records][:total] : @args[:records].length
         # conditions for show
         @show_row_actions = @args[:index_url] && @args[:actions] && (@args[:actions][:show] || @args[:actions][:edit] || @args[:actions][:delete])
-        @show_row_actions_class = @show_row_actions ? 'widgets-index--actions' : ''
+        @show_row_actions_class = @args[:actions_on_start] && @show_row_actions ? 'widgets-index--actions-start' : ''
+        @show_row_actions_class = !@args[:actions_on_start] && @show_row_actions ? 'widgets-index--actions-end' : @show_row_actions_class
         @show_search = @args[:index_url] && @args[:search]
         @show_pagiantion = @args[:index_url] && @args[:pagination]
         @show_new_action = @args[:index_url] && @args[:actions] && @args[:actions][:new]
@@ -86,6 +87,9 @@ module LatoCore
         if @args[:head] && @args[:head].length > 0
           # manage case with custom head
           labels = []
+          if @args[:actions_on_start] && @show_row_actions
+            labels.push(LANGUAGES[:lato_core][:mixed][:actions])
+          end
           @args[:head].each do |head|
             if head.is_a?(Hash)
               sort_value = @args[:records].is_a?(Hash) ? @args[:records][:sort] : ''
@@ -103,12 +107,20 @@ module LatoCore
               labels.push(head)
             end
           end
-          labels.push(LANGUAGES[:lato_core][:mixed][:actions]) if @show_row_actions
+          if !@args[:actions_on_start] && @show_row_actions
+            labels.push(LANGUAGES[:lato_core][:mixed][:actions])
+          end
         elsif @records&.length > 0
           # manage case without custom head
-          labels = @records.first.attributes.keys.map {|s| s.gsub('_', ' ')}
+          labels = []
+          if @args[:actions_on_start] && @show_row_actions
+            labels.push(LANGUAGES[:lato_core][:mixed][:actions])
+          end
+          labels = labels + @records.first.attributes.keys.map {|s| s.gsub('_', ' ')}
           labels = labels.map(&:capitalize)
-          labels.push(LANGUAGES[:lato_core][:mixed][:actions]) if @show_row_actions
+          if !@args[:actions_on_start] && @show_row_actions
+            labels.push(LANGUAGES[:lato_core][:mixed][:actions])
+          end
         end
 
         return LatoCore::Elements::Table::Head::Cell.new(labels: labels)
