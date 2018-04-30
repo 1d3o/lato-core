@@ -24,7 +24,8 @@ module LatoCore
       },
       table_body: {
         hover: false
-      }
+      },
+      actions_on_start: false
     }
 
     def initialize(args = {})
@@ -141,12 +142,16 @@ module LatoCore
 
         @records.each do |record|
           labels = []
+          # add actions to row columns
+          if @args[:actions_on_start] && @show_row_actions
+            labels.push(generate_actions_bottongroup_for_record(record))
+          end
           # add function result to row columns
           columns_functions.each do |column_function|
             labels.push(record.send(column_function))
           end
           # add actions to row columns
-          if @show_row_actions
+          if !@args[:actions_on_start] && @show_row_actions
             labels.push(generate_actions_bottongroup_for_record(record))
           end
           # puts rows on table rows
