@@ -228,7 +228,10 @@ module LatoCore
 
       # This function generate and return the search input.
       def generate_search_input
-        search_placeholder = @args[:records].is_a?(Hash) ? @args[:records][:search_key].humanize : ''
+        search_placeholder = ''
+        if @args[:records].is_a?(Hash)
+          search_placeholder = @args[:records][:search_key].is_a?(Array) ? @args[:records][:search_key].to_sentence : @args[:records][:search_key].humanize
+        end
         search_value = @args[:records].is_a?(Hash) ? @args[:records][:search] : ''
         return LatoCore::Inputs::Text::Cell.new(name: 'widget_index[search]', value: search_value, placeholder: search_placeholder)
       end

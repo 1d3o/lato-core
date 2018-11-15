@@ -25,7 +25,16 @@ module LatoCore
 
       # manage search
       if search && params[:widget_index] && params[:widget_index][:search] && !params[:widget_index][:search].blank?
-        response[:records] = response[:records].where("#{search} like ?", "%#{params[:widget_index][:search]}%")
+        search_array = search.is_a?(Array) ? search : [search]
+        query1 = ''
+        query2 = []
+        search_array.each do |s|
+          query1 += "#{s} like ? OR "
+          query2.push("%#{params[:widget_index][:search]}%")
+        end
+        query1 = query1[0...-4]
+        query = [query1] + query2
+        response[:records] = response[:records].where(query)
         response[:total] = response[:records].length
         response[:search] = params[:widget_index][:search]
       end
